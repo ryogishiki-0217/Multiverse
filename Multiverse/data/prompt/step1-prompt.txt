@@ -1,0 +1,157 @@
+**Task 1: Main‐Step Extraction**  
+Analyze the given reasoning chain (for a math or coding problem) and pull out every *major* step. Ignore substeps—only list the top‑level insights or actions.
+
+**Output format:**  
+```
+S1: [First major step]  
+S2: [Second major step]  
+S3: [Third major step]  
+...
+SX: [Description of step X]
+...
+```  
+
+**Guidelines:**  
+- Label each top‑level step consecutively (`S1`, `S2`, `S3`, …).  
+- Please capture the entire thought process presented in the reasoning chain, and do not skip any step that includes but not is limited to:  
+  - Initial problem understanding and analysis
+  - All exploration paths (both successful and unsuccessful) 
+  - Case studies, checks, or tests performed
+  - Any “aha” or correction (re-evaluation or re-thinking) moments  
+  - The final reasoning that yields the solution   
+- Keep each item concise yet descriptive.  
+- Do *not* include any sub‑numbering (no `S2.1`, etc.).  
+- Explicitly split multiple cases or scenarios into different steps. Each case should be allocated an independent step.
+
+---
+
+**Task 2: Substep Extraction**  
+Given the output including all main step from a reasoning chain, break it down into all its internal substeps only if it can be meaningfully subdivided into smaller thought units. 
+
+**Output format:**  
+```
+S1: [Description of step 1]
+S2: [Description of step 2]
+	S2.1 [Description of step 2.1]
+	S2.2 [Description of step 2.2]
+	...
+	S2.10 [Description of step 2.10]
+S3: [Description of step 3]
+S4: [Description of step 4]   
+...
+S10: [Description of step 10]
+...
+```  
+
+**Guidelines:**  
+- Use the same parent index (`x`) as the main step (e.g. if breaking down `S2`, label `S2.1`, `S2.2`, …).  
+- Capture the entire thought process presented in the reasoning chain, and do not skip any substep that includes but not is limited to: 
+  - Initial problem understanding and analysis
+  - All exploration paths (both successful and unsuccessful) 
+  - Case studies, checks, or tests performed
+  - Any “aha” or correction (re-evaluation or re-thinking) moments  
+  - The final reasoning that yields the solution 
+- Keep each substep concise and focused.  
+- Do *not* introduce deeper nesting larger than 2. For example, `S2.1.1` is not allowed.
+- Explicitly split multiple cases or scenarios into different substeps. Each case should be allocated an independent substep.
+
+---
+**Task 3: Parallelizing Main Steps**  
+Using only the **main steps** (`S1`, `S2`, ...) you extracted in Task 1, identify all steps or contiguous step groups can be executed in parallel without violating logical dependencies, and rewrite the plan as a structured parallel execution outline.
+
+**1. Identify Parallel Groups**  
+   - Find sets of adjacent main steps with no dependencies among them.  
+   - Label groups `P1`, `P2`, ... and list their step ranges (e.g. `[S1+S2, S3]`, `[S4]`). 
+
+**2. Rewrite into a Parallel Execution Plan**  
+   - Preserve each step’s original wording as much as possible.
+
+**Output Format:**  
+```
+Parallel groups:
+P1: [S1+S2, S3]
+P2: [S4]
+...
+  
+
+Parallel execution plan:
+P1[parallel reason: ...]:
+  S1+S2: [text of S1 + text of S2]
+  S3: [text of S3]
+P2[parallel reason: ...]:
+  S4: [text of S4]
+...
+```
+
+**Guidelines:**  
+- **Coverage:** Include **every** step exactly once, either alone or inside a parallel group. 
+- **Contiguous Blocks:** You may combine adjacent steps (e.g. `S1+S2`) and treat them as one unit in the parallel group with another step or block (e.g. `S3`), but do **not** combine non‐adjacent steps as a block.
+- **Strict Parallelism Only:** Build an explicit dependency graph in your analysis: draw an edge from step A to step B if B uses A’s output or insight. A group `Pi` may include steps (or contiguous blocks) **only** if there are **no** edges between any two steps. In conditional logic, treat the **if** branch and **else** branch as independent tasks and parallelize them even though their outputs cannot both occur at runtime.
+- Contiguous grouping only: Each parallel group must cover a continuous sequence of steps or blocks. In other words, you may only parallelize adjacent steps. The occurrence of steps in parallel groups must follow their original order. For example, P1: [S5, S8] is not allowed.
+- **Conciseness:** Keep each bullet short yet stick closely to the original text.
+---
+
+**Task 4: Parallelizing Substeps**  
+Using only the **substeps** (`S2.1`, `S2.2`, ...) you extracted in Task 2, identify all substeps or contiguous substep groups can be executed in parallel without violating logical dependencies, and rewrite the plan as a structured parallel execution outline.
+
+**1. Identify Parallel Groups**  
+   - Find sets of adjacent main steps with no dependencies among them.  
+   - Label groups `P1`, `P2`, ... and list their substep members (e.g. `[S2.1+S2.2, S2.3]`, `[S3.1]`). 
+
+**2. Rewrite into a Parallel Execution Plan**   
+   - Preserve each substep’s original wording as much as possible.
+
+**Output Format:**  
+```
+Parallel groups:
+P1: [S2.1+S2.2, S2.3]
+P2: [S2.4]
+P2: [S3.1]
+...
+  
+
+Parallel execution plan:
+P1[parallel reason: ...]:
+  S2.1+S2.2: [text of S2.1 + text of S2.2]
+  S2.3: [text of S2.3]
+P2[parallel reason: ...]:
+  S3.1: [text of S3.1]
+...
+```
+
+**Guidelines:**  
+- **Coverage:** Include **every** substep exactly once, either alone or inside a parallel group. 
+- **Contiguous Blocks:** You may combine adjacent substeps (e.g. `S2.1+S2.2`) and treat them as one unit in the parallel group with another substep or block (e.g. `S2.3`), but do **not** combine non‐adjacent substeps as a block.
+- **Strict Parallelism Only:** Build an explicit dependency graph in your analysis: draw an edge from substep A to substep B if B uses A’s output or insight. A group `Pi` may include steps (or contiguous blocks) **only** if there are **no** edges between any two steps. In conditional logic, treat the **if** branch and **else** branch as independent tasks and parallelize them even though their outputs cannot both occur at runtime.
+- Contiguous grouping only: Each parallel group must cover a continuous sequence of steps or blocks. In other words, you may only parallelize adjacent substeps. The occurrence of substeps in parallel groups must follow their original order. For example, P1: [S2.2, S3.1] is not allowed.
+- **Conciseness:** Keep each bullet short yet stick closely to the original text.
+
+---
+
+**Task 5: Get Structured Summary**  
+Please summarize the conversation above by extracting the reasoning steps and substeps in Task 1 and Task 2 as a tree structure with explicit parallelism annotations following Task 3 and Task 4. 
+
+**Output Format:** 
+```
+S1: [Brief summary of top‑level step S1]
+ 	<parallel>[parallel reason: ...]
+	S1.1: [Summary of substep S1.1]
+ 	S1.2: [Summary of substep S1.2]
+  	...
+  	</parallel>
+<parallel>[parallel reason: ...]
+S2: [Brief description of top‑level step S2]
+S3: [Brief description of top‑level step S3]
+</parallel>
+S4: [Brief description of top‑level step S4]
+...
+```
+
+**Guidelines:**  
+- **Max depth of nested `<parallel>` is 2.** Do not nest `<parallel>` tags inside one another more deeply. You are not allowed to use structure like <parallel> <parallel> <parallel> </parallel> </parallel> </parallel>.
+- **Max depth of nested numbering is 2.** Do *not* introduce number beyond Sx and Sx.y. For example, `Sx.y.z` is not allowed.
+- **Sequential subpaths stay unexpanded.** If a node’s children are purely sequential, list them normally without `<parallel>`.  
+- **Tag parallel blocks.** Wrap only truly parallelizable sibling steps in `<parallel>`…`</parallel>`.
+- **Concise summaries.** Provide a short description for every step and substep.  
+- **Avoid over‑splitting.** If most of a node’s children are sequential and only a small pair can run in parallel, you may leave the group un-split or only tag the genuinely parallel pair.  
+- **Group parallelizable sets.** You may bundle several independent subpaths into a single `<parallel>` block when they share no dependencies.

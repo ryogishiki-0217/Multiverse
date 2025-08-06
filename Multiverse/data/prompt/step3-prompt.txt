@@ -1,0 +1,93 @@
+**Rewriting Task: Structured Parallel Reasoning Chain**
+
+You are given a full reasoning structure inside a `<Parallel>` block, consisting of:
+- one `<Goal>` block with multiple `<Outline>` elements,
+- multiple `<Path>` blocks, and
+- one `<Conclusion>` block.
+
+Some `<Path>` blocks may include a **fully nested `<Parallel>...</Parallel>` block**. These nested blocks must be rewritten **recursively using the same rules**.
+
+
+### General Instructions
+
+- You must **preserve all XML tags exactly** as they appear — do **not** remove, rename, or reorder tags.
+- Only modify the **inner text** of `<Outline>`, `<Path>`, and `<Conclusion>` blocks.
+- Wrap the final output in a **single Markdown code block** using triple backticks.
+
+### Rewriting Guidelines
+
+#### For `<Goal>`:
+- Rewrite each `<Outline>` into a **concise and standalone statement of what is being computed, determined, or found**.
+- **Remove any references to intermediate steps, reasoning, or methods** — only the end goal should remain.
+
+#### For each `<Path>`:
+- Maintain the original numbering prefix (e.g., `1:`, `2:`).
+- Rewrite the path into a **logically self-contained paragraph**.
+- Do **not** use any transitional or comparative phrases (e.g., "First," "Next," "Alternatively," "On the other hand," etc.).
+
+- **Critically important**:  
+  - **Start by counting how many sentences appear in the original `<Path>` block.**
+  - If the `<Path>` contains **five or fewer sentences**, rewrite them **together as a single coherent paragraph**, ensuring logical flow and fluency without using transitional phrases.
+  - If the `<Path>` contains **more than five sentences**:
+    - Rewrite the **first five sentences together as a single unit**, forming a fluent paragraph.
+    - For the **remaining sentences**, **rewrite each one individually**, based on its meaning, as clear and fluent standalone statements.
+
+- If a `<Path>` contains a **nested `<Parallel>` block**, treat that block recursively using the same rewriting procedure (including for its `<Goal>`, `<Path>`, and `<Conclusion>`).
+
+#### For `<Conclusion>`:
+- Rewrite this block into a **concise summary of the outcomes** across all `<Path>` blocks.
+- You may combine or contrast final results, but avoid restating intermediate steps.
+
+
+### Example Output Format
+
+```
+<Parallel>
+<Goal>
+<Outline>
+1: [concise description of the goal of Path 1]
+</Outline>
+<Outline>
+2: [concise description of the goal of Path 2]
+</Outline>
+</Goal>
+<Path>
+1: [self-contained paragraph for Path 1, rewritten sentence by sentence]
+<Parallel>
+<Goal>
+<Outline>
+1.1: [concise goal for subpath 1.1]
+</Outline>
+<Outline>
+1.2: [concise goal for subpath 1.2]
+</Outline>
+</Goal>
+<Path>
+1.1: [rewritten paragraph for subpath 1.1]
+</Path>
+<Path>
+1.2: [rewritten paragraph for subpath 1.2]
+</Path>
+<Conclusion>
+[summarized results from subpaths 1.1 and 1.2]
+</Conclusion>
+</Parallel>
+</Path>
+<Path>
+2: [self-contained paragraph for Path 2, rewritten sentence by sentence]
+</Path>
+<Conclusion>
+[summary of outcomes from Path 1 and Path 2]
+</Conclusion>
+</Parallel>
+```
+
+### Summary
+
+- Preserve tag structure exactly.
+- For `<Path>`, rewrite based on sentence count:  
+  - First 5 sentences as a group, make sure this path starts as a separte path without any cross-reference such as "First," "Next," "Alternatively," "On the other hand,".  
+  - Remaining ones individually.
+- Always rewrite sentence-by-sentence based on summary of meaning.
+- Apply the same rules recursively to any nested `<Parallel>` blocks.
+- Ensure clarity, logical completeness, and fluency without transitional phrases

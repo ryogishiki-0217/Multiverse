@@ -1,0 +1,148 @@
+# Task: Update Outline with Original Reasoning Chain, Preserving Parallel Tags
+
+
+
+You will receive an outline that **may be incomplete but includes `<parallel>` tags** indicating parallel structures. It might contain summaries for existing steps/substeps. You will also receive the corresponding original text, where sentences implicitly or explicitly map to hierarchical prefixes (e.g., `S1`, `S1.1`, `S2`) **in sequence**.
+
+
+
+Your task is to process the original reasoning chain sequentially to update the outline: replace existing summaries or insert new steps as needed, while **preserving the original `<parallel>` tag structure**.
+
+
+
+1. **Initialize Structure:** Start with the structure provided by the input outline, including its text/summaries and `<parallel>` tags.
+
+2. **Read Sentences Sequentially:** Process the original text sentences one by one without skipping any sentence, **in the order they appear**.
+
+3. **Process Each Sentence:** For each sentence:
+
+* a. Determine the hierarchical prefix associated with this sentence (e.g., `S1`, `S1.1`, `S2`).
+
+* b. Check if a step/substep with this exact prefix currently exists within the outline structure.
+
+* c. **If it exists:** Replace its current content (e.g., a summary) with the **full original sentence**.
+
+* d. **If it does NOT exist:** Insert a **new** step/substep/subsubstep at the correct hierarchical position relative to existing steps (e.g., `S1.1` goes under `S1`, `S2` follows `S1`). Use the **full original sentence** as its content and apply the correct indentation.
+
+4. **Preserve `<parallel>` Tags:** The `<parallel>` and `</parallel>` tags from the input outline must be maintained in their original positions relative to the steps/substeps they enclosed initially. Do not add new tags or remove existing ones based on content analysis. Structure modification happens *around* these preserved tags.
+
+5. **Ensure Correct Output Formatting:** In the final, updated outline:
+
+* Maintain correct hierarchical indentation for all steps/substeps.
+
+* Each step/substep (whether inside or outside `<parallel>` tags) must be on its own line, starting with its prefix (e.g., `S1:`, `S1.1:`) followed by the full original sentence.
+
+6. **Maintain Completeness:** Ensure every sentence from the original text is processed and included in the final outline structure according to the rules above. You must not ignore or remove any sentence from the final output by your understanding and decision
+
+---
+
+**Task: Filling Detailed Goal and Conclusion Based on the New Reasoning Chain**
+
+Based on the generated reasoning chain, your task is to:
+
+1. Remove all numbering labels (such as "S1", "S2.1", etc.) and eliminate any indentation.
+
+2. For each `<parallel>...</parallel>` sections, it has a `[parallel reason: ...]` that denotes different path within this parallel structure. You should combine all the step/substep/subsubstep which belong to one path and wrapped it by `<Path>...</Path>` tags. You must not miss any step/substep/subsubstep within the whole <paralle></parallel> and each of them should belong to one path. You should ensure that no path references other paths, even if originally derived from the same sentence. After that you should remove the `[parallel reason: ...]`.
+
+3. Insert <Goal> and </Goal> in the <Parallel> block and before the first <Path>, In `<Goal>`, succinctly describe each branch as `Path: ...` clearly indicating its independent investigation.
+
+4. Insert <Conclusion> and </Conclusion> in the <Parallel> block and after the last <Path>, briefly summarize the outcomes of all branches within the current `<Parallel>` block independently, without cross-referencing.
+
+
+
+**Output Format**
+
+```text
+
+[Full detailed reasoning copied exactly from the reasoning chain for the first top-level path]
+
+[Full detailed reasoning copied exactly from the reasoning chain for the second top-level path]
+
+...
+
+Let's think in parallel.
+
+<Parallel>
+
+<Goal>
+
+Path: [brief, self-contained description of case A]
+
+Path: [brief, self-contained description of case B]
+
+...
+
+</Goal>
+
+<Path>
+
+[Introductory reasoning for case A]
+
+Let's think in parallel.
+
+<Parallel>
+
+<Goal>
+
+Path: [brief, self-contained description of case A.1]
+
+Path: [brief, self-contained description of case A.2]
+
+</Goal>
+
+<Path>
+
+[Full detailed reasoning for case A.1, rewritten clearly and independently without repeating the description provided in the Goal]
+
+</Path>
+
+<Path>
+
+[Full detailed reasoning for case A.2, rewritten clearly and independently without repeating the description provided in the Goal]
+
+</Path>
+
+<Conclusion>
+
+[Your concise summary of outcomes from A.1 and A.2]
+
+</Conclusion>
+
+</Parallel>
+
+</Path>
+
+<Path>
+
+[Full detailed reasoning for case B, rewritten clearly and independently without repeating the description provided in the Goal]
+
+</Path>
+
+...
+
+<Conclusion>
+
+[Your concise summary of outcomes from A and B]
+
+</Conclusion>
+
+</Parallel>
+
+[Full detailed reasoning for any remaining paths]
+
+
+**Guidelines**
+
+If two or more `<Path>` entries were originally derived from the same sentence or have dependency in the original text, you must:
+
+- Rewrite each path separately, clearly, and completely. If you rewrite the path, please do not append the original information of this path to avoid repeating.
+
+- Ensure each path has sufficient contextual detail to be understood independently, without relying on any information or context provided in other paths derived from the same sentence.
+
+- Verify each rewritten path fully encapsulates the logical reasoning required to understand it clearly in isolation.
+
+
+
+**Avoid Repetition**: When writing detailed reasoning inside <Path>, avoid directly repeating the brief descriptions provided in <Goal>. Also, avoid repeated information in the <Path> itself.
+
+Wrap your entire response in a single Markdown code block.

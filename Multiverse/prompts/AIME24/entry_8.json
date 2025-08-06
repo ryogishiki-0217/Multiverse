@@ -1,0 +1,7 @@
+{
+  "id": 67,
+  "problem": "There exist real numbers $x$ and $y$, both greater than 1, such that $\\log_x\\left(y^x\\right)=\\log_y\\left(x^{4y}\\right)=10$. Find $xy$.",
+  "solution": "By properties of logarithms, we can simplify the given equation to $x\\log_xy=4y\\log_yx=10$. Let us break this into two separate equations: \n\\[x\\log_xy=10\\]\n\\[4y\\log_yx=10.\\]\nWe multiply the two equations to get: \n\\[4xy\\left(\\log_xy\\log_yx\\right)=100.\\]\nAlso by properties of logarithms, we know that $\\log_ab\\cdot\\log_ba=1$; thus, $\\log_xy\\cdot\\log_yx=1$. Therefore, our equation simplifies to: \n\\[4xy=100\\implies xy=\\boxed{025}.\\]\n~Technodoggo\nConvert the two equations into exponents:\n\\[x^{10}=y^x~(1)\\]\n\\[y^{10}=x^{4y}~(2).\\]\nTake $(1)$ to the power of $\\frac{1}{x}$:\n\\[x^{\\frac{10}{x}}=y.\\]\nPlug this into $(2)$:\n\\[x^{(\\frac{10}{x})(10)}=x^{4(x^{\\frac{10}{x}})}\\]\n\\[{\\frac{100}{x}}={4x^{\\frac{10}{x}}}\\]\n\\[{\\frac{25}{x}}={x^{\\frac{10}{x}}}=y,\\]\nSo $xy=\\boxed{025}$\n~alexanderruan\nSimilar to solution 2, we have:\n$x^{10}=y^x$ and $y^{10}=x^{4y}$\nTake the tenth root of the first equation to get \n$x=y^{\\frac{x}{10}}$\nSubstitute into the second equation to get \n$y^{10}=y^{\\frac{4xy}{10}}$\nThis means that $10=\\frac{4xy}{10}$, or $100=4xy$, meaning that $xy=\\boxed{25}$.\n~MC413551",
+  "answer": "025",
+  "url": "https://artofproblemsolving.com/wiki/index.php/2024_AIME_I_Problems/Problem_2"
+}
