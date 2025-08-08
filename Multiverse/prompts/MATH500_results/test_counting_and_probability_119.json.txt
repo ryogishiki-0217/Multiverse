@@ -1,0 +1,224 @@
+问题: Find the constant term in the expansion of $$\left(10x^3-\frac{1}{2x^2}\right)^{5}$$
+
+模型解答: <|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant specializing in solving math problems.
+When solving math problems, please show your reasoning process first, then provide the final answer in a fixed format:
+"the final answer is ..."
+Replace ... with the actual answer. Ensure this exact phrase is included at the end of your response.<|im_end|>
+<|im_start|>user
+Solve the following math problem: Find the constant term in the expansion of $$\left(10x^3-\frac{1}{2x^2}\right)^{5}$$
+<|im_end|>
+<|im_start|>assistant
+<Think>
+Okay, so I need to find the constant term in the expansion of (10x^3 - 1/(2x^2))^5. Hmm, let's think. I remember that for expansions like (a + b)^n, we can use the binomial theorem. The binomial theorem says that each term in the expansion is given by C(n, k) * a^(n - k) * b^k, where C(n, k) is the binomial coefficient. Right?
+Let's think in parallel.
+<Parallel>
+<Goal>
+<Outline>
+1: Determination of the expansion formula and the specific term form to identify the constant term.
+</Outline>
+<Outline>
+2: Specification of the variables 'a', 'b', 'n', and 'k' for the given binomial expression.
+</Outline>
+</Goal>
+<Path>
+1: The binomial theorem formula (a + b)^n = Σ [C(n, k) * a^(n - k) * b^k] from k=0 to n is recalled. The objective is to find the specific term in this expansion that is a constant, meaning the exponent of x in that term must be zero.
+</Path>
+<Path>
+2: The variables for the binomial theorem are specified as a = 10x^3, b = -1/(2x^2), and n = 5. The exponent 'k' is a variable integer ranging from 0 to 5.
+</Path>
+<Conclusion>
+The binomial theorem formula is established, and the variables for the given expression are set as a = 10x^3, b = -1/(2x^2), and n = 5, with k ranging from 0 to 5.
+</Conclusion>
+</Parallel>
+So each term in the expansion will look like C(5, k) * (10x^3)^(5 - k) * (-1/(2x^2))^k. I need to simplify this general term and find which value of k makes the exponent of x zero. Let's write out the general term then: Term(k) = C(5, k) * (10x^3)^(5 - k) * (-1/(2x^2))^k. First, let's deal with the constants and the variables separately. Let's think in parallel.
+<Parallel>
+<Goal>
+<Outline>
+1: The constant component of the general term, C(5,k) * 10^(5-k) * (-1/2)^k, is determined.
+</Outline>
+<Outline>
+2: The variable component of the general term, x^(3*(5-k) - 2k), is determined.
+</Outline>
+</Goal>
+<Path>
+1: The constant part of the term is C(5, k) multiplied by 10^(5 - k) from (10x^3)^(5 - k), and multiplied by (-1/(2x^2))^k, which contributes (-1)^k / 2^k. Therefore, the overall constant factor becomes C(5, k) * 10^(5 - k) * (-1)^k / 2^k. This expression can be rewritten as C(5, k) * (-1)^k * 10^(5 - k) / 2^k.
+</Path>
+<Path>
+2: The variable components are x^(3(5 - k)) from (x^3)^(5 - k) and x^(-2k) from (x^(-2))^k. The exponent of x in the term is calculated as 3(5 - k) - 2k, which simplifies to 15 - 3k - 2k, resulting in 15 - 5k.
+</Path>
+<Conclusion>
+The constant component of the general term is C(5,k) * (-1)^k * 10^(5-k) / 2^k, and the variable component is x^(15 - 5k).
+</Conclusion>
+</Parallel>
+So the exponent of x in the general term is 15 - 5k. To find the constant term, we set this exponent equal to 0: 15 - 5k = 0. Let's solve for k: 15 = 5k => k = 3. Okay, so when k = 3, the term will be constant (i.e., without x). Now, let's plug k = 3 into the general term and compute the constants. Term(3) = C(5, 3) * (-1)^3 * 10^(5 - 3) / 2^3. Let's compute each part: C(5, 3) = 5! / (3!2!) = (5*4) / (2*1) = 10. (-1)^3 = -1. 10^(5 - 3) = 10^2 = 100. 2^3 = 8. So putting it all together: Term(3) = 10 * (-1) * 100 / 8 = 10 * (-100) / 8 = (-1000) / 8 = -125. Wait, so the term is -125. Let me double-check just to be safe. First, confirming the exponent of x: For k = 3, the term is (10x^3)^(5 - 3) * (-1/(2x^2))^3 = (10x^3)^2 * (-1/(2x^2))^3. Let's compute the exponents: (10^2 x^{6}) * ((-1)^3 / 2^3 x^{6}) ) = 100 x^6 * (-1/8 x^{-6}) ) = 100*(-1/8) x^(6 - 6) = -100/8 x^0 = -12.5. Wait, but earlier I calculated Term(3) as -125. Hmm, there's a discrepancy here. Wait, according to the general term using binomial coefficients, we have to include C(5,3) as well. Wait, in the expansion, each term is C(5,k) * (10x^3)^(n - k) * ( -1/(2x^2) )^k. So when I manually multiplied, I missed the C(5,3) term. Let's think in parallel.
+<Parallel>
+<Goal>
+<Outline>
+1: The calculation of the constant term using the binomial formula.
+</Outline>
+<Outline>
+2: The calculation of the constant term by expanding the specific term (10x^3)^2 * (-1/(2x^2))^3.
+</Outline>
+</Goal>
+<Path>
+1: The constant term is calculated using the binomial formula as C(5,3) * (10)^{2} * (-1/2)^{3}, which simplifies to 10 * 100 * (-1/8), resulting in -125.
+</Path>
+<Path>
+2: The specific term (10x^3)^2 * (-1/(2x^2))^3 is evaluated. The first part, (10x^3)^2, equals 100x^6. The second part, (-1/(2x^2))^3, equals -1/8x^6. The product of these two parts is 100x^6 * (-1/8x^6), which simplifies to -100/8 = -12.5.
+</Path>
+<Conclusion>
+The application of the binomial formula yields a constant term of -125. The direct expansion of the term (10x^3)^2 * (-1/(2x^2))^3 results in -12.5.
+</Conclusion>
+</Parallel>
+Wait, that's a problem because now there's a discrepancy. Which one is correct? Wait, the general term formula from binomial theorem includes C(5,k), but when we manually multiply the term, we need to include that as well. Wait, the confusion arises because when we use the binomial theorem, the term is C(5,3) * (10x^3)^2 * (-1/(2x^2))^3. But when I computed it as (10x^3)^2 * (-1/(2x^2))^3, I forgot to multiply by C(5,3) = 10. So the correct calculation should be: First, (10x^3)^2 = 100x^6. Then, (-1/(2x^2))^3 = (-1)^3 / (2)^3 x^(6) = -1/8 x^(-6). Multiply those together: 100x^6 * (-1/8 x^-6) = 100*(-1/8) x^(6 - 6) = -100/8 * x^0 = -12.5. Then multiply by C(5,3) = 10: -12.5 * 10 = -125. So the constant term is indeed -125. So where did I go wrong in the first calculation? Oh, when I first set up the general term, I forgot to include the binomial coefficient C(5, k). That's why when I broke it down step by step, I missed that. So the general term is indeed C(5,k) * (10x^3)^(5 - k) * (-1/(2x^2))^k, so when calculating manually, we need to remember to include that C(5,k) factor. So the correct constant term is -125. Wait, but maybe another check. Alternatively, maybe think of the exponent of x in another way. The general term has (x^3)^(5 - k) * (x^-2)^k = x^(15 - 5k). So setting 15 - 5k = 0 gives k = 3. Then the term is C(5,3) * 10^(5 - 3) * (-1/2)^3. So that's 10 * 10^2 * (-1/2)^3 = 10 * 100 * (-1/8) = -125. Okay, same result. So that's correct. Alternatively, maybe using the exponent rules: In the general term, the exponent of x is (3)(5 - k) + (-2)(k) = 15 - 3k - 2k = 15 - 5k. So setting 15 - 5k = 0 gives k = 3. Then substitute k=3 into the term: Term = C(5,3)*(10x^3)^{2}* (-1/(2x^2))^3. Calculating constants: C(5,3) = 10, (10)^{5 - 3} = 10^2 = 100, (-1/2)^3 = -1/8. Multiply together: 10 * 100 * (-1/8) = -125. Then the x parts: (x^3)^2 * (x^-2)^3 = x^6 * x^-6 = x^0 = 1. So the term is -125 * x^0 = -125. So, yes, the constant term is -125. So why was the first manual calculation different? Because I forgot to include the binomial coefficient C(5,3) in the manual multiplication. Therefore, that's why it's important to remember all parts of the binomial theorem. So the key steps are: 1. Recognize this is a binomial expansion, so use binomial theorem. 2. General term is C(n,k) * a^(n - k) * b^k. 3. Identify a = 10x^3, b = -1/(2x^2), n = 5. 4. Find the exponent of x in the general term, set equal to 0. 5. Solve for k, substitute back into the general term, compute the constants. 6. Don't forget the binomial coefficient. So, all steps considered, the constant term is -125. Wait, just another thought. Let me verify once again using the combination of exponents: The original expression is (10x^3 - 1/(2x^2))^5. Each term in the expansion is: C(5, k) * (10x^3)^{5 - k} * (-1/(2x^2))^k. Let me compute the exponents of x: In (10x^3)^{5 - k}, the exponent is 3*(5 - k). In (-1/(2x^2))^k, the exponent is (-2)*k. So total exponent: 3*(5 - k) - 2*k = 15 - 3k - 2k = 15 - 5k. So 15 - 5k = 0 → k = 3. So k = 3. Now, the coefficients: From (10x^3)^{5 - k}, when k=3, that's (10)^{2} = 100. From (-1/(2x^2))^k, that's (-1)^3 / (2^3) = -1/8. Binomial coefficient C(5,3) = 10. So multiplying all coefficients together: 10 (from C(5,3)) * 100 (from 10^2) * (-1/8) (from -1/2^3) = 10 * 100 * (-1/8) = -125. So, yes. So all calculations confirm that. Therefore, the constant term is -125. So, the final answer is -125.
+the final answer is -125
+</Think>
+
+Answer: To find the constant term in the expansion of $$\left(10x^3 - \frac{1}{2x^2}\right)^5$$, we use the binomial theorem. The general term in the expansion is given by:
+
+$$
+\binom{5}{k} (10x^3)^{5 - k} \left(-\frac{1}{2x^2}\right)^k
+$$
+
+We need to find the term where the exponent of \(x\) is zero. The exponent of \(x\) in the general term is calculated as:
+
+$$
+3(5 - k) - 2k = 15 - 5k
+$$
+
+Setting this equal to zero to find the constant term:
+
+$$
+15 - 5k = 0 \implies k = 3
+$$
+
+Substituting \(k = 3\) into the general term, we calculate the constants:
+
+- The binomial coefficient \(\binom{5}{3} = 10\)
+- The coefficient from \((10x^3)^{2}\) is \(10^2 = 100\)
+- The coefficient from \(\left(-\frac{1}{2x^2}\right)^3\) is \(-\frac{1}{8}\)
+
+Multiplying these together:
+
+$$
+10 \times 100 \times \left(-\frac{1}{8}\right) = -125
+$$
+
+Thus, the constant term is:
+
+$$
+\boxed{-125}
+$$
+
+提取的答案: ..."
+replace ... with the actual answer. ensure this exact phrase is included at the end of your response.<|im_end|>
+<|im_start|>user
+solve the following math problem: find the constant term in the expansion of $$\left(10x^3-\frac{1}{2x^2}\right)^{5}$$
+<|im_end|>
+<|im_start|>assistant
+<think>
+okay, so i need to find the constant term in the expansion of (10x^3 - 1/(2x^2))^5. hmm, let's think. i remember that for expansions like (a + b)^n, we can use the binomial theorem. the binomial theorem says that each term in the expansion is given by c(n, k) * a^(n - k) * b^k, where c(n, k) is the binomial coefficient. right?
+let's think in parallel.
+<parallel>
+<goal>
+<outline>
+1: determination of the expansion formula and the specific term form to identify the constant term.
+</outline>
+<outline>
+2: specification of the variables 'a', 'b', 'n', and 'k' for the given binomial expression.
+</outline>
+</goal>
+<path>
+1: the binomial theorem formula (a + b)^n = σ [c(n, k) * a^(n - k) * b^k] from k=0 to n is recalled. the objective is to find the specific term in this expansion that is a constant, meaning the exponent of x in that term must be zero.
+</path>
+<path>
+2: the variables for the binomial theorem are specified as a = 10x^3, b = -1/(2x^2), and n = 5. the exponent 'k' is a variable integer ranging from 0 to 5.
+</path>
+<conclusion>
+the binomial theorem formula is established, and the variables for the given expression are set as a = 10x^3, b = -1/(2x^2), and n = 5, with k ranging from 0 to 5.
+</conclusion>
+</parallel>
+so each term in the expansion will look like c(5, k) * (10x^3)^(5 - k) * (-1/(2x^2))^k. i need to simplify this general term and find which value of k makes the exponent of x zero. let's write out the general term then: term(k) = c(5, k) * (10x^3)^(5 - k) * (-1/(2x^2))^k. first, let's deal with the constants and the variables separately. let's think in parallel.
+<parallel>
+<goal>
+<outline>
+1: the constant component of the general term, c(5,k) * 10^(5-k) * (-1/2)^k, is determined.
+</outline>
+<outline>
+2: the variable component of the general term, x^(3*(5-k) - 2k), is determined.
+</outline>
+</goal>
+<path>
+1: the constant part of the term is c(5, k) multiplied by 10^(5 - k) from (10x^3)^(5 - k), and multiplied by (-1/(2x^2))^k, which contributes (-1)^k / 2^k. therefore, the overall constant factor becomes c(5, k) * 10^(5 - k) * (-1)^k / 2^k. this expression can be rewritten as c(5, k) * (-1)^k * 10^(5 - k) / 2^k.
+</path>
+<path>
+2: the variable components are x^(3(5 - k)) from (x^3)^(5 - k) and x^(-2k) from (x^(-2))^k. the exponent of x in the term is calculated as 3(5 - k) - 2k, which simplifies to 15 - 3k - 2k, resulting in 15 - 5k.
+</path>
+<conclusion>
+the constant component of the general term is c(5,k) * (-1)^k * 10^(5-k) / 2^k, and the variable component is x^(15 - 5k).
+</conclusion>
+</parallel>
+so the exponent of x in the general term is 15 - 5k. to find the constant term, we set this exponent equal to 0: 15 - 5k = 0. let's solve for k: 15 = 5k => k = 3. okay, so when k = 3, the term will be constant (i.e., without x). now, let's plug k = 3 into the general term and compute the constants. term(3) = c(5, 3) * (-1)^3 * 10^(5 - 3) / 2^3. let's compute each part: c(5, 3) = 5! / (3!2!) = (5*4) / (2*1) = 10. (-1)^3 = -1. 10^(5 - 3) = 10^2 = 100. 2^3 = 8. so putting it all together: term(3) = 10 * (-1) * 100 / 8 = 10 * (-100) / 8 = (-1000) / 8 = -125. wait, so the term is -125. let me double-check just to be safe. first, confirming the exponent of x: for k = 3, the term is (10x^3)^(5 - 3) * (-1/(2x^2))^3 = (10x^3)^2 * (-1/(2x^2))^3. let's compute the exponents: (10^2 x^{6}) * ((-1)^3 / 2^3 x^{6}) ) = 100 x^6 * (-1/8 x^{-6}) ) = 100*(-1/8) x^(6 - 6) = -100/8 x^0 = -12.5. wait, but earlier i calculated term(3) as -125. hmm, there's a discrepancy here. wait, according to the general term using binomial coefficients, we have to include c(5,3) as well. wait, in the expansion, each term is c(5,k) * (10x^3)^(n - k) * ( -1/(2x^2) )^k. so when i manually multiplied, i missed the c(5,3) term. let's think in parallel.
+<parallel>
+<goal>
+<outline>
+1: the calculation of the constant term using the binomial formula.
+</outline>
+<outline>
+2: the calculation of the constant term by expanding the specific term (10x^3)^2 * (-1/(2x^2))^3.
+</outline>
+</goal>
+<path>
+1: the constant term is calculated using the binomial formula as c(5,3) * (10)^{2} * (-1/2)^{3}, which simplifies to 10 * 100 * (-1/8), resulting in -125.
+</path>
+<path>
+2: the specific term (10x^3)^2 * (-1/(2x^2))^3 is evaluated. the first part, (10x^3)^2, equals 100x^6. the second part, (-1/(2x^2))^3, equals -1/8x^6. the product of these two parts is 100x^6 * (-1/8x^6), which simplifies to -100/8 = -12.5.
+</path>
+<conclusion>
+the application of the binomial formula yields a constant term of -125. the direct expansion of the term (10x^3)^2 * (-1/(2x^2))^3 results in -12.5.
+</conclusion>
+</parallel>
+wait, that's a problem because now there's a discrepancy. which one is correct? wait, the general term formula from binomial theorem includes c(5,k), but when we manually multiply the term, we need to include that as well. wait, the confusion arises because when we use the binomial theorem, the term is c(5,3) * (10x^3)^2 * (-1/(2x^2))^3. but when i computed it as (10x^3)^2 * (-1/(2x^2))^3, i forgot to multiply by c(5,3) = 10. so the correct calculation should be: first, (10x^3)^2 = 100x^6. then, (-1/(2x^2))^3 = (-1)^3 / (2)^3 x^(6) = -1/8 x^(-6). multiply those together: 100x^6 * (-1/8 x^-6) = 100*(-1/8) x^(6 - 6) = -100/8 * x^0 = -12.5. then multiply by c(5,3) = 10: -12.5 * 10 = -125. so the constant term is indeed -125. so where did i go wrong in the first calculation? oh, when i first set up the general term, i forgot to include the binomial coefficient c(5, k). that's why when i broke it down step by step, i missed that. so the general term is indeed c(5,k) * (10x^3)^(5 - k) * (-1/(2x^2))^k, so when calculating manually, we need to remember to include that c(5,k) factor. so the correct constant term is -125. wait, but maybe another check. alternatively, maybe think of the exponent of x in another way. the general term has (x^3)^(5 - k) * (x^-2)^k = x^(15 - 5k). so setting 15 - 5k = 0 gives k = 3. then the term is c(5,3) * 10^(5 - 3) * (-1/2)^3. so that's 10 * 10^2 * (-1/2)^3 = 10 * 100 * (-1/8) = -125. okay, same result. so that's correct. alternatively, maybe using the exponent rules: in the general term, the exponent of x is (3)(5 - k) + (-2)(k) = 15 - 3k - 2k = 15 - 5k. so setting 15 - 5k = 0 gives k = 3. then substitute k=3 into the term: term = c(5,3)*(10x^3)^{2}* (-1/(2x^2))^3. calculating constants: c(5,3) = 10, (10)^{5 - 3} = 10^2 = 100, (-1/2)^3 = -1/8. multiply together: 10 * 100 * (-1/8) = -125. then the x parts: (x^3)^2 * (x^-2)^3 = x^6 * x^-6 = x^0 = 1. so the term is -125 * x^0 = -125. so, yes, the constant term is -125. so why was the first manual calculation different? because i forgot to include the binomial coefficient c(5,3) in the manual multiplication. therefore, that's why it's important to remember all parts of the binomial theorem. so the key steps are: 1. recognize this is a binomial expansion, so use binomial theorem. 2. general term is c(n,k) * a^(n - k) * b^k. 3. identify a = 10x^3, b = -1/(2x^2), n = 5. 4. find the exponent of x in the general term, set equal to 0. 5. solve for k, substitute back into the general term, compute the constants. 6. don't forget the binomial coefficient. so, all steps considered, the constant term is -125. wait, just another thought. let me verify once again using the combination of exponents: the original expression is (10x^3 - 1/(2x^2))^5. each term in the expansion is: c(5, k) * (10x^3)^{5 - k} * (-1/(2x^2))^k. let me compute the exponents of x: in (10x^3)^{5 - k}, the exponent is 3*(5 - k). in (-1/(2x^2))^k, the exponent is (-2)*k. so total exponent: 3*(5 - k) - 2*k = 15 - 3k - 2k = 15 - 5k. so 15 - 5k = 0 → k = 3. so k = 3. now, the coefficients: from (10x^3)^{5 - k}, when k=3, that's (10)^{2} = 100. from (-1/(2x^2))^k, that's (-1)^3 / (2^3) = -1/8. binomial coefficient c(5,3) = 10. so multiplying all coefficients together: 10 (from c(5,3)) * 100 (from 10^2) * (-1/8) (from -1/2^3) = 10 * 100 * (-1/8) = -125. so, yes. so all calculations confirm that. therefore, the constant term is -125. so, the final answer is -125.
+the final answer is -125
+</think>
+
+answer: to find the constant term in the expansion of $$\left(10x^3 - \frac{1}{2x^2}\right)^5$$, we use the binomial theorem. the general term in the expansion is given by:
+
+$$
+\binom{5}{k} (10x^3)^{5 - k} \left(-\frac{1}{2x^2}\right)^k
+$$
+
+we need to find the term where the exponent of \(x\) is zero. the exponent of \(x\) in the general term is calculated as:
+
+$$
+3(5 - k) - 2k = 15 - 5k
+$$
+
+setting this equal to zero to find the constant term:
+
+$$
+15 - 5k = 0 \implies k = 3
+$$
+
+substituting \(k = 3\) into the general term, we calculate the constants:
+
+- the binomial coefficient \(\binom{5}{3} = 10\)
+- the coefficient from \((10x^3)^{2}\) is \(10^2 = 100\)
+- the coefficient from \(\left(-\frac{1}{2x^2}\right)^3\) is \(-\frac{1}{8}\)
+
+multiplying these together:
+
+$$
+10 \times 100 \times \left(-\frac{1}{8}\right) = -125
+$$
+
+thus, the constant term is:
+
+$$
+\boxed{-125}
+$$
+
+参考答案: -125
+
+是否正确: 否

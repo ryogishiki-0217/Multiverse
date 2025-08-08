@@ -13,7 +13,7 @@ def main(args):
     tokenizer = AutoTokenizer.from_pretrained(model_path)
     llm = sgl.Engine(
         model_path=model_path,
-        tp_size=2,
+        tp_size=4,
         log_level="info",
         disable_overlap_schedule=True
     )

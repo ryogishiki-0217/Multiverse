@@ -7,4 +7,4 @@
 #SBATCH -J Multiverse
 
 
-python /cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/example/example.py --model_path /cluster/nvme2/yueyang/Multiverse/model --prompts_dir /cluster/home2/yueyang/Multiverse/Multiverse/prompts/AIME24
+python /cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/example/eval.py --model_path /cluster/nvme2/yueyang/Multiverse/model --prompts_dir /cluster/home2/yueyang/Multiverse/Multiverse/prompts/GPQA --results_dir /cluster/home2/yueyang/Multiverse/Multiverse/prompts/GPQA_results --stats_dir /cluster/home2/yueyang/Multiverse/Multiverse/prompts/GPQA_acc

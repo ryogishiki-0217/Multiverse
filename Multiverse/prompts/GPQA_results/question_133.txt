@@ -1,0 +1,349 @@
+问题: Answer the following multiple choice question. The last line of your response should be of the following format: '\boxed{$LETTER}' (without quotes) where LETTER is one of A, B, C, and D. Think step by step before answering.
+
+We have a solution which has the volume of 200.00 cm3 and contains 1.00 g KH2PO4 (Mw = 136.09 g/mol) and 1.00 g Na2HPO4●2H2O (Mw = 177.99 g/mol) (T = 25 °C). What is the concentration of orthophosphate ions in this solution? The Ka1, Ka2 and Ka3 values for H3PO4 are 7.5x10^-3, 6.2x10^-8 and 1.8x10^-12, respectively.
+
+A) 5.48x10^-7 M 
+B) 2.81x10^-7 M
+C) 6.24x10^-7 M
+D) 3.97x10^-7 M 
+
+模型解答: <|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant specializing in solving math problems.
+When solving math problems, please show your reasoning process first, then provide the final answer in a fixed format:
+"the final answer is ..."
+Replace ... with the actual answer. Ensure this exact phrase is included at the end of your response.<|im_end|>
+<|im_start|>user
+Solve the following math problem: Answer the following multiple choice question. The last line of your response should be of the following format: '\boxed{$LETTER}' (without quotes) where LETTER is one of A, B, C, and D. Think step by step before answering.
+
+We have a solution which has the volume of 200.00 cm3 and contains 1.00 g KH2PO4 (Mw = 136.09 g/mol) and 1.00 g Na2HPO4●2H2O (Mw = 177.99 g/mol) (T = 25 °C). What is the concentration of orthophosphate ions in this solution? The Ka1, Ka2 and Ka3 values for H3PO4 are 7.5x10^-3, 6.2x10^-8 and 1.8x10^-12, respectively.
+
+A) 5.48x10^-7 M 
+B) 2.81x10^-7 M
+C) 6.24x10^-7 M
+D) 3.97x10^-7 M 
+<|im_end|>
+<|im_start|>assistant
+<Think>
+Okay, so I need to find the concentration of orthophosphate ions in this solution.
+The solution is a buffer made with KH2PO4 and Na2HPO4·2H2O.
+The volume is 200.00 cm3, which is 0.200 L.
+Each compound is 1.00 g.
+The problem gives the molecular weights: KH2PO4 is 136.09 g/mol and Na2HPO4·2H2O is 177.99 g/mol.
+The pKa values for H3PO4 are given as Ka1 = 7.5×10−3, Ka2 = 6.2×10−8, and Ka3 = 1.8×10−12.
+Since orthophosphate is PO43−, which comes from the dissociation of H3PO4 in its third stage.
+But the buffer here is made from KH2PO4 (which is H2PO4−) and Na2HPO4·2H2O (which is HPO42−).
+So this buffer is between H2PO4− and HPO42−, right?
+That would mean the relevant Ka is Ka2, since H2PO4− ⇌ H+ + HPO42−.
+Wait, let me confirm:
+H3PO4 ⇌ H+ + H2PO4− (Ka1)
+H2PO4− ⇌ H+ + HPO42− (Ka2)
+HPO42− ⇌ H+ + PO43− (Ka3)
+Yes, so since the buffer is made of H2PO4− and HPO42−, that's the second dissociation, so Ka2 is 6.2×10−8.
+The question is asking for the concentration of PO43− ions in this solution.
+Wait, but the buffer solution is a mixture of H2PO4− and HPO42−, so the pH of the solution would be determined by the Ka2 and the ratio of HPO42− to H2PO4−.
+But orthophosphate is PO43−, which comes from the third dissociation.
+So even though the buffer is based on Ka2, maybe there's some PO43− present due to the dissociation of HPO42−.
+So perhaps I need to consider the third dissociation, Ka3?
+Because HPO42− can further dissociate into PO43− and H+.
+So even though the main species are H2PO4− and HPO42−, there will be some PO43− from the third dissociation.
+So I need to calculate the concentration of PO43−.
+So the approach would be to first determine the pH of the buffer solution using the Henderson-Hasselbalch equation with Ka2, since it's a buffer of H2PO4− and HPO42−.
+Then, knowing the pH, use the Ka3 expression to find [PO43−].
+Wait, but another thought: the problem is asking for the concentration of orthophosphate ions in the solution.
+The orthophosphate is PO43−, so that would come from the dissociation of HPO42−.
+Since the buffer is H2PO4− and HPO42−, the concentration of HPO42− can be calculated, and then from that, using Ka3, find PO43−.
+Alternatively, maybe because the solution is a buffer at pH determined by Ka2, and then the PO43− would be in equilibrium with HPO42− via Ka3.
+So perhaps I need to set up the equation for that.
+Let me think step by step.
+First, calculate the molarity of each salt in the solution.
+The volume is 0.200 L.
+So molarity is moles divided by volume.
+For KH2PO4: 1.00 g / 136.09 g/mol = moles.
+Let me calculate that.
+1.00 / 136.09 ≈ 0.007346 mol.
+Molarity is 0.007346 mol / 0.200 L ≈ 0.03673 M.
+Similarly for Na2HPO4·2H2O: 1.00 g / 177.99 g/mol = 0.005621 mol.
+Molarity is 0.005621 / 0.200 = 0.02810 M.
+Wait, so the initial concentrations of H2PO4− (from KH2PO4) is 0.03673 M, and HPO42− (from Na2HPO4·2H2O) is 0.02810 M.
+But wait, the molar mass of Na2HPO4·2H2O is 177.99, so when it dissolves, it gives Na2HPO4·2H2O → 2 Na+ + HPO42− + 2 H2O.
+So each mole of Na2HPO4·2H2O gives one mole of HPO42−.
+So yes, 1.00 g gives 0.005621 mol, so [HPO42−] = 0.02810 M.
+Similarly, KH2PO4 dissociates into K+ and H2PO4−, so [H2PO4−] is 0.03673 M.
+Now, the pH of the solution is a buffer between H2PO4− and HPO42−, so we can use the Henderson-Hasselbalch equation:
+pH = pKa2 + log ([HPO42−]/[H2PO4−])
+Let's calculate that.
+Given Ka2 is 6.2×10−8, so pKa2 is -log(6.2×10−8) ≈ 7.21.
+Then, [HPO42−] / [H2PO4−] ratio is 0.02810 / 0.03673 ≈ 0.765.
+So log(0.765) ≈ -0.116.
+Thus, pH = 7.21 - 0.116 ≈ 7.094.
+So the pH is approximately 7.09.
+Now, knowing the pH, we can find the concentration of H+ ions, which is 10^-7.09 ≈ 8.1×10^-8 M.
+But we need to find [PO43−].
+PO43− comes from the dissociation of HPO42−:
+HPO42− ⇌ H+ + PO43− Ka3 = 1.8×10−12
+So the concentration of PO43− would be [H+][PO43−] / [HPO42−].
+But wait, since this is an equilibrium, we need to consider that.
+Let me denote the concentration of PO43− as x.
+So, at equilibrium:
+[HPO42−] = 0.02810 - x
+[H+] = 8.1×10^-8 M (from the buffer pH calculation)
+Wait, but if we use the pH to calculate [H+], that [H+] is due to the buffer.
+However, the presence of the third dissociation will also contribute to [H+].
+So perhaps the [H+] from the buffer is dominant, but the contribution from the third dissociation is small.
+Let me check.
+Let’s denote α as the degree of dissociation for HPO42− into PO43−.
+Then, α ≈ x / [HPO42−]initial.
+So, the equation would be Ka3 = ([H+][PO43−])/([HPO42−])
+Assuming x is small compared to [HPO42−], so [HPO42−] ≈ 0.02810 M.
+Then, [PO43−] ≈ [H+] * Ka3 / [HPO42−]
+Wait, no.
+Wait, Ka3 = [H+][PO43−]/[HPO42−]
+Therefore, [PO43−] = Ka3 * [HPO42−] / [H+]
+So substituting the values:
+[H+] is 10^-7.09 ≈ 8.1×10^-8 M
+[HPO42−] is 0.02810 M
+Therefore, [PO43−] = (1.8×10^-12) * (0.02810) / (8.1×10^-8)
+Calculating this:
+First, multiply 1.8e-12 by 0.02810: 1.8e-12 * 0.02810 ≈ 5.058e-14
+Then divide by 8.1e-8: 5.058e-14 / 8.1e-8 ≈ 6.244e-7 M
+So approximately 6.24×10^-7 M.
+Looking at the answer choices, option C is 6.24×10^-7 M.
+However, wait, let me check the exact calculation.
+1.8×10^-12 multiplied by 0.02810 is:
+0.02810 × 1.8 = 0.05058, so 0.05058 ×10^-12 = 5.058×10^-14
+Then divide by 8.1×10^-8:
+5.058 / 8.1 = approximately 0.6244, and 10^-14 /10^-8 = 10^-6
+So 0.6244×10^-6 = 6.244×10^-7 M.
+Yes, so 6.24×10^-7 M.
+However, the answer choice C is 6.24×10^-7 M.
+Wait, that's exactly option C.
+But let me see if this is correct.
+Wait, but maybe I need to consider the contribution of [H+] from the third dissociation as well.
+Because the dissociation of HPO42− would produce H+ and PO43−, so [H+] would be the sum of H+ from the buffer and from this dissociation.
+However, since Ka3 is 1.8×10^-12, which is very small, the contribution of H+ from HPO42− dissociation would be negligible compared to the H+ from the buffer.
+Let me verify.
+Suppose x is the concentration of PO43−, then the [H+] from HPO42− would be x as well.
+So total [H+] is 8.1×10^-8 + x.
+But x is approximately 6.24×10^-7, which is larger than 8.1×10^-8.
+Wait, that's a problem.
+So my assumption that x is negligible compared to [H+] is invalid.
+So I need to take into account the increase in [H+] due to the dissociation of HPO42−.
+Therefore, perhaps I need to set up the equilibrium expression properly.
+Let me define x as [PO43−] = [H+] from dissociation.
+The initial [H+] from the buffer is 8.1×10^-8 M.
+Then, at equilibrium:
+[H+] = 8.1×10^-8 + x
+[PO43−] = x
+[HPO42−] = 0.02810 - x
+Then, Ka3 = ([H+][PO43−])/[HPO42−] = (8.1e-8 + x)x / (0.02810 - x) = 1.8e-12
+But since Ka3 is very small, 1.8e-12, x is probably small compared to 0.02810 M.
+But the issue is whether x is small compared to the [H+] from the buffer.
+Because if x is significant compared to 8.1e-8, we need to solve the quadratic equation.
+Let me see.
+Suppose that x is small compared to 0.02810, so approximate [HPO42−] as 0.02810 M.
+Then, the equation is:
+(8.1e-8 + x)x ≈ 1.8e-12 * 0.02810
+So, 8.1e-8 x + x2 = 1.8e-12 * 0.02810 ≈ 5.058e-14
+But 8.1e-8 x and x2: if x is around 6e-7 as before, then 8.1e-8 * 6e-7 = 4.86e-14, and x2 would be 3.6e-13.
+But 3.6e-13 is much larger than 5.058e-14, which would mean the approximation is invalid.
+Therefore, need to solve the quadratic equation.
+So, the equation is:
+x2 + 8.1e-8 x - 5.058e-14 = 0
+Using quadratic formula:
+x = [ -b ± sqrt(b2 + 4ac) ] / (2a)
+Here, a = 1, b = 8.1e-8, c = -5.058e-14
+Discriminant:
+sqrt( (8.1e-8)^2 + 4 * 1 * 5.058e-14 ) = sqrt(6.561e-15 + 2.0232e-13) ≈ sqrt(2.08881e-13) ≈ 1.445e-6
+Therefore,
+x = [ -8.1e-8 ± 1.445e-6 ] / 2
+We take the positive root:
+x = (-8.1e-8 + 1.445e-6)/2 ≈ (1.364e-6)/2 ≈ 6.82e-7 M
+So x ≈ 6.82e-7 M
+Let me compute that more accurately.
+Calculate b: 8.1e-8
+sqrt(D) ≈1.4448e-6
+Then x= (-8.1e-8 + 1.4448e-6)/2
+Convert to scientific notation:
+-8.1e-8 = -0.81e-6
+So (-0.81e-6 +1.4448e-6)=0.6348e-6
+Divide by 2: 0.3174e-6 = 3.174e-7 M
+Wait, that's approximately 3.17e-7 M.
+Wait, so x is approximately 3.17e-7 M.
+Let me check:
+Wait, x=( -8.1e-8 + sqrt((8.1e-8)^2 +4*5.058e-14 )) / 2
+Wait, actually, the discriminant was sqrt( (8.1e-8)^2 +4*1*5.058e-14 )
+But let me calculate (8.1e-8)^2:
+8.1^2=65.61, so 65.61e-16=6.561e-15
+4*5.058e-14=2.0232e-13
+So total under sqrt: 2.0232e-13 + 0.00006561e-13≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈
+
+提取的答案: ..."
+replace ... with the actual answer. ensure this exact phrase is included at the end of your response.<|im_end|>
+<|im_start|>user
+solve the following math problem: answer the following multiple choice question. the last line of your response should be of the following format: '\boxed{$letter}' (without quotes) where letter is one of a, b, c, and d. think step by step before answering.
+
+we have a solution which has the volume of 200.00 cm3 and contains 1.00 g kh2po4 (mw = 136.09 g/mol) and 1.00 g na2hpo4●2h2o (mw = 177.99 g/mol) (t = 25 °c). what is the concentration of orthophosphate ions in this solution? the ka1, ka2 and ka3 values for h3po4 are 7.5x10^-3, 6.2x10^-8 and 1.8x10^-12, respectively.
+
+a) 5.48x10^-7 m 
+b) 2.81x10^-7 m
+c) 6.24x10^-7 m
+d) 3.97x10^-7 m 
+<|im_end|>
+<|im_start|>assistant
+<think>
+okay, so i need to find the concentration of orthophosphate ions in this solution.
+the solution is a buffer made with kh2po4 and na2hpo4·2h2o.
+the volume is 200.00 cm3, which is 0.200 l.
+each compound is 1.00 g.
+the problem gives the molecular weights: kh2po4 is 136.09 g/mol and na2hpo4·2h2o is 177.99 g/mol.
+the pka values for h3po4 are given as ka1 = 7.5×10−3, ka2 = 6.2×10−8, and ka3 = 1.8×10−12.
+since orthophosphate is po43−, which comes from the dissociation of h3po4 in its third stage.
+but the buffer here is made from kh2po4 (which is h2po4−) and na2hpo4·2h2o (which is hpo42−).
+so this buffer is between h2po4− and hpo42−, right?
+that would mean the relevant ka is ka2, since h2po4− ⇌ h+ + hpo42−.
+wait, let me confirm:
+h3po4 ⇌ h+ + h2po4− (ka1)
+h2po4− ⇌ h+ + hpo42− (ka2)
+hpo42− ⇌ h+ + po43− (ka3)
+yes, so since the buffer is made of h2po4− and hpo42−, that's the second dissociation, so ka2 is 6.2×10−8.
+the question is asking for the concentration of po43− ions in this solution.
+wait, but the buffer solution is a mixture of h2po4− and hpo42−, so the ph of the solution would be determined by the ka2 and the ratio of hpo42− to h2po4−.
+but orthophosphate is po43−, which comes from the third dissociation.
+so even though the buffer is based on ka2, maybe there's some po43− present due to the dissociation of hpo42−.
+so perhaps i need to consider the third dissociation, ka3?
+because hpo42− can further dissociate into po43− and h+.
+so even though the main species are h2po4− and hpo42−, there will be some po43− from the third dissociation.
+so i need to calculate the concentration of po43−.
+so the approach would be to first determine the ph of the buffer solution using the henderson-hasselbalch equation with ka2, since it's a buffer of h2po4− and hpo42−.
+then, knowing the ph, use the ka3 expression to find [po43−].
+wait, but another thought: the problem is asking for the concentration of orthophosphate ions in the solution.
+the orthophosphate is po43−, so that would come from the dissociation of hpo42−.
+since the buffer is h2po4− and hpo42−, the concentration of hpo42− can be calculated, and then from that, using ka3, find po43−.
+alternatively, maybe because the solution is a buffer at ph determined by ka2, and then the po43− would be in equilibrium with hpo42− via ka3.
+so perhaps i need to set up the equation for that.
+let me think step by step.
+first, calculate the molarity of each salt in the solution.
+the volume is 0.200 l.
+so molarity is moles divided by volume.
+for kh2po4: 1.00 g / 136.09 g/mol = moles.
+let me calculate that.
+1.00 / 136.09 ≈ 0.007346 mol.
+molarity is 0.007346 mol / 0.200 l ≈ 0.03673 m.
+similarly for na2hpo4·2h2o: 1.00 g / 177.99 g/mol = 0.005621 mol.
+molarity is 0.005621 / 0.200 = 0.02810 m.
+wait, so the initial concentrations of h2po4− (from kh2po4) is 0.03673 m, and hpo42− (from na2hpo4·2h2o) is 0.02810 m.
+but wait, the molar mass of na2hpo4·2h2o is 177.99, so when it dissolves, it gives na2hpo4·2h2o → 2 na+ + hpo42− + 2 h2o.
+so each mole of na2hpo4·2h2o gives one mole of hpo42−.
+so yes, 1.00 g gives 0.005621 mol, so [hpo42−] = 0.02810 m.
+similarly, kh2po4 dissociates into k+ and h2po4−, so [h2po4−] is 0.03673 m.
+now, the ph of the solution is a buffer between h2po4− and hpo42−, so we can use the henderson-hasselbalch equation:
+ph = pka2 + log ([hpo42−]/[h2po4−])
+let's calculate that.
+given ka2 is 6.2×10−8, so pka2 is -log(6.2×10−8) ≈ 7.21.
+then, [hpo42−] / [h2po4−] ratio is 0.02810 / 0.03673 ≈ 0.765.
+so log(0.765) ≈ -0.116.
+thus, ph = 7.21 - 0.116 ≈ 7.094.
+so the ph is approximately 7.09.
+now, knowing the ph, we can find the concentration of h+ ions, which is 10^-7.09 ≈ 8.1×10^-8 m.
+but we need to find [po43−].
+po43− comes from the dissociation of hpo42−:
+hpo42− ⇌ h+ + po43− ka3 = 1.8×10−12
+so the concentration of po43− would be [h+][po43−] / [hpo42−].
+but wait, since this is an equilibrium, we need to consider that.
+let me denote the concentration of po43− as x.
+so, at equilibrium:
+[hpo42−] = 0.02810 - x
+[h+] = 8.1×10^-8 m (from the buffer ph calculation)
+wait, but if we use the ph to calculate [h+], that [h+] is due to the buffer.
+however, the presence of the third dissociation will also contribute to [h+].
+so perhaps the [h+] from the buffer is dominant, but the contribution from the third dissociation is small.
+let me check.
+let’s denote α as the degree of dissociation for hpo42− into po43−.
+then, α ≈ x / [hpo42−]initial.
+so, the equation would be ka3 = ([h+][po43−])/([hpo42−])
+assuming x is small compared to [hpo42−], so [hpo42−] ≈ 0.02810 m.
+then, [po43−] ≈ [h+] * ka3 / [hpo42−]
+wait, no.
+wait, ka3 = [h+][po43−]/[hpo42−]
+therefore, [po43−] = ka3 * [hpo42−] / [h+]
+so substituting the values:
+[h+] is 10^-7.09 ≈ 8.1×10^-8 m
+[hpo42−] is 0.02810 m
+therefore, [po43−] = (1.8×10^-12) * (0.02810) / (8.1×10^-8)
+calculating this:
+first, multiply 1.8e-12 by 0.02810: 1.8e-12 * 0.02810 ≈ 5.058e-14
+then divide by 8.1e-8: 5.058e-14 / 8.1e-8 ≈ 6.244e-7 m
+so approximately 6.24×10^-7 m.
+looking at the answer choices, option c is 6.24×10^-7 m.
+however, wait, let me check the exact calculation.
+1.8×10^-12 multiplied by 0.02810 is:
+0.02810 × 1.8 = 0.05058, so 0.05058 ×10^-12 = 5.058×10^-14
+then divide by 8.1×10^-8:
+5.058 / 8.1 = approximately 0.6244, and 10^-14 /10^-8 = 10^-6
+so 0.6244×10^-6 = 6.244×10^-7 m.
+yes, so 6.24×10^-7 m.
+however, the answer choice c is 6.24×10^-7 m.
+wait, that's exactly option c.
+but let me see if this is correct.
+wait, but maybe i need to consider the contribution of [h+] from the third dissociation as well.
+because the dissociation of hpo42− would produce h+ and po43−, so [h+] would be the sum of h+ from the buffer and from this dissociation.
+however, since ka3 is 1.8×10^-12, which is very small, the contribution of h+ from hpo42− dissociation would be negligible compared to the h+ from the buffer.
+let me verify.
+suppose x is the concentration of po43−, then the [h+] from hpo42− would be x as well.
+so total [h+] is 8.1×10^-8 + x.
+but x is approximately 6.24×10^-7, which is larger than 8.1×10^-8.
+wait, that's a problem.
+so my assumption that x is negligible compared to [h+] is invalid.
+so i need to take into account the increase in [h+] due to the dissociation of hpo42−.
+therefore, perhaps i need to set up the equilibrium expression properly.
+let me define x as [po43−] = [h+] from dissociation.
+the initial [h+] from the buffer is 8.1×10^-8 m.
+then, at equilibrium:
+[h+] = 8.1×10^-8 + x
+[po43−] = x
+[hpo42−] = 0.02810 - x
+then, ka3 = ([h+][po43−])/[hpo42−] = (8.1e-8 + x)x / (0.02810 - x) = 1.8e-12
+but since ka3 is very small, 1.8e-12, x is probably small compared to 0.02810 m.
+but the issue is whether x is small compared to the [h+] from the buffer.
+because if x is significant compared to 8.1e-8, we need to solve the quadratic equation.
+let me see.
+suppose that x is small compared to 0.02810, so approximate [hpo42−] as 0.02810 m.
+then, the equation is:
+(8.1e-8 + x)x ≈ 1.8e-12 * 0.02810
+so, 8.1e-8 x + x2 = 1.8e-12 * 0.02810 ≈ 5.058e-14
+but 8.1e-8 x and x2: if x is around 6e-7 as before, then 8.1e-8 * 6e-7 = 4.86e-14, and x2 would be 3.6e-13.
+but 3.6e-13 is much larger than 5.058e-14, which would mean the approximation is invalid.
+therefore, need to solve the quadratic equation.
+so, the equation is:
+x2 + 8.1e-8 x - 5.058e-14 = 0
+using quadratic formula:
+x = [ -b ± sqrt(b2 + 4ac) ] / (2a)
+here, a = 1, b = 8.1e-8, c = -5.058e-14
+discriminant:
+sqrt( (8.1e-8)^2 + 4 * 1 * 5.058e-14 ) = sqrt(6.561e-15 + 2.0232e-13) ≈ sqrt(2.08881e-13) ≈ 1.445e-6
+therefore,
+x = [ -8.1e-8 ± 1.445e-6 ] / 2
+we take the positive root:
+x = (-8.1e-8 + 1.445e-6)/2 ≈ (1.364e-6)/2 ≈ 6.82e-7 m
+so x ≈ 6.82e-7 m
+let me compute that more accurately.
+calculate b: 8.1e-8
+sqrt(d) ≈1.4448e-6
+then x= (-8.1e-8 + 1.4448e-6)/2
+convert to scientific notation:
+-8.1e-8 = -0.81e-6
+so (-0.81e-6 +1.4448e-6)=0.6348e-6
+divide by 2: 0.3174e-6 = 3.174e-7 m
+wait, that's approximately 3.17e-7 m.
+wait, so x is approximately 3.17e-7 m.
+let me check:
+wait, x=( -8.1e-8 + sqrt((8.1e-8)^2 +4*5.058e-14 )) / 2
+wait, actually, the discriminant was sqrt( (8.1e-8)^2 +4*1*5.058e-14 )
+but let me calculate (8.1e-8)^2:
+8.1^2=65.61, so 65.61e-16=6.561e-15
+4*5.058e-14=2.0232e-13
+so total under sqrt: 2.0232e-13 + 0.00006561e-13≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈
+
+参考答案: c
+
+是否正确: 否

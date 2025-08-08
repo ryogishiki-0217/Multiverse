@@ -1,0 +1,353 @@
+问题: Torus $T$ is the surface produced by revolving a circle with radius $3$ around an axis in the plane of the circle that is a distance $6$ from the center of the circle (so like a donut). Let $S$ be a sphere with a radius $11$. When $T$ rests on the outside of $S$, it is externally tangent to $S$ along a circle with radius $r_i$, and when $T$ rests on the outside of $S$, it is externally tangent to $S$ along a circle with radius $r_o$. The difference $r_i-r_o$ can be written as $\tfrac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.
+[asy] unitsize(0.3 inch); draw(ellipse((0,0), 3, 1.75)); draw((-1.2,0.1)..(-0.8,-0.03)..(-0.4,-0.11)..(0,-0.15)..(0.4,-0.11)..(0.8,-0.03)..(1.2,0.1)); draw((-1,0.04)..(-0.5,0.12)..(0,0.16)..(0.5,0.12)..(1,0.04)); draw((0,2.4)--(0,-0.15)); draw((0,-0.15)--(0,-1.75), dashed); draw((0,-1.75)--(0,-2.25)); draw(ellipse((2,0), 1, 0.9)); draw((2.03,-0.02)--(2.9,-0.4)); [/asy]
+
+模型解答: <|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant specializing in solving math problems.
+When solving math problems, please show your reasoning process first, then provide the final answer in a fixed format:
+"the final answer is ..."
+Replace ... with the actual answer. Ensure this exact phrase is included at the end of your response.<|im_end|>
+<|im_start|>user
+Solve the following math problem: Torus $T$ is the surface produced by revolving a circle with radius $3$ around an axis in the plane of the circle that is a distance $6$ from the center of the circle (so like a donut). Let $S$ be a sphere with a radius $11$. When $T$ rests on the outside of $S$, it is externally tangent to $S$ along a circle with radius $r_i$, and when $T$ rests on the outside of $S$, it is externally tangent to $S$ along a circle with radius $r_o$. The difference $r_i-r_o$ can be written as $\tfrac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.
+[asy] unitsize(0.3 inch); draw(ellipse((0,0), 3, 1.75)); draw((-1.2,0.1)..(-0.8,-0.03)..(-0.4,-0.11)..(0,-0.15)..(0.4,-0.11)..(0.8,-0.03)..(1.2,0.1)); draw((-1,0.04)..(-0.5,0.12)..(0,0.16)..(0.5,0.12)..(1,0.04)); draw((0,2.4)--(0,-0.15)); draw((0,-0.15)--(0,-1.75), dashed); draw((0,-1.75)--(0,-2.25)); draw(ellipse((2,0), 1, 0.9)); draw((2.03,-0.02)--(2.9,-0.4)); [/asy]
+<|im_end|>
+<|im_start|>assistant
+<Think>
+Okay, so I need to solve this problem about a torus and a sphere. Let me read through it again and make sure I understand what's being asked.
+The problem is about a torus T, which is created by revolving a circle with radius 3 around an axis that's 6 units away from the center of the circle. That makes sense—it's like a donut shape where the tube has a radius of 3, and the distance from the center of the tube to the center of the torus is 6.
+Then there's a sphere S with radius 11. When the torus T rests on the outside of the sphere S, they are externally tangent along a circle with radius r_i.
+Wait, actually, I think the problem says when T rests on the outside of S, it is externally tangent along a circle with radius r_i, and when T rests on the outside of S, it is externally tangent along a circle with radius r_o. Then the difference r_i - r_o is to be found as a fraction m/n where m and n are coprime, and then find m + n.
+Wait, actually, maybe I misread. Let me check again. The problem says: "When T rests on the outside of S, it is externally tangent to S along a circle with radius r_i, and when T rests on the outside of S, it is externally tangent to S along a circle with radius r_o." Hmm, maybe that's a typo. Maybe one is when the torus is inside the sphere and one is outside? But the problem says "when T rests on the outside of S". Maybe once when it's resting on the equator or something?
+Wait, maybe the torus can be tangent to the sphere along two different circles depending on how it's oriented. For example, if the torus is sitting on the sphere with its hole facing up or down, the radius of the tangent circle would be different.
+Wait, the torus has an inner radius and an outer radius. If you have a sphere, and you put the torus around it, maybe the inner part of the torus (closest to the sphere's center) is tangent along a circle with radius r_i, and the outer part is tangent along a circle with radius r_o. Then the difference between these two radii is wanted.
+But the problem says "when T rests on the outside of S", so both times? That seems confusing. Maybe there's a misstatement. Alternatively, maybe the problem is talking about the case when the torus is tangent to the sphere along a circle when viewed from the top and from the side, leading to different radii?
+Alternatively, maybe it's about the torus being tangent to the sphere along two different circles depending on the orientation—like major radius versus minor radius.
+Wait, the torus has a major radius (distance from the center of the torus to the center of the tube) and a minor radius (radius of the tube). Here, the major radius is 6 and the minor radius is 3.
+When the torus is placed around the sphere, the distance from the center of the sphere to the center of the tube (which is part of the torus) would vary. Depending on how you place the torus, the closest and farthest points from the sphere's center would be different.
+Wait, if the sphere has radius 11, and the torus is resting on the outside of the sphere, so the center of the sphere is at the center of the torus's revolution. Wait, maybe not. Wait, actually, the torus is being placed around the sphere. So the torus is like a ring around the sphere. The sphere is inside the torus, but the torus is resting on the outside of the sphere, so the sphere is touching the inside of the torus.
+But if they are externally tangent, that's confusing. If the torus is on the outside of the sphere, then external tangency would mean that they just touch at a point, but the problem says they are tangent along a circle. So maybe the torus and the sphere are tangent along a circle when the torus is placed around the sphere. But how can they be tangent along a circle if the sphere is inside the torus? Wait, the sphere is radius 11, and the torus has a major radius of 6 and minor radius 3. So the distance from the center of the sphere to the center of the tube of the torus is 6, and the tube itself has a radius of 3. So the closest the torus gets to the sphere is 6 - 3 = 3 units from the center of the sphere, and the farthest is 6 + 3 = 9 units from the center. But the sphere has radius 11, so if the torus is surrounding the sphere, but the sphere is larger. Wait, hold on, the sphere is radius 11, and the torus is generated by a circle of radius 3 at a distance 6 from the axis. So the torus has a major radius of 6 and minor radius of 3.
+Wait, so if you have a sphere of radius 11, and you put a torus around it such that the torus is just touching the sphere along a circle. Depending on where the torus touches the sphere, the radius of that circle of tangency would vary. So perhaps, when the torus is oriented such that its vertical cross-section is tangent to the sphere, the radii of the circles of tangency would be different.
+Alternatively, perhaps the torus can rest on the sphere in two different orientations, one where the torus is "upright" (like a donut sitting on a table, but the table is the sphere) and another where it's "lying down". Each orientation would result in a different radius for the circle of tangency.
+Alternatively, maybe the problem is referring to the inner and outer tangent circles when the torus is placed around the sphere. Since the torus has an inner radius and an outer radius, perhaps when the torus is placed around the sphere, the closest points (inner radius) and the farthest points (outer radius) form circles of tangency with the sphere.
+But the sphere is larger than the torus's major radius. The sphere is radius 11, and the torus has a major radius of 6 and minor radius of 3. So the torus extends from 6 - 3 = 3 units from its own center to 6 + 3 = 9 units from its center. If the torus is surrounding the sphere, whose center is at a certain distance. Wait, actually, if the torus is resting on the outside of the sphere, then the center of the sphere would be inside the torus. Wait, but the sphere is larger. The sphere is radius 11, so if the torus is resting on the outside of the sphere, perhaps the sphere is inside the torus? Wait, no. If the torus is resting on the outside of the sphere, like a ring around a larger sphere. So the sphere is inside the torus. Wait, but the torus is generated by revolving a circle of radius 3 around an axis 6 units away, so the torus has a total diameter of 6 + 3 + 6 + 3 = 18 units. So the sphere is radius 11, so diameter 22. So the torus is smaller than the sphere. Therefore, if the torus is resting on the outside of the sphere, the sphere is larger, so the torus is like a handle or a ring around the sphere.
+But how would their tangency work? If the torus is on the outside of the sphere, then the sphere is inside the torus. But external tangents would be lines outside the sphere and torus that touch them, but the problem says the torus is externally tangent to the sphere along a circle. Hmm, maybe "externally tangent" here means that the torus and sphere are tangent to each other along a circle, even though the torus is surrounding the sphere. Maybe similar to how two cones can be externally tangent along a line.
+Alternatively, maybe there's a circle on the sphere and a corresponding circle on the torus that are tangent to each other. Since both surfaces are revolution surfaces, these circles would lie in planes perpendicular to the axis of revolution.
+Wait, the torus is being revolved around an axis. If the sphere is also centered on that same axis, then when you place the torus around the sphere, the points of tangency would form circles. Depending on where the torus touches the sphere, these circles would have different radii.
+Let me visualize this. Suppose the axis of the torus is the z-axis. The torus is centered at the origin, so its tube is centered at a distance 6 from the origin, and the tube has radius 3. So the torus is a surface with major radius 6 and minor radius 3.
+Now, the sphere of radius 11 is also centered at the origin. Wait, but then if the sphere is radius 11, and the torus's center (the center of the tube) is 6 units from the origin, then the sphere would go from -11 to 11 in all directions, while the torus extends from 6 - 3 = 3 to 6 + 3 = 9 in radius from the origin. So the torus is entirely outside the sphere since the sphere ends at 11, but the torus goes from radius 3 to 9. Wait, no, if the sphere is radius 11, then the torus (which is generated by a circle of radius 3 at distance 6 from the origin) would be much smaller. Wait, actually, the torus generated by revolving a radius 3 circle around an axis 6 units away would have a "tube" radius of 3, and a major radius of 6. So the torus is like a donut with a hole radius of 6 - 3 = 3, and an outer radius of 6 + 3 = 9. The sphere is radius 11, so if the torus is placed around the sphere, the sphere is much larger. So the torus is sitting on the surface of the sphere, encircling it. Wait, but the sphere is radius 11, so the torus must be resting on it. But how?
+Wait, maybe the problem is misworded. Let me check again: "Let S be a sphere with radius 11. When T rests on the outside of S, it is externally tangent to S along a circle with radius r_i, and when T rests on the outside of S, it is externally tangent to S along a circle with radius r_o." Hmm.
+Alternatively, maybe the torus is placed around the sphere, and there are two circles where they are tangent: one at the top of the sphere (where the torus is closest to the center) and one at the bottom (where it's farthest). Wait, but if the torus is placed symmetrically around the sphere, maybe the radii of these circles depend on the distance from the center.
+Wait, perhaps when the torus is placed on the sphere, it's like a belt around a sphere. The points where the belt touches the sphere form a circle. Depending on how tight the belt is, the radius of that circle would vary. But since the torus has a fixed size, maybe there are two such possible circles where the torus can be tangent to the sphere.
+Alternatively, maybe when you have the torus resting on the sphere, there are two possible orientations: one where the torus is "upright" (with the hole vertical) and one where it's "horizontal". Each would result in a different circle of tangency.
+Wait, but the problem states that T is the surface produced by revolving a circle around an axis in its plane, 6 units from the center. So the torus has a fixed orientation. When it's placed on the sphere, maybe you can place it such that the axis of the torus is perpendicular or parallel to the line of tangency.
+Alternatively, maybe it's about the inner and outer edges of the torus being tangent to the sphere. Since the torus has an inner radius (distance from the center to the inner edge) and an outer radius, perhaps when placed around the sphere, the inner edge is tangent along one circle and the outer edge is tangent along another. But the problem says "when T rests on the outside of S", so perhaps resting on the outside would mean the outer edge is tangent, and resting in some other orientation the inner edge is tangent? But the wording is confusing.
+Wait, maybe the problem is saying that when the torus T is placed on the outside of the sphere S, there are two possible tangent circles: one when it's tangent along the inner part of the torus (r_i) and one when it's tangent along the outer part (r_o). Then, the difference between these two radii is wanted. But I need to visualize this.
+Alternatively, perhaps the torus can rest on the sphere in two different ways, leading to two different radii of tangency. For example, if the torus is placed "standing up" or "lying down", similar to how a tire can rest on the ground either with the tread touching or the side touching. But in this case, the torus is on a sphere.
+Alternatively, maybe it's about the torus being tangent to the sphere along the top and bottom circles when wrapped around the sphere.
+Wait, let's approach this mathematically. Let me set up coordinates. Suppose the sphere S is centered at the origin with radius 11. The torus T is generated by revolving a circle of radius 3 around an axis at distance 6 from the center of the circle. So, if we position the torus so that its axis of revolution is the z-axis, and the circle being revolved is in the x-z plane, centered at (6, 0, 0). When this circle is revolved around the z-axis, it forms a torus.
+Now, if the torus is resting on the outside of the sphere, which is centered at the origin. To rest on the outside of the sphere, the torus must be tangent to the sphere along some circle.
+So, the surface of the torus and the surface of the sphere touch each other along a circle. Since both are surfaces of revolution around the z-axis, the circle of tangency must lie in a plane perpendicular to the z-axis. So, the circle of tangency is a horizontal circle.
+Wait, but the sphere is inside the torus? Wait, the sphere is radius 11, which is larger than the major radius of the torus (6) plus the minor radius (3), since 6 + 3 = 9, which is less than 11. So the sphere is bigger. Therefore, the torus cannot enclose the sphere; instead, the sphere would protrude outside the torus. Wait, no. If the sphere is radius 11, and the torus's outer radius is 6 + 3 = 9, which is less than 11, so the sphere would be too big to fit inside the torus. Therefore, if the torus is resting on the outside of the sphere, perhaps the torus is like a ring around the sphere, but the sphere is inside the torus. Wait, but the sphere is 11, and the torus's inner radius is 6 - 3 = 3. So the sphere is way too big. So maybe the sphere is on the inside of the torus, but the torus is resting on the outside of the sphere?
+Wait, this is getting confusing. Let's clarify.
+If the torus is resting on the outside of the sphere, that means the sphere is beneath the torus, supporting it, right? So the torus is sitting on the sphere, which is acting like a base. But the sphere is three-dimensional, so the torus would encircle the sphere. However, the torus has a certain size, and the sphere has radius 11. If the torus is sitting on the sphere, the distance from the center of the sphere to the center of the torus (which is the axis around which the torus is generated) would need to be such that the torus is tangent to the sphere along a circle.
+Wait, maybe we can model this. If the torus is sitting on the sphere, the center of the torus (the axis) must be vertically above the center of the sphere. Let's suppose the sphere is centered at the origin, and the torus is generated by revolving a circle of radius 3 around the z-axis, at a distance of 6 units from the origin. So the axis of the torus is the z-axis, and the generating circle is at (6, 0, 0) in the x-z plane. When revolved around the z-axis, this forms the torus.
+Now, the sphere is centered at the origin with radius 11. If the torus is sitting on the sphere, then the sphere and the torus must be tangent. The point of tangency would be the point where the torus touches the sphere. But since the torus is a surface of revolution, and the sphere is symmetric, the tangency would form a circle. Depending on how the torus is oriented, this circle could be at different radii.
+Wait, perhaps the torus can be oriented in such a way that it touches the sphere along the top or along the bottom, leading to different radii. But if it's sitting on the sphere, it must touch along a circle. Let me think.
+Alternatively, maybe the torus is placed around the sphere such that the sphere is tangent to the inner surface of the torus (the side facing the z-axis) and the outer surface. Wait, but the sphere is much larger. Wait, the torus has an inner radius of 3 (6 - 3) and outer radius of 9 (6 + 3). The sphere is radius 11, so it's bigger than the outer radius of the torus. Therefore, the sphere cannot fit inside the torus. Then how can the torus rest on the outside of the sphere? Maybe the torus is wrapped around the sphere, but the sphere is inside the torus. But the sphere is radius 11, and the torus's inner radius is 3. So the sphere would be too large to fit inside the torus. Hmm.
+Wait, maybe the problem is misworded and it's supposed to be the torus on the inside of the sphere? Let me check the problem statement again: "When T rests on the outside of S, it is externally tangent to S along a circle with radius r_i, and when T rests on the outside of S, it is externally tangent to S along a circle with radius r_o."
+Wait, that wording is confusing. Maybe "rests on the outside" in two different configurations leading to two different radii. Alternatively, maybe it's a translation issue. Alternatively, maybe the problem is similar to a torus and sphere being tangent along a circle, and depending on the orientation (like vertical or horizontal), the radius of the circle of tangency is different. For example, like when a torus is tangent to a sphere at the top and bottom, leading to two different radii.
+Alternatively, perhaps the torus is tangent to the sphere along two circles: one at the top where the torus is closest to the center of the sphere, and one at the bottom where it's farthest. Then, the radii of these circles would be r_i and r_o.
+Wait, but in that case, since the torus is a surface of revolution, and so is the sphere, the points of tangency would lie in planes perpendicular to the axis of revolution. So, suppose the axis of the torus is the z-axis, and the sphere is centered at the origin. If the torus is tangent to the sphere along a circle in the plane z = a, then the radius of that circle would be determined by the intersection of the sphere and the torus in that plane.
+So, the sphere equation is x2 + y2 + z2 = 112.
+The torus equation around the z-axis with major radius 6 and minor radius 3 is (√x2 + y2 - 6)2 + z2 = 32.
+If we intersect the sphere and torus, setting their equations equal (since at tangency, they just touch, so the system has a single solution in each intersection plane).
+Wait, but to find where they are tangent along a circle, we need that in some plane, say z = k, the intersection of the sphere and the torus is a single circle. So in that plane, the equations would be:
+For the sphere: x2 + y2 + k2 = 121, so x2 + y2 = 121 - k2.
+For the torus: (√x2 + y2 - 6)2 + k2 = 9.
+Substituting x2 + y2 = 121 - k2 into the torus equation:
+(√(121 - k2) - 6)2 + k2 = 9.
+Let me compute this.
+Let me denote sqrt(121 - k2) as sqrt(121 - k2). Then:
+(sqrt(121 - k2) - 6)^2 + k2 = 9.
+Expanding the left side:
+(121 - k2) - 12*sqrt(121 - k2) + 36 + k2 = 9.
+Simplify terms:
+121 - k2 + 36 - 12*sqrt(121 - k2) + k2 = 9.
+The -k2 and +k2 cancel, so:
+121 + 36 - 12*sqrt(121 - k2) = 9
+Combine constants:
+157 - 12*sqrt(121 - k2) = 9
+Subtract 157 from both sides:
+-12*sqrt(121 - k2) = 9 - 157 = -148
+Divide both sides by -12:
+sqrt(121 - k2) = 148/12 = 37/3.
+Square both sides:
+121 - k2 = (37/3)^2 = 1369/9.
+Therefore:
+k2 = 121 - 1369/9 = (1089 - 1369)/9 = (-280)/9.
+Wait, but k2 can't be negative, so this approach must be wrong.
+Hmm. That suggests that my assumption is incorrect. Perhaps the intersection is not in a horizontal plane. Maybe the plane of tangency is not perpendicular to the z-axis.
+Alternatively, maybe the circle of tangency is not a horizontal circle. Since both the torus and the sphere are surfaces of revolution, but maybe the plane of tangency is inclined.
+Alternatively, perhaps my approach is wrong. Let's think in terms of tangent circles.
+If two surfaces are tangent along a circle, then at every point of that circle, the surfaces are tangent to each other. So their tangent planes must coincide along the circle.
+For the sphere and the torus, both being smooth surfaces, the set of points where they are tangent must form a curve, which in this case is a circle. Since both are surfaces of revolution around the same axis (assuming the axis of the torus is the same as the axis of the sphere), the circle of tangency must lie in a plane perpendicular to the axis of revolution.
+Wait, but in the previous attempt, when I assumed the plane was z = k, we got a contradiction. So maybe the circle of tangency is not a horizontal circle, but a vertical circle? Or some other orientation.
+Alternatively, perhaps the axis of the torus is not the z-axis but some other axis that allows tangency along a circle. Wait, but the problem statement says that the torus is produced by revolving a circle around an axis in its plane, which is 6 units from the center. So the axis is fixed in the plane of the original circle.
+Wait, maybe the key is to parametrize the torus and the sphere and find the points where their surfaces are tangent. Let me consider parametric equations.
+Parametric equations for the torus T: Since it's generated by revolving a circle of radius 3 around an axis 6 units away, we can parametrize it as:
+x = (6 + 3*cosθ)*cosφ
+y = (6 + 3*cosθ)*sinφ
+z = 3*sinθ
+where θ and φ are angles of revolution.
+Parametric equations for the sphere S of radius 11:
+x = 11*cosθ*cosφ
+y = 11*cosθ*sinφ
+z = 11*sinθ
+Wait, no, the sphere parametrization uses colatitude θ and longitude φ:
+x = 11*sinθ*cosφ
+y = 11*sinθ*sinφ
+z = 11*cosθ
+where θ is the polar angle (colatitude) and φ is the azimuthal angle.
+But for the torus:
+x = (R + r*cosθ)*cosφ
+y = (R + r*cosθ)*sinφ
+z = r*sinθ
+where R is the major radius (6) and r is the minor radius (3).
+Now, if the torus and sphere are tangent at a point, their parametric equations must coincide at some parameters (θ_t, φ_t) for the torus and (θ_s, φ_s) for the sphere, and their tangent planes must also coincide.
+But this seems complicated. Maybe instead consider that the distance from the center of the sphere (origin) to a point on the torus is equal to 11 (the radius of the sphere) at the point of tangency.
+So, for a point on the torus, the distance from the origin is sqrt(x2 + y2 + z2). For the parametric equations above:
+sqrt( [(6 + 3*cosθ)*cosφ]^2 + [(6 + 3*cosθ)*sinφ]^2 + (3*sinθ)^2 ) = sqrt( (6 + 3*cosθ)^2 + (3*sinθ)^2 )
+Because the x and y components contribute (6 + 3*cosθ)^2*(cos2φ + sin2φ) = (6 + 3*cosθ)^2, and the z component is 9*sin2θ. So total distance squared is (6 + 3*cosθ)^2 + 9 sin2θ.
+Set this equal to 112 = 121:
+(6 + 3*cosθ)^2 + 9 sin2θ = 121.
+Let me compute this:
+First, expand (6 + 3*cosθ)^2:
+36 + 36*cosθ + 9*cos2θ + 9 sin2θ
+Combine the 9 cos2θ and 9 sin2θ terms:
+36 + 36 cosθ + 9(cos2θ + sin2θ) = 36 + 36 cosθ + 9(1) = 36 + 36 cosθ + 9 = 45 + 36 cosθ.
+Set equal to 121:
+45 + 36 cosθ = 121
+Subtract 45:
+36 cosθ = 76
+Therefore:
+cosθ = 76/36 = 19/9.
+Wait, but cosθ can't be greater than 1. 19/9 is approximately 2.111, which is impossible.
+This suggests that my initial assumption is wrong. That is, if the sphere is centered at the origin, and the torus is also centered at the origin (since its axis is the z-axis), then the distance from the origin to any point on the torus is between 3 and 9. But the sphere is radius 11, so this approach is incorrect.
+Wait, this indicates a fundamental misunderstanding. If the torus is supposed to rest on the outside of the sphere, then their centers cannot coincide. Instead, the sphere must be offset so that the torus is resting on it.
+So perhaps the sphere is centered at the origin, and the torus is shifted up or down along the z-axis so that it's resting on the sphere. Wait, but the problem doesn't specify an offset. It just says the torus is produced by revolving a circle around an axis 6 units from the center of the circle. So maybe the axis of the torus is not at the origin.
+Wait, the original problem states: "Torus T is the surface produced by revolving a circle with radius 3 around an axis in the plane of the circle that is a distance 6 from the center of the circle." So the torus has a major radius of 6 and minor radius of 3. The sphere S has radius 11. The problem is when T rests on the outside of S.
+So perhaps the axis of the torus is not at the origin. Instead, when the torus is placed on the sphere, the center of the sphere is at some point, and the axis of the torus is raised above it.
+Wait, imagine a torus (donut) sitting on a sphere. The sphere is supporting the torus, so the distance from the center of the sphere to the center of the torus (the axis) must be such that the torus just touches the sphere along a circle.
+Let me model this. Suppose the sphere is still centered at the origin. The torus is sitting on top of the sphere, so the center of the torus (axis) is along the z-axis, at some height h above the origin. The distance from the center of the sphere to the center of the torus is h. The torus has major radius 6 (distance from the axis to the center of the generating circle) and minor radius 3.
+Wait, but in standard torus terminology, the major radius is the distance from the center of the torus (the axis) to the center of the tube, right? So if the torus is sitting on the sphere, the center of the torus (the axis) is at height h, and the generating circle is 6 units below that, so the generating circle is centered at (0,0, h - 6). Wait, maybe not. Wait, the major radius is 6, which is the distance from the axis to the center of the tube. So if the axis is along the z-axis at height h, then the generating circle is at distance 6 from the axis, in the plane z = h. Wait, no. If the torus is formed by revolving a circle around an axis in its own plane 6 units away, then in the standard torus, the axis is at a distance 6 from the generating circle.
+Wait, perhaps it's better to have the axis at the origin for the torus when it's in its generating position. But when placed on the sphere, which is also at the origin, maybe they intersect.
+Wait, this is getting too tangled. Let me switch strategies.
+In the problem, it's stated that when the torus T rests on the outside of the sphere S, it is externally tangent along a circle with radius r_i, and when it rests on the outside in some other way, tangent along a circle with radius r_o. The difference between these radii is wanted.
+Given that the torus and the sphere are both three-dimensional shapes, and the torus can rest on the sphere in different orientations, leading to different radii of tangency.
+Alternatively, since the torus has a varying radius from its center, perhaps when it's placed so that the closest points on the torus to the sphere's center are tangent, that's one radius, and when the farthest points are tangent, that's another.
+Wait, if the sphere is radius 11, and the torus is placed around it, then the closest distance from the sphere's center to the torus is 11 - (6 - 3) = 11 - 3 = 8? Wait, not sure.
+Alternatively, think of the torus as a surface with parametric equation (R + r cos θ) cos φ, (R + r cos θ) sin φ, r sin θ, where R is the major radius (6) and r is the minor radius (3). The sphere is centered at the origin with radius 11. When the torus is tangent to the sphere, the distance from the origin to the torus is 11.
+The distance from the origin to a point on the torus is sqrt[( (R + r cos θ) cos φ )2 + ( (R + r cos θ) sin φ )2 + ( r sin θ )2 ]
+= sqrt[ (R + r cos θ)^2 (cos2φ + sin2φ ) + ( r sin θ )^2 ]
+= sqrt[ (R + r cos θ)^2 + r2 sin2 θ ]
+Set this equal to 11^2:
+(R + r cos θ)^2 + r2 sin2 θ = 121.
+Plugging in R = 6 and r = 3:
+(6 + 3 cos θ)^2 + 9 sin2 θ = 121.
+Expanding:
+36 + 36 cos θ + 9 cos2 θ + 9 sin2 θ = 121.
+Combine the terms:
+36 + 36 cos θ + 9 (cos2 θ + sin2 θ ) = 121.
+Since cos2 θ + sin2 θ = 1:
+36 + 36 cos θ + 9 = 121.
+So:
+45 + 36 cos θ = 121.
+Thus:
+36 cos θ = 76
+cos θ = 76 / 36 = 19 / 9 ≈ 2.111...
+But cosine cannot be greater than 1. This suggests that there's no solution, which contradicts the problem statement.
+Therefore, my setup must be wrong.
+This implies that the torus and sphere aren't centered at the same point. If the sphere is centered at the origin, and the torus is centered at some other point, perhaps elevated along the z-axis.
+Suppose the torus is sitting on the sphere, which is on the ground (so the sphere's bottom point is at the lowest z). The center of the sphere is at (0, 0, 0). The torus is resting on the sphere, so the point of contact is at z = 11 (since the sphere has radius 11). The axis of the torus is some distance above the sphere. Let me model this scenario.
+Assume the torus is generated by revolving a circle of radius 3 around an axis that is 6 units away from the center of the circle, which is in the horizontal plane. When this torus is placed on the sphere, the axis of the torus is vertically above the center of the sphere.
+Let the center of the sphere be at (0, 0, 0). The torus is resting on the sphere, so the point of contact is at (0, 0, 11). The axis of the torus is at (0, 0, h), where h is the height of the axis above the sphere's center. The generating circle of the torus is in a horizontal plane at height h - d, where d is the distance from the axis to the generating circle, which is 6 units. Wait, if the axis is at (0, 0, h), and the generating circle is 6 units below the axis (assuming it's below), then the generating circle is at (0, 0, h - 6). The radius of the generating circle is 3, so points on the generating circle are 3 units away from (0, 0, h - 6) in the horizontal plane. When revolved around the z-axis, this forms the torus.
+The torus touches the sphere at (0, 0, 11). Therefore, the point (0, 0, 11) must lie on the torus.
+Since the torus is formed by revolving a circle of radius 3 around the z-axis, the equation of the torus is:
+sqrt( x2 + y2 ) = 6 ± 3, depending on the direction. Wait, no. The standard torus equation is sqrt( (sqrt(x2 + y2) - R )2 + z2 ) = r, where R is the major radius and r is the minor radius.
+So in this case, R = 6, r = 3. So the equation is sqrt( (sqrt(x2 + y2) - 6 )2 + z2 ) = 3.
+Therefore, for a point (0, 0, 11) on the z-axis, sqrt( (sqrt(0 + 0) - 6 )2 + 112 ) = sqrt( ( -6 )2 + 121 ) = sqrt( 36 + 121 ) = sqrt( 157 ) ≈ 12.5
+
+提取的答案: ..."
+replace ... with the actual answer. ensure this exact phrase is included at the end of your response.<|im_end|>
+<|im_start|>user
+solve the following math problem: torus $t$ is the surface produced by revolving a circle with radius $3$ around an axis in the plane of the circle that is a distance $6$ from the center of the circle (so like a donut). let $s$ be a sphere with a radius $11$. when $t$ rests on the outside of $s$, it is externally tangent to $s$ along a circle with radius $r_i$, and when $t$ rests on the outside of $s$, it is externally tangent to $s$ along a circle with radius $r_o$. the difference $r_i-r_o$ can be written as $\tfrac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. find $m+n$.
+[asy] unitsize(0.3 inch); draw(ellipse((0,0), 3, 1.75)); draw((-1.2,0.1)..(-0.8,-0.03)..(-0.4,-0.11)..(0,-0.15)..(0.4,-0.11)..(0.8,-0.03)..(1.2,0.1)); draw((-1,0.04)..(-0.5,0.12)..(0,0.16)..(0.5,0.12)..(1,0.04)); draw((0,2.4)--(0,-0.15)); draw((0,-0.15)--(0,-1.75), dashed); draw((0,-1.75)--(0,-2.25)); draw(ellipse((2,0), 1, 0.9)); draw((2.03,-0.02)--(2.9,-0.4)); [/asy]
+<|im_end|>
+<|im_start|>assistant
+<think>
+okay, so i need to solve this problem about a torus and a sphere. let me read through it again and make sure i understand what's being asked.
+the problem is about a torus t, which is created by revolving a circle with radius 3 around an axis that's 6 units away from the center of the circle. that makes sense—it's like a donut shape where the tube has a radius of 3, and the distance from the center of the tube to the center of the torus is 6.
+then there's a sphere s with radius 11. when the torus t rests on the outside of the sphere s, they are externally tangent along a circle with radius r_i.
+wait, actually, i think the problem says when t rests on the outside of s, it is externally tangent along a circle with radius r_i, and when t rests on the outside of s, it is externally tangent along a circle with radius r_o. then the difference r_i - r_o is to be found as a fraction m/n where m and n are coprime, and then find m + n.
+wait, actually, maybe i misread. let me check again. the problem says: "when t rests on the outside of s, it is externally tangent to s along a circle with radius r_i, and when t rests on the outside of s, it is externally tangent to s along a circle with radius r_o." hmm, maybe that's a typo. maybe one is when the torus is inside the sphere and one is outside? but the problem says "when t rests on the outside of s". maybe once when it's resting on the equator or something?
+wait, maybe the torus can be tangent to the sphere along two different circles depending on how it's oriented. for example, if the torus is sitting on the sphere with its hole facing up or down, the radius of the tangent circle would be different.
+wait, the torus has an inner radius and an outer radius. if you have a sphere, and you put the torus around it, maybe the inner part of the torus (closest to the sphere's center) is tangent along a circle with radius r_i, and the outer part is tangent along a circle with radius r_o. then the difference between these two radii is wanted.
+but the problem says "when t rests on the outside of s", so both times? that seems confusing. maybe there's a misstatement. alternatively, maybe the problem is talking about the case when the torus is tangent to the sphere along a circle when viewed from the top and from the side, leading to different radii?
+alternatively, maybe it's about the torus being tangent to the sphere along two different circles depending on the orientation—like major radius versus minor radius.
+wait, the torus has a major radius (distance from the center of the torus to the center of the tube) and a minor radius (radius of the tube). here, the major radius is 6 and the minor radius is 3.
+when the torus is placed around the sphere, the distance from the center of the sphere to the center of the tube (which is part of the torus) would vary. depending on how you place the torus, the closest and farthest points from the sphere's center would be different.
+wait, if the sphere has radius 11, and the torus is resting on the outside of the sphere, so the center of the sphere is at the center of the torus's revolution. wait, maybe not. wait, actually, the torus is being placed around the sphere. so the torus is like a ring around the sphere. the sphere is inside the torus, but the torus is resting on the outside of the sphere, so the sphere is touching the inside of the torus.
+but if they are externally tangent, that's confusing. if the torus is on the outside of the sphere, then external tangency would mean that they just touch at a point, but the problem says they are tangent along a circle. so maybe the torus and the sphere are tangent along a circle when the torus is placed around the sphere. but how can they be tangent along a circle if the sphere is inside the torus? wait, the sphere is radius 11, and the torus has a major radius of 6 and minor radius 3. so the distance from the center of the sphere to the center of the tube of the torus is 6, and the tube itself has a radius of 3. so the closest the torus gets to the sphere is 6 - 3 = 3 units from the center of the sphere, and the farthest is 6 + 3 = 9 units from the center. but the sphere has radius 11, so if the torus is surrounding the sphere, but the sphere is larger. wait, hold on, the sphere is radius 11, and the torus is generated by a circle of radius 3 at a distance 6 from the axis. so the torus has a major radius of 6 and minor radius of 3.
+wait, so if you have a sphere of radius 11, and you put a torus around it such that the torus is just touching the sphere along a circle. depending on where the torus touches the sphere, the radius of that circle of tangency would vary. so perhaps, when the torus is oriented such that its vertical cross-section is tangent to the sphere, the radii of the circles of tangency would be different.
+alternatively, perhaps the torus can rest on the sphere in two different orientations, one where the torus is "upright" (like a donut sitting on a table, but the table is the sphere) and another where it's "lying down". each orientation would result in a different radius for the circle of tangency.
+alternatively, maybe the problem is referring to the inner and outer tangent circles when the torus is placed around the sphere. since the torus has an inner radius and an outer radius, perhaps when the torus is placed around the sphere, the closest points (inner radius) and the farthest points (outer radius) form circles of tangency with the sphere.
+but the sphere is larger than the torus's major radius. the sphere is radius 11, and the torus has a major radius of 6 and minor radius of 3. so the torus extends from 6 - 3 = 3 units from its own center to 6 + 3 = 9 units from its center. if the torus is surrounding the sphere, whose center is at a certain distance. wait, actually, if the torus is resting on the outside of the sphere, then the center of the sphere would be inside the torus. wait, but the sphere is larger. the sphere is radius 11, so if the torus is resting on the outside of the sphere, perhaps the sphere is inside the torus? wait, no. if the torus is resting on the outside of the sphere, like a ring around a larger sphere. so the sphere is inside the torus. wait, but the torus is generated by revolving a circle of radius 3 around an axis 6 units away, so the torus has a total diameter of 6 + 3 + 6 + 3 = 18 units. so the sphere is radius 11, so diameter 22. so the torus is smaller than the sphere. therefore, if the torus is resting on the outside of the sphere, the sphere is larger, so the torus is like a handle or a ring around the sphere.
+but how would their tangency work? if the torus is on the outside of the sphere, then the sphere is inside the torus. but external tangents would be lines outside the sphere and torus that touch them, but the problem says the torus is externally tangent to the sphere along a circle. hmm, maybe "externally tangent" here means that the torus and sphere are tangent to each other along a circle, even though the torus is surrounding the sphere. maybe similar to how two cones can be externally tangent along a line.
+alternatively, maybe there's a circle on the sphere and a corresponding circle on the torus that are tangent to each other. since both surfaces are revolution surfaces, these circles would lie in planes perpendicular to the axis of revolution.
+wait, the torus is being revolved around an axis. if the sphere is also centered on that same axis, then when you place the torus around the sphere, the points of tangency would form circles. depending on where the torus touches the sphere, these circles would have different radii.
+let me visualize this. suppose the axis of the torus is the z-axis. the torus is centered at the origin, so its tube is centered at a distance 6 from the origin, and the tube has radius 3. so the torus is a surface with major radius 6 and minor radius 3.
+now, the sphere of radius 11 is also centered at the origin. wait, but then if the sphere is radius 11, and the torus's center (the center of the tube) is 6 units from the origin, then the sphere would go from -11 to 11 in all directions, while the torus extends from 6 - 3 = 3 to 6 + 3 = 9 in radius from the origin. so the torus is entirely outside the sphere since the sphere ends at 11, but the torus goes from radius 3 to 9. wait, no, if the sphere is radius 11, then the torus (which is generated by a circle of radius 3 at distance 6 from the origin) would be much smaller. wait, actually, the torus generated by revolving a radius 3 circle around an axis 6 units away would have a "tube" radius of 3, and a major radius of 6. so the torus is like a donut with a hole radius of 6 - 3 = 3, and an outer radius of 6 + 3 = 9. the sphere is radius 11, so if the torus is placed around the sphere, the sphere is much larger. so the torus is sitting on the surface of the sphere, encircling it. wait, but the sphere is radius 11, so the torus must be resting on it. but how?
+wait, maybe the problem is misworded. let me check again: "let s be a sphere with radius 11. when t rests on the outside of s, it is externally tangent to s along a circle with radius r_i, and when t rests on the outside of s, it is externally tangent to s along a circle with radius r_o." hmm.
+alternatively, maybe the torus is placed around the sphere, and there are two circles where they are tangent: one at the top of the sphere (where the torus is closest to the center) and one at the bottom (where it's farthest). wait, but if the torus is placed symmetrically around the sphere, maybe the radii of these circles depend on the distance from the center.
+wait, perhaps when the torus is placed on the sphere, it's like a belt around a sphere. the points where the belt touches the sphere form a circle. depending on how tight the belt is, the radius of that circle would vary. but since the torus has a fixed size, maybe there are two such possible circles where the torus can be tangent to the sphere.
+alternatively, maybe when you have the torus resting on the sphere, there are two possible orientations: one where the torus is "upright" (with the hole vertical) and one where it's "horizontal". each would result in a different circle of tangency.
+wait, but the problem states that t is the surface produced by revolving a circle around an axis in its plane, 6 units from the center. so the torus has a fixed orientation. when it's placed on the sphere, maybe you can place it such that the axis of the torus is perpendicular or parallel to the line of tangency.
+alternatively, maybe it's about the inner and outer edges of the torus being tangent to the sphere. since the torus has an inner radius (distance from the center to the inner edge) and an outer radius, perhaps when placed around the sphere, the inner edge is tangent along one circle and the outer edge is tangent along another. but the problem says "when t rests on the outside of s", so perhaps resting on the outside would mean the outer edge is tangent, and resting in some other orientation the inner edge is tangent? but the wording is confusing.
+wait, maybe the problem is saying that when the torus t is placed on the outside of the sphere s, there are two possible tangent circles: one when it's tangent along the inner part of the torus (r_i) and one when it's tangent along the outer part (r_o). then, the difference between these two radii is wanted. but i need to visualize this.
+alternatively, perhaps the torus can rest on the sphere in two different ways, leading to two different radii of tangency. for example, if the torus is placed "standing up" or "lying down", similar to how a tire can rest on the ground either with the tread touching or the side touching. but in this case, the torus is on a sphere.
+alternatively, maybe it's about the torus being tangent to the sphere along the top and bottom circles when wrapped around the sphere.
+wait, let's approach this mathematically. let me set up coordinates. suppose the sphere s is centered at the origin with radius 11. the torus t is generated by revolving a circle of radius 3 around an axis at distance 6 from the center of the circle. so, if we position the torus so that its axis of revolution is the z-axis, and the circle being revolved is in the x-z plane, centered at (6, 0, 0). when this circle is revolved around the z-axis, it forms a torus.
+now, if the torus is resting on the outside of the sphere, which is centered at the origin. to rest on the outside of the sphere, the torus must be tangent to the sphere along some circle.
+so, the surface of the torus and the surface of the sphere touch each other along a circle. since both are surfaces of revolution around the z-axis, the circle of tangency must lie in a plane perpendicular to the z-axis. so, the circle of tangency is a horizontal circle.
+wait, but the sphere is inside the torus? wait, the sphere is radius 11, which is larger than the major radius of the torus (6) plus the minor radius (3), since 6 + 3 = 9, which is less than 11. so the sphere is bigger. therefore, the torus cannot enclose the sphere; instead, the sphere would protrude outside the torus. wait, no. if the sphere is radius 11, and the torus's outer radius is 6 + 3 = 9, which is less than 11, so the sphere would be too big to fit inside the torus. therefore, if the torus is resting on the outside of the sphere, perhaps the torus is like a ring around the sphere, but the sphere is inside the torus. wait, but the sphere is 11, and the torus's inner radius is 6 - 3 = 3. so the sphere is way too big. so maybe the sphere is on the inside of the torus, but the torus is resting on the outside of the sphere?
+wait, this is getting confusing. let's clarify.
+if the torus is resting on the outside of the sphere, that means the sphere is beneath the torus, supporting it, right? so the torus is sitting on the sphere, which is acting like a base. but the sphere is three-dimensional, so the torus would encircle the sphere. however, the torus has a certain size, and the sphere has radius 11. if the torus is sitting on the sphere, the distance from the center of the sphere to the center of the torus (which is the axis around which the torus is generated) would need to be such that the torus is tangent to the sphere along a circle.
+wait, maybe we can model this. if the torus is sitting on the sphere, the center of the torus (the axis) must be vertically above the center of the sphere. let's suppose the sphere is centered at the origin, and the torus is generated by revolving a circle of radius 3 around the z-axis, at a distance of 6 units from the origin. so the axis of the torus is the z-axis, and the generating circle is at (6, 0, 0) in the x-z plane. when revolved around the z-axis, this forms the torus.
+now, the sphere is centered at the origin with radius 11. if the torus is sitting on the sphere, then the sphere and the torus must be tangent. the point of tangency would be the point where the torus touches the sphere. but since the torus is a surface of revolution, and the sphere is symmetric, the tangency would form a circle. depending on how the torus is oriented, this circle could be at different radii.
+wait, perhaps the torus can be oriented in such a way that it touches the sphere along the top or along the bottom, leading to different radii. but if it's sitting on the sphere, it must touch along a circle. let me think.
+alternatively, maybe the torus is placed around the sphere such that the sphere is tangent to the inner surface of the torus (the side facing the z-axis) and the outer surface. wait, but the sphere is much larger. wait, the torus has an inner radius of 3 (6 - 3) and outer radius of 9 (6 + 3). the sphere is radius 11, so it's bigger than the outer radius of the torus. therefore, the sphere cannot fit inside the torus. then how can the torus rest on the outside of the sphere? maybe the torus is wrapped around the sphere, but the sphere is inside the torus. but the sphere is radius 11, and the torus's inner radius is 3. so the sphere would be too large to fit inside the torus. hmm.
+wait, maybe the problem is misworded and it's supposed to be the torus on the inside of the sphere? let me check the problem statement again: "when t rests on the outside of s, it is externally tangent to s along a circle with radius r_i, and when t rests on the outside of s, it is externally tangent to s along a circle with radius r_o."
+wait, that wording is confusing. maybe "rests on the outside" in two different configurations leading to two different radii. alternatively, maybe it's a translation issue. alternatively, maybe the problem is similar to a torus and sphere being tangent along a circle, and depending on the orientation (like vertical or horizontal), the radius of the circle of tangency is different. for example, like when a torus is tangent to a sphere at the top and bottom, leading to two different radii.
+alternatively, perhaps the torus is tangent to the sphere along two circles: one at the top where the torus is closest to the center of the sphere, and one at the bottom where it's farthest. then, the radii of these circles would be r_i and r_o.
+wait, but in that case, since the torus is a surface of revolution, and so is the sphere, the points of tangency would lie in planes perpendicular to the axis of revolution. so, suppose the axis of the torus is the z-axis, and the sphere is centered at the origin. if the torus is tangent to the sphere along a circle in the plane z = a, then the radius of that circle would be determined by the intersection of the sphere and the torus in that plane.
+so, the sphere equation is x2 + y2 + z2 = 112.
+the torus equation around the z-axis with major radius 6 and minor radius 3 is (√x2 + y2 - 6)2 + z2 = 32.
+if we intersect the sphere and torus, setting their equations equal (since at tangency, they just touch, so the system has a single solution in each intersection plane).
+wait, but to find where they are tangent along a circle, we need that in some plane, say z = k, the intersection of the sphere and the torus is a single circle. so in that plane, the equations would be:
+for the sphere: x2 + y2 + k2 = 121, so x2 + y2 = 121 - k2.
+for the torus: (√x2 + y2 - 6)2 + k2 = 9.
+substituting x2 + y2 = 121 - k2 into the torus equation:
+(√(121 - k2) - 6)2 + k2 = 9.
+let me compute this.
+let me denote sqrt(121 - k2) as sqrt(121 - k2). then:
+(sqrt(121 - k2) - 6)^2 + k2 = 9.
+expanding the left side:
+(121 - k2) - 12*sqrt(121 - k2) + 36 + k2 = 9.
+simplify terms:
+121 - k2 + 36 - 12*sqrt(121 - k2) + k2 = 9.
+the -k2 and +k2 cancel, so:
+121 + 36 - 12*sqrt(121 - k2) = 9
+combine constants:
+157 - 12*sqrt(121 - k2) = 9
+subtract 157 from both sides:
+-12*sqrt(121 - k2) = 9 - 157 = -148
+divide both sides by -12:
+sqrt(121 - k2) = 148/12 = 37/3.
+square both sides:
+121 - k2 = (37/3)^2 = 1369/9.
+therefore:
+k2 = 121 - 1369/9 = (1089 - 1369)/9 = (-280)/9.
+wait, but k2 can't be negative, so this approach must be wrong.
+hmm. that suggests that my assumption is incorrect. perhaps the intersection is not in a horizontal plane. maybe the plane of tangency is not perpendicular to the z-axis.
+alternatively, maybe the circle of tangency is not a horizontal circle. since both the torus and the sphere are surfaces of revolution, but maybe the plane of tangency is inclined.
+alternatively, perhaps my approach is wrong. let's think in terms of tangent circles.
+if two surfaces are tangent along a circle, then at every point of that circle, the surfaces are tangent to each other. so their tangent planes must coincide along the circle.
+for the sphere and the torus, both being smooth surfaces, the set of points where they are tangent must form a curve, which in this case is a circle. since both are surfaces of revolution around the same axis (assuming the axis of the torus is the same as the axis of the sphere), the circle of tangency must lie in a plane perpendicular to the axis of revolution.
+wait, but in the previous attempt, when i assumed the plane was z = k, we got a contradiction. so maybe the circle of tangency is not a horizontal circle, but a vertical circle? or some other orientation.
+alternatively, perhaps the axis of the torus is not the z-axis but some other axis that allows tangency along a circle. wait, but the problem statement says that the torus is produced by revolving a circle around an axis in its plane, which is 6 units from the center. so the axis is fixed in the plane of the original circle.
+wait, maybe the key is to parametrize the torus and the sphere and find the points where their surfaces are tangent. let me consider parametric equations.
+parametric equations for the torus t: since it's generated by revolving a circle of radius 3 around an axis 6 units away, we can parametrize it as:
+x = (6 + 3*cosθ)*cosφ
+y = (6 + 3*cosθ)*sinφ
+z = 3*sinθ
+where θ and φ are angles of revolution.
+parametric equations for the sphere s of radius 11:
+x = 11*cosθ*cosφ
+y = 11*cosθ*sinφ
+z = 11*sinθ
+wait, no, the sphere parametrization uses colatitude θ and longitude φ:
+x = 11*sinθ*cosφ
+y = 11*sinθ*sinφ
+z = 11*cosθ
+where θ is the polar angle (colatitude) and φ is the azimuthal angle.
+but for the torus:
+x = (r + r*cosθ)*cosφ
+y = (r + r*cosθ)*sinφ
+z = r*sinθ
+where r is the major radius (6) and r is the minor radius (3).
+now, if the torus and sphere are tangent at a point, their parametric equations must coincide at some parameters (θ_t, φ_t) for the torus and (θ_s, φ_s) for the sphere, and their tangent planes must also coincide.
+but this seems complicated. maybe instead consider that the distance from the center of the sphere (origin) to a point on the torus is equal to 11 (the radius of the sphere) at the point of tangency.
+so, for a point on the torus, the distance from the origin is sqrt(x2 + y2 + z2). for the parametric equations above:
+sqrt( [(6 + 3*cosθ)*cosφ]^2 + [(6 + 3*cosθ)*sinφ]^2 + (3*sinθ)^2 ) = sqrt( (6 + 3*cosθ)^2 + (3*sinθ)^2 )
+because the x and y components contribute (6 + 3*cosθ)^2*(cos2φ + sin2φ) = (6 + 3*cosθ)^2, and the z component is 9*sin2θ. so total distance squared is (6 + 3*cosθ)^2 + 9 sin2θ.
+set this equal to 112 = 121:
+(6 + 3*cosθ)^2 + 9 sin2θ = 121.
+let me compute this:
+first, expand (6 + 3*cosθ)^2:
+36 + 36*cosθ + 9*cos2θ + 9 sin2θ
+combine the 9 cos2θ and 9 sin2θ terms:
+36 + 36 cosθ + 9(cos2θ + sin2θ) = 36 + 36 cosθ + 9(1) = 36 + 36 cosθ + 9 = 45 + 36 cosθ.
+set equal to 121:
+45 + 36 cosθ = 121
+subtract 45:
+36 cosθ = 76
+therefore:
+cosθ = 76/36 = 19/9.
+wait, but cosθ can't be greater than 1. 19/9 is approximately 2.111, which is impossible.
+this suggests that my initial assumption is wrong. that is, if the sphere is centered at the origin, and the torus is also centered at the origin (since its axis is the z-axis), then the distance from the origin to any point on the torus is between 3 and 9. but the sphere is radius 11, so this approach is incorrect.
+wait, this indicates a fundamental misunderstanding. if the torus is supposed to rest on the outside of the sphere, then their centers cannot coincide. instead, the sphere must be offset so that the torus is resting on it.
+so perhaps the sphere is centered at the origin, and the torus is shifted up or down along the z-axis so that it's resting on the sphere. wait, but the problem doesn't specify an offset. it just says the torus is produced by revolving a circle around an axis 6 units from the center of the circle. so maybe the axis of the torus is not at the origin.
+wait, the original problem states: "torus t is the surface produced by revolving a circle with radius 3 around an axis in the plane of the circle that is a distance 6 from the center of the circle." so the torus has a major radius of 6 and minor radius of 3. the sphere s has radius 11. the problem is when t rests on the outside of s.
+so perhaps the axis of the torus is not at the origin. instead, when the torus is placed on the sphere, the center of the sphere is at some point, and the axis of the torus is raised above it.
+wait, imagine a torus (donut) sitting on a sphere. the sphere is supporting the torus, so the distance from the center of the sphere to the center of the torus (the axis) must be such that the torus just touches the sphere along a circle.
+let me model this. suppose the sphere is still centered at the origin. the torus is sitting on top of the sphere, so the center of the torus (axis) is along the z-axis, at some height h above the origin. the distance from the center of the sphere to the center of the torus is h. the torus has major radius 6 (distance from the axis to the center of the generating circle) and minor radius 3.
+wait, but in standard torus terminology, the major radius is the distance from the center of the torus (the axis) to the center of the tube, right? so if the torus is sitting on the sphere, the center of the torus (the axis) is at height h, and the generating circle is 6 units below that, so the generating circle is centered at (0,0, h - 6). wait, maybe not. wait, the major radius is 6, which is the distance from the axis to the center of the tube. so if the axis is along the z-axis at height h, then the generating circle is at distance 6 from the axis, in the plane z = h. wait, no. if the torus is formed by revolving a circle around an axis in its own plane 6 units away, then in the standard torus, the axis is at a distance 6 from the generating circle.
+wait, perhaps it's better to have the axis at the origin for the torus when it's in its generating position. but when placed on the sphere, which is also at the origin, maybe they intersect.
+wait, this is getting too tangled. let me switch strategies.
+in the problem, it's stated that when the torus t rests on the outside of the sphere s, it is externally tangent along a circle with radius r_i, and when it rests on the outside in some other way, tangent along a circle with radius r_o. the difference between these radii is wanted.
+given that the torus and the sphere are both three-dimensional shapes, and the torus can rest on the sphere in different orientations, leading to different radii of tangency.
+alternatively, since the torus has a varying radius from its center, perhaps when it's placed so that the closest points on the torus to the sphere's center are tangent, that's one radius, and when the farthest points are tangent, that's another.
+wait, if the sphere is radius 11, and the torus is placed around it, then the closest distance from the sphere's center to the torus is 11 - (6 - 3) = 11 - 3 = 8? wait, not sure.
+alternatively, think of the torus as a surface with parametric equation (r + r cos θ) cos φ, (r + r cos θ) sin φ, r sin θ, where r is the major radius (6) and r is the minor radius (3). the sphere is centered at the origin with radius 11. when the torus is tangent to the sphere, the distance from the origin to the torus is 11.
+the distance from the origin to a point on the torus is sqrt[( (r + r cos θ) cos φ )2 + ( (r + r cos θ) sin φ )2 + ( r sin θ )2 ]
+= sqrt[ (r + r cos θ)^2 (cos2φ + sin2φ ) + ( r sin θ )^2 ]
+= sqrt[ (r + r cos θ)^2 + r2 sin2 θ ]
+set this equal to 11^2:
+(r + r cos θ)^2 + r2 sin2 θ = 121.
+plugging in r = 6 and r = 3:
+(6 + 3 cos θ)^2 + 9 sin2 θ = 121.
+expanding:
+36 + 36 cos θ + 9 cos2 θ + 9 sin2 θ = 121.
+combine the terms:
+36 + 36 cos θ + 9 (cos2 θ + sin2 θ ) = 121.
+since cos2 θ + sin2 θ = 1:
+36 + 36 cos θ + 9 = 121.
+so:
+45 + 36 cos θ = 121.
+thus:
+36 cos θ = 76
+cos θ = 76 / 36 = 19 / 9 ≈ 2.111...
+but cosine cannot be greater than 1. this suggests that there's no solution, which contradicts the problem statement.
+therefore, my setup must be wrong.
+this implies that the torus and sphere aren't centered at the same point. if the sphere is centered at the origin, and the torus is centered at some other point, perhaps elevated along the z-axis.
+suppose the torus is sitting on the sphere, which is on the ground (so the sphere's bottom point is at the lowest z). the center of the sphere is at (0, 0, 0). the torus is resting on the sphere, so the point of contact is at z = 11 (since the sphere has radius 11). the axis of the torus is some distance above the sphere. let me model this scenario.
+assume the torus is generated by revolving a circle of radius 3 around an axis that is 6 units away from the center of the circle, which is in the horizontal plane. when this torus is placed on the sphere, the axis of the torus is vertically above the center of the sphere.
+let the center of the sphere be at (0, 0, 0). the torus is resting on the sphere, so the point of contact is at (0, 0, 11). the axis of the torus is at (0, 0, h), where h is the height of the axis above the sphere's center. the generating circle of the torus is in a horizontal plane at height h - d, where d is the distance from the axis to the generating circle, which is 6 units. wait, if the axis is at (0, 0, h), and the generating circle is 6 units below the axis (assuming it's below), then the generating circle is at (0, 0, h - 6). the radius of the generating circle is 3, so points on the generating circle are 3 units away from (0, 0, h - 6) in the horizontal plane. when revolved around the z-axis, this forms the torus.
+the torus touches the sphere at (0, 0, 11). therefore, the point (0, 0, 11) must lie on the torus.
+since the torus is formed by revolving a circle of radius 3 around the z-axis, the equation of the torus is:
+sqrt( x2 + y2 ) = 6 ± 3, depending on the direction. wait, no. the standard torus equation is sqrt( (sqrt(x2 + y2) - r )2 + z2 ) = r, where r is the major radius and r is the minor radius.
+so in this case, r = 6, r = 3. so the equation is sqrt( (sqrt(x2 + y2) - 6 )2 + z2 ) = 3.
+therefore, for a point (0, 0, 11) on the z-axis, sqrt( (sqrt(0 + 0) - 6 )2 + 112 ) = sqrt( ( -6 )2 + 121 ) = sqrt( 36 + 121 ) = sqrt( 157 ) ≈ 12.5
+
+参考答案: 127
+
+是否正确: 否
