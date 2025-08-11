@@ -1,57 +1,69 @@
 import os
 import re
 from pathlib import Path
-# 假设 math_grader.py 所在目录已在 PYTHONPATH 中
-from grader import boxed_reward_fn
 
-def extract_answer_and_gt(file_content):
+def extract_answers_from_file(file_path):
     """
-    从文件内容中提取模型输出的答案和参考答案
-    返回格式: (model_answer_content, ground_truth)
+    从GPQA结果文件中提取模型答案和参考答案
+    返回格式: (model_answer, reference_answer)
     """
-    # 提取模型输出内容（到"参考答案:"之前）
-    model_output_match = re.split(r'参考答案:', file_content, flags=re.IGNORECASE)
-    if len(model_output_match) < 2:
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # 提取模型答案（匹配最后一个\boxed{}中的内容，确保括号匹配）
+        # 使用正则表达式匹配\boxed{...}，支持嵌套括号
+        start = content.rfind(r'\boxed{')
+        if start == -1:
+            model_answer = None
+        start += len(r'\boxed{')  # 跳过 \boxed{
+        balance = 0
+        end = start
+        # 遍历找到匹配的闭合 }
+        for i in range(start, len(content)):
+            if content[i] == '{':
+                balance += 1
+            elif content[i] == '}':
+                balance -= 1
+                if balance == 0:
+                    end = i
+                    break
+    # 提取内容并替换 \dfrac 为 \frac
+        extracted = content[start:end].strip()
+        model_answer = extracted.replace(r'\dfrac', r'\frac')
+        
+        # 提取参考答案
+        ref_match = re.search(r'参考答案: \s*(.*?)\s*$', content)
+        reference_answer = ref_match.group(1) if ref_match else None
+        print(model_answer)
+        print(reference_answer)
+        return model_answer, reference_answer
+    
+    except Exception as e:
+        # 仅捕获异常，不打印错误信息
         return None, None
-    model_output = model_output_match[0].strip()
-    
-    # 提取参考答案
-    gt_match = re.split(r'是否正确:', model_output_match[1], flags=re.IGNORECASE)
-    if len(gt_match) < 2:
-        return model_output, None
-    ground_truth = gt_match[0].strip()
-    
-    return model_output, ground_truth
 
-def evaluate_txt_files(folder_path):
-    """评估文件夹内所有txt文件的正确率"""
+def calculate_accuracy(folder_path):
+    """
+    计算文件夹内所有GPQA结果文件的正确率，未找到模型答案或参考答案视为错误
+    """
     total = 0
     correct = 0
-    error_files = []
+    error_files = []  # 存储无法提取答案的文件
     
     # 遍历文件夹内所有txt文件
     for file in Path(folder_path).glob("*.txt"):
         total += 1
-        try:
-            with open(file, 'r', encoding='utf-8') as f:
-                content = f.read()
-            
-            # 提取模型输出和参考答案
-            model_output, ground_truth = extract_answer_and_gt(content)
-            if not model_output or not ground_truth:
-                error_files.append(f"{file.name} - 无法提取答案内容")
-                continue
-            
-            # 使用 math_grader 中的评分函数进行评估
-            # 这里使用 boxed_reward_fn，适用于带 \boxed{} 格式的答案
-            info, reward = boxed_reward_fn(model_output, ground_truth, fast=False)
-            
-            if reward == 1.0:
-                correct += 1
+        model_ans, ref_ans = extract_answers_from_file(file)
         
-        except Exception as e:
-            error_files.append(f"{file.name} - 处理错误: {str(e)}")
-    
+        # 模型答案或参考答案缺失，视为错误
+        if not model_ans or not ref_ans:
+            error_files.append(file.name)
+            continue
+        
+        if model_ans == ref_ans:
+            correct += 1
+            print(f"- {file}")
     # 计算正确率
     accuracy = correct / total if total > 0 else 0.0
     
@@ -59,24 +71,24 @@ def evaluate_txt_files(folder_path):
     print(f"评估结果:")
     print(f"总文件数: {total}")
     print(f"正确数: {correct}")
+    print(f"错误数: {total - correct}")  # 包含答案不匹配和提取失败的情况
     print(f"正确率: {accuracy:.2%}")
     
     if error_files:
-        print("\n处理异常的文件:")
-        for err in error_files:
-            print(f"- {err}")
-    
+        print(f"\n无法提取答案的文件 ({len(error_files)} 个):")
+
     return {
         "total": total,
         "correct": correct,
+        "error": total - correct,
         "accuracy": accuracy,
-        "errors": error_files
+        "error_files": error_files
     }
 
 if __name__ == "__main__":
     import argparse
-    parser = argparse.ArgumentParser(description='评估文件夹内txt文件的数学答案正确率')
-    parser.add_argument('folder_path', help='包含txt文件的文件夹路径')
+    parser = argparse.ArgumentParser(description='评估GPQA结果文件夹的正确率')
+    parser.add_argument('folder_path', help='包含GPQA结果txt文件的文件夹路径')
     args = parser.parse_args()
     
-    evaluate_txt_files(args.folder_path)
+    calculate_accuracy(args.folder_path)
