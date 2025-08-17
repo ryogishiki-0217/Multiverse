@@ -11,32 +11,42 @@ def extract_answers_from_file(file_path):
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # 提取模型答案（匹配最后一个\boxed{}中的内容，确保括号匹配）
-        # 使用正则表达式匹配\boxed{...}，支持嵌套括号
-        start = content.rfind(r'\boxed{')
-        if start == -1:
-            model_answer = None
-        start += len(r'\boxed{')  # 跳过 \boxed{
-        balance = 0
-        end = start
-        # 遍历找到匹配的闭合 }
-        for i in range(start, len(content)):
-            if content[i] == '{':
-                balance += 1
-            elif content[i] == '}':
-                balance -= 1
-                if balance == 0:
-                    end = i
-                    break
-    # 提取内容并替换 \dfrac 为 \frac
-        extracted = content[start:end].strip()
-        model_answer = extracted.replace(r'\dfrac', r'\frac')
+        # 提取模型答案（匹配最后一个\boxed{}中的内容，正确处理嵌套括号）
+        model_answer = None
+        # 查找所有\boxed{的位置
+        boxed_pattern = re.compile(r'\\boxed\{')
+        matches = [m.start() for m in boxed_pattern.finditer(content)]
+        
+        if matches:
+            # 取最后一个\boxed{的位置
+            start_idx = matches[-1]
+            # 从\boxed{开始计算完整括号范围
+            balance = 0
+            end_idx = -1
+            # 包含\boxed{的起始位置开始遍历
+            for i in range(start_idx, len(content)):
+                if content[i] == '{':
+                    balance += 1
+                elif content[i] == '}':
+                    balance -= 1
+                    if balance == 0:
+                        end_idx = i
+                        break
+            if end_idx != -1:
+                # 提取完整的\boxed{...}字符串
+                full_boxed = content[start_idx:end_idx+1]
+                # 移除最外层的\boxed{和}
+                extracted = full_boxed[len(r'\boxed{'):-1].strip()
+                # 统一分数格式
+                model_answer = extracted.replace(r'\dfrac', r'\frac')\
+                                       .replace(r'\tfrac', r'\frac')\
+                                       .replace(r'\cfrac', r'\frac')
         
         # 提取参考答案
-        ref_match = re.search(r'参考答案: \s*(.*?)\s*$', content)
-        reference_answer = ref_match.group(1) if ref_match else None
-        print(model_answer)
-        print(reference_answer)
+        ref_match = re.search(r'参考答案:\s*(.*?)\s*(?=\n|$)', content, re.DOTALL)
+        reference_answer = ref_match.group(1).strip() if ref_match else None
+        #print(model_answer)
+        #print(reference_answer)
         return model_answer, reference_answer
     
     except Exception as e:

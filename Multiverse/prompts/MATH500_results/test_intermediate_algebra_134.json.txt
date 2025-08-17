@@ -10,56 +10,106 @@ Solve the following math problem: Compute: $1-2+3-4+5- \dots +99-100$.
 <|im_end|>
 <|im_start|>assistant
 <Think>
-Okay, so I need to compute the sum 1 - 2 + 3 - 4 + 5 - ... + 99 - 100. Let me try to figure out how to approach this. First, I notice that the series alternates between addition and subtraction. The pattern is that each even term is subtracted, and each odd term is added. So, the positive terms are the odd numbers (1, 3, 5, ..., 99) and the negative terms are the even numbers (2, 4, 6, ..., 100). Maybe I can split the sum into two separate sums: one for the positive terms and one for the negative terms. Then, compute each sum and combine them. Let me try that. First, the positive terms: 1, 3, 5, ..., 99. That's the sequence of odd numbers starting at 1 up to 99. How many terms are there? Since the nth odd number is given by the formula 2n - 1. So, if 2n - 1 = 99, then 2n = 100, so n = 50. So, there are 50 positive terms. The sum of the first n odd numbers is n^2. Wait, so the sum of 1 + 3 + 5 + ... + 99 should be 50^2 = 2500. Let me confirm that. The formula for the sum of the first n odd numbers is n^2, which is 50^2 = 2500. Okay, so the positive sum is 2500. Now, the negative terms: -2 -4 -6 - ... -100. That's the sequence of even numbers from -2 to -100. Let's think of this as -1*(2 + 4 + 6 + ... + 100). So, if I can compute the sum inside the parentheses and then multiply by -1. The sum of even numbers from 2 to 100. The number of terms here is (100 - 2)/2 + 1. Wait, the formula for the number of terms when counting by 2s is (last - first)/step + 1. So (100 - 2)/2 +1 = 98/2 +1 = 49 +1 = 50. So, 50 terms. Alternatively, since the nth even number is 2n. So, 2n = 100 when n=50. So, yeah, 50 terms. The sum of the first n even numbers is n(n + 1). But wait, the formula for the sum of the first n even numbers is n(n + 1). Let me recall that. Yes, the sum of the first n even numbers is n(n + 1). For example, n=1: 2 = 1*2=2, n=2: 2+4=6=2*3=6. So, sum of 2 + 4 + 6 + ... + 100 would be 50*(50 +1) = 50*51 = 2550. Therefore, the negative terms sum to -2550. Therefore, the total sum is 2500 - 2550 = -50. Wait, so the answer would be -50? Hmm, let me check again. Wait, sum of positive terms (odds): 1, 3, 5,...,99 is 2500. Sum of negative terms (even numbers): -2, -4,...,-100, which is -2550. So total sum is 2500 - 2550 = -50. But that seems counter-intuitive because we have more positive terms? Wait, no. Wait, hold on. Wait, actually, the number of positive terms and negative terms is the same? Let's check. The positive terms go 1,3,5,...,99. That's the odd numbers up to 99. Since 99 is the 50th odd number, so 50 terms. The negative terms are 2,4,6,...,100. Which is the even numbers up to 100. The nth even number is 2n, so 100 is the 50th even number. So, 50 terms as well. So, equal number of positive and negative terms. So, if their sums are 2500 and 2550, then the total is 2500 - 2550 = -50. Hmm, but 2500 minus 2550 is indeed -50. Let's think in parallel.
+Okay, let's see here. I need to compute the sum 1 - 2 + 3 - 4 + 5 - ... + 99 - 100. Hmm, okay. First, I should look for a pattern or a way to group the terms to make the calculation easier.
+Let's think in parallel.
 <Parallel>
 <Goal>
 <Outline>
-1: The arithmetic sum of pairs (1-2) + (3-4) + ... + (99-100) and its relation to the total sum.
+1: Identification of the pattern in the series.
 </Outline>
 <Outline>
-2: The arithmetic sum of the entire series 1 - 2 + 3 - 4 + ... + 99 - 100 and its relation to the total sum.
+2: Identification of the pairing strategy.
 </Outline>
 </Goal>
 <Path>
-1: The problem can be approached by pairing consecutive terms: (1-2) + (3-4) + ... + (99-100). Each such pair (n - (n+1)) evaluates to -1. The number of these pairs is determined by the total count of terms. The original series starts at 1 and ends at 100, containing 100 terms in total. Since each pair consists of two terms, the number of pairs is 100 divided by 2, which equals 50. Each of these 50 pairs sums to -1, so their combined total is 50 multiplied by -1, resulting in -50. This result suggests the final sum of the series is -50.
+1: The series exhibits an alternating pattern of addition and subtraction.
 </Path>
 <Path>
-2: The entire series is 1 - 2 + 3 - 4 + ... + 99 - 100. This can be grouped as (1 - 2) + (3 - 4) + ... + (99 - 100), resulting in the sum of 50 identical pairs, each equaling -1. The total sum is 50 * (-1) = -50.
+2: The terms can be paired as (1-2)+(3-4)+(5-6)+...+(99-100). Each such pair simplifies to -1.
 </Path>
 <Conclusion>
-Both the pairing method, which yields 50 pairs each summing to -1 (total -50), and the direct arithmetic sum of the entire series, which also yields -50, consistently indicate that the total sum is -50.
+The series is characterized by an alternating addition and subtraction pattern, which suggests grouping the terms into pairs.
 </Conclusion>
 </Parallel>
-Wait, maybe that's a better way. If you pair them as (1 - 2) + (3 - 4) + ... + (99 - 100). Each pair is -1 and there are 50 pairs. So total is -50. That's straightforward. So why did the other method give the same answer? Wait, but in that case, if the sum is -50, then that conflicts with my initial feeling that there are more positives? But no, the number of positive and negative numbers is the same. Since starting at 1 up to 100, there's 100 numbers. Grouped as 1-2, 3-4, ..., 99-100. So 100 numbers divided into 50 groups, each contributing -1. So total -50. That seems correct. Alternatively, thinking that each pair is (odd - (odd +1)) = -1. So 1 to 100, 50 pairs, each contributing -1. So total sum is -50. So that seems clear. But let me check why the sum of odds is 2500 and evens 2550. If you take the positive terms: 1,3,5,...,99. Sum of the first n odd numbers is n^2. Here, n=50, so 50^2=2500. The sum of the negative terms: 2,4,6,...,100. The sum of the first m even numbers is m(m +1). Here, 2+4+...+100: the nth even number is 2n, so 100 is the 50th even number, so m=50. So sum is 50*(50 +1) = 50*51=2550. So total sum is 2500 -2550 = -50. So that's correct as well. So both approaches confirm that the answer is -50. So I think that's correct. Alternatively, if I write it out for a smaller number. Let's say up to 2 terms: 1-2= -1. According to the formula, (1 odd term: 1) summed as 1, and (1 even term: 2) summed as -2. Total:1 -2 = -1. Which matches (1 -2) = -1. Similarly, 1 -2 +3 -4. Which is (1-2)+(3-4)= -1 -1= -2. The formula approach: sum of odds 1,3=4 (but 2^2=4), sum of evens 2,4=6. So 4 -6= -2. Which matches. Another example: 1 -2 +3 -4 +5 -6. Grouped: (1-2)+(3-4)+(5-6)= -1 -1 -1= -3. Formula: sum of odds 1,3,5=9 (3^2=9), sum of evens 2,4,6=12. Then 9 -12= -3. Correct. So, the formula seems to hold. Therefore, for 1-2+3-4+...+99-100, the formula gives 2500 -2550= -50. The pairing method gives 50 * (-1) = -50. Both methods agree. So the answer is -50. Therefore, confident that the answer is -50.
-**Final Answer** 
+Let me verify that. Take the first pair: 1 - 2 = -1. Next pair: 3 - 4 = -1. Similarly, 5 - 6 = -1, and so on until 99 - 100 = -1. So each of these pairs adds up to -1. Therefore, all I need to do is figure out how many such pairs there are and then multiply that by -1.
+The total number of terms in the sequence is 100. Since each pair consists of 2 terms, the number of pairs would be 100 divided by 2, which is 50. Therefore, there are 50 pairs, each contributing -1 to the sum. So the total sum should be 50 * (-1) = -50.
+But let me double-check. Let's take a small example. Suppose we have 1 - 2 + 3 - 4. That should be (1 - 2) + (3 - 4) = -1 + -1 = -2. Which is indeed -2. So 2 pairs, each contributing -1, total sum -2. So that works.
+Let's think in parallel.
+<Parallel>
+<Goal>
+<Outline>
+1: Verification of the pairing strategy for an even number of terms.
+</Outline>
+<Outline>
+2: Verification of the pairing strategy for an odd number of terms.
+</Outline>
+</Goal>
+<Path>
+1: The pairing strategy is confirmed for an even number of terms (e.g., 1-2+3-4).
+</Path>
+<Path>
+2: An initial consideration of an odd number of terms, such as 1-2+3-4+5, is dismissed because the problem involves 100 terms.
+</Path>
+<Conclusion>
+The pairing strategy is validated for an even number of terms, and an odd-numbered case is deemed irrelevant to the problem.
+</Conclusion>
+</Parallel>
+Wait, another way: The sum can be written as sum_{k=1}^{100} (-1)^{k+1} k. But perhaps that's more complicated. Alternatively, the sum can be grouped as pairs of (positive - negative). Each pair is an odd term (positive) and an even term (negative). Since we start at 1 (positive) and end at 100 (negative), which is even. So there's no term left unpaired. Hence, 50 pairs, each equaling -1, total sum -50.
+But wait, hold on. Let me make sure about the number of pairs. If we start at 1 and go up to 100, that's 100 numbers. First number is 1, last number is 100. Since we are pairing them as (1-2), (3-4), ..., (99-100). The first term of each pair is an odd number, and the second term is the next even number. So the number of pairs is equal to the number of odd numbers in the list. Wait, from 1 to 99, how many odd numbers are there? 1, 3, 5, ..., 99. That's an arithmetic sequence with a common difference of 2. The number of terms can be calculated as (99 -1)/2 +1 = 49 +1 =50. So yes, 50 pairs. Therefore, 50 pairs times -1 each equals -50.
+Alternatively, if I'm still not sure, maybe I can think of it as the sum of all the positive terms minus the sum of all the negative terms. The positive terms are the odd numbers: 1, 3, 5, ..., 99. The negative terms are the even numbers: 2, 4, 6, ..., 100.
+So the total sum would be (Sum of odds) - (Sum of evens). Let's compute each sum separately. First, sum of odds: 1 + 3 + 5 + ... + 99. That's an arithmetic series with first term a=1, common difference d=2, last term l=99. The number of terms n can be found by nth term = a + (n-1)d. So 99 =1 + (n -1)*2 => 98 = (n -1)*2 => 49 = n -1 => n=50. So there are 50 terms. The sum is n/2 * (first term + last term) = 50/2 * (1 + 99) = 25 * 100 = 2500.
+Wait, that seems high. Wait, hold on. Wait, the formula for the sum of an arithmetic series is n/2*(first term + last term). So n is 50 terms. 50/2 is 25. 25 times (1 +99) is 25*100=2500. But that can't be right. Wait, sum of the first 50 odd numbers starting at 1 is actually 2500? Wait, but the sum of the first n odd numbers is n^2. Wait, that's a formula. The sum of the first n odd numbers is n^2. So here, the number of terms is 50. So the sum should be 50^2 = 2500? Wait, but that's the sum of 1 to 99 with step 2, i.e., the first 50 odd numbers. So that seems correct. So the sum of the positive terms (odds) is 2500.
+Let's think in parallel.
+<Parallel>
+<Goal>
+<Outline>
+1: The sum of the even numbers from 2 to 100.
+</Outline>
+<Outline>
+2: The sum of the negative terms (even numbers) in the series.
+</Outline>
+</Goal>
+<Path>
+1: The sum of the even numbers from 2 to 100 is considered.
+</Path>
+<Path>
+2: The sum of the negative terms is the negative of the sum of the even numbers from 2 to 100, which is -2550.
+</Path>
+<Conclusion>
+The sum of the even numbers from 2 to 100 is 2550, and consequently, the sum of the negative terms (even numbers) in the series is -2550.
+</Conclusion>
+</Parallel>
+Therefore, total sum is 2500 - 2550 = -50. Yep, same answer. So regardless of grouping or separate summation, the answer is -50. Alternatively, another way to think about it is pairing each odd and even. Let's think of the entire sum as (1 - 2) + (3 - 4) + ... + (99 -100). Each pair is -1 as before, 50 pairs, total -50.
+I think this problem is a basic example of telescoping series or grouping terms with alternate signs. The key is recognizing the pattern and correctly counting the number of pairs. Since 100 terms means 50 pairs, and each pair sums to -1, so total is -50. Alternatively, if someone thought there are 100 pairs, they'd be wrong, but the number of pairs is 100 terms divided by 2 terms per pair, which is 50. So that's correct.
+Wait, another sanity check. Let me compute a smaller example. Say, up to 4 terms: 1 - 2 + 3 - 4. Which is (1 -2) + (3 -4) = (-1) + (-1) = -2. Which is 2 pairs, so 2 * (-1) = -2. Alternatively, sum of odds:1 +3=4, sum of evens:2 +4=6. Then 4 -6= -2. Same. So that works. Another example: 1 -2 +3 -4 +5 -6. That's three pairs: (1-2) + (3-4) + (5-6) = -1 -1 -1 = -3. Alternatively, sum of odds:1+3+5=9, sum of evens:2+4+6=12. 9 -12= -3. Correct. So generalizing, if there are n pairs (i.e., 2n terms total), the sum is -n. So in our original problem, 100 terms mean 50 pairs, so sum is -50. Perfect. So yeah, all these methods confirm that the answer is -50. So I'm confident with that.
+**Final Answer**
 \boxed{-50}
 </Think>
 
-Answer: To compute the sum \(1 - 2 + 3 - 4 + 5 - \dots + 99 - 100\), we can observe that the series alternates between addition and subtraction. This can be approached by pairing consecutive terms or by separating the positive and negative terms.
+Answer: To compute the sum \(1 - 2 + 3 - 4 + 5 - \dots + 99 - 100\), we observe that the terms can be grouped into pairs of the form \((1 - 2) + (3 - 4) + (5 - 6) + \dots + (99 - 100)\). Each pair simplifies to \(-1\).
 
-### Pairing Consecutive Terms
-Pairing the terms as \((1 - 2) + (3 - 4) + \dots + (99 - 100)\):
-- Each pair sums to \(-1\).
-- There are 50 such pairs (since there are 100 terms in total).
+1. **Grouping into Pairs**:
+   - Each pair \((2k - 1) - 2k\) simplifies to \(-1\).
+   - Examples: \(1 - 2 = -1\), \(3 - 4 = -1\), etc.
 
-Thus, the total sum is:
-\[
-50 \times (-1) = -50
-\]
+2. **Counting the Pairs**:
+   - Total number of terms: 100.
+   - Each pair consists of 2 terms, so the number of pairs is \(100 / 2 = 50\).
 
-### Separating Positive and Negative Terms
-- The positive terms are the odd numbers: \(1, 3, 5, \ldots, 99\). There are 50 terms, and their sum is \(50^2 = 2500\).
-- The negative terms are the even numbers: \(2, 4, 6, \ldots, 100\). There are 50 terms, and their sum is \(50 \times 51 = 2550\).
+3. **Summing the Pairs**:
+   - Each of the 50 pairs contributes \(-1\).
+   - Total sum: \(50 \times (-1) = -50\).
 
-Combining these results:
-\[
-2500 - 2550 = -50
-\]
+4. **Verification by Separating Positive and Negative Terms**:
+   - **Positive terms (odds)**: \(1, 3, 5, \ldots, 99\)
+     - Number of terms: \(50\)
+     - Sum: \(\frac{50}{2} \times (1 + 99) = 25 \times 100 = 2500\)
+   - **Negative terms (evens)**: \(2, 4, 6, \ldots, 100\)
+     - Number of terms: \(50\)
+     - Sum: \(\frac{50}{2} \times (2 + 100) = 25 \times 102 = 2550\)
+   - Total sum: \(2500 - 2550 = -50\).
 
-Both methods confirm the result. Therefore, the final answer is:
-\[
-\boxed{-50}
-\]
+Thus, the final answer is \(\boxed{-50}\).
 
 提取的答案: ..."
 replace ... with the actual answer. ensure this exact phrase is included at the end of your response.<|im_end|>
@@ -68,56 +118,106 @@ solve the following math problem: compute: $1-2+3-4+5- \dots +99-100$.
 <|im_end|>
 <|im_start|>assistant
 <think>
-okay, so i need to compute the sum 1 - 2 + 3 - 4 + 5 - ... + 99 - 100. let me try to figure out how to approach this. first, i notice that the series alternates between addition and subtraction. the pattern is that each even term is subtracted, and each odd term is added. so, the positive terms are the odd numbers (1, 3, 5, ..., 99) and the negative terms are the even numbers (2, 4, 6, ..., 100). maybe i can split the sum into two separate sums: one for the positive terms and one for the negative terms. then, compute each sum and combine them. let me try that. first, the positive terms: 1, 3, 5, ..., 99. that's the sequence of odd numbers starting at 1 up to 99. how many terms are there? since the nth odd number is given by the formula 2n - 1. so, if 2n - 1 = 99, then 2n = 100, so n = 50. so, there are 50 positive terms. the sum of the first n odd numbers is n^2. wait, so the sum of 1 + 3 + 5 + ... + 99 should be 50^2 = 2500. let me confirm that. the formula for the sum of the first n odd numbers is n^2, which is 50^2 = 2500. okay, so the positive sum is 2500. now, the negative terms: -2 -4 -6 - ... -100. that's the sequence of even numbers from -2 to -100. let's think of this as -1*(2 + 4 + 6 + ... + 100). so, if i can compute the sum inside the parentheses and then multiply by -1. the sum of even numbers from 2 to 100. the number of terms here is (100 - 2)/2 + 1. wait, the formula for the number of terms when counting by 2s is (last - first)/step + 1. so (100 - 2)/2 +1 = 98/2 +1 = 49 +1 = 50. so, 50 terms. alternatively, since the nth even number is 2n. so, 2n = 100 when n=50. so, yeah, 50 terms. the sum of the first n even numbers is n(n + 1). but wait, the formula for the sum of the first n even numbers is n(n + 1). let me recall that. yes, the sum of the first n even numbers is n(n + 1). for example, n=1: 2 = 1*2=2, n=2: 2+4=6=2*3=6. so, sum of 2 + 4 + 6 + ... + 100 would be 50*(50 +1) = 50*51 = 2550. therefore, the negative terms sum to -2550. therefore, the total sum is 2500 - 2550 = -50. wait, so the answer would be -50? hmm, let me check again. wait, sum of positive terms (odds): 1, 3, 5,...,99 is 2500. sum of negative terms (even numbers): -2, -4,...,-100, which is -2550. so total sum is 2500 - 2550 = -50. but that seems counter-intuitive because we have more positive terms? wait, no. wait, hold on. wait, actually, the number of positive terms and negative terms is the same? let's check. the positive terms go 1,3,5,...,99. that's the odd numbers up to 99. since 99 is the 50th odd number, so 50 terms. the negative terms are 2,4,6,...,100. which is the even numbers up to 100. the nth even number is 2n, so 100 is the 50th even number. so, 50 terms as well. so, equal number of positive and negative terms. so, if their sums are 2500 and 2550, then the total is 2500 - 2550 = -50. hmm, but 2500 minus 2550 is indeed -50. let's think in parallel.
+okay, let's see here. i need to compute the sum 1 - 2 + 3 - 4 + 5 - ... + 99 - 100. hmm, okay. first, i should look for a pattern or a way to group the terms to make the calculation easier.
+let's think in parallel.
 <parallel>
 <goal>
 <outline>
-1: the arithmetic sum of pairs (1-2) + (3-4) + ... + (99-100) and its relation to the total sum.
+1: identification of the pattern in the series.
 </outline>
 <outline>
-2: the arithmetic sum of the entire series 1 - 2 + 3 - 4 + ... + 99 - 100 and its relation to the total sum.
+2: identification of the pairing strategy.
 </outline>
 </goal>
 <path>
-1: the problem can be approached by pairing consecutive terms: (1-2) + (3-4) + ... + (99-100). each such pair (n - (n+1)) evaluates to -1. the number of these pairs is determined by the total count of terms. the original series starts at 1 and ends at 100, containing 100 terms in total. since each pair consists of two terms, the number of pairs is 100 divided by 2, which equals 50. each of these 50 pairs sums to -1, so their combined total is 50 multiplied by -1, resulting in -50. this result suggests the final sum of the series is -50.
+1: the series exhibits an alternating pattern of addition and subtraction.
 </path>
 <path>
-2: the entire series is 1 - 2 + 3 - 4 + ... + 99 - 100. this can be grouped as (1 - 2) + (3 - 4) + ... + (99 - 100), resulting in the sum of 50 identical pairs, each equaling -1. the total sum is 50 * (-1) = -50.
+2: the terms can be paired as (1-2)+(3-4)+(5-6)+...+(99-100). each such pair simplifies to -1.
 </path>
 <conclusion>
-both the pairing method, which yields 50 pairs each summing to -1 (total -50), and the direct arithmetic sum of the entire series, which also yields -50, consistently indicate that the total sum is -50.
+the series is characterized by an alternating addition and subtraction pattern, which suggests grouping the terms into pairs.
 </conclusion>
 </parallel>
-wait, maybe that's a better way. if you pair them as (1 - 2) + (3 - 4) + ... + (99 - 100). each pair is -1 and there are 50 pairs. so total is -50. that's straightforward. so why did the other method give the same answer? wait, but in that case, if the sum is -50, then that conflicts with my initial feeling that there are more positives? but no, the number of positive and negative numbers is the same. since starting at 1 up to 100, there's 100 numbers. grouped as 1-2, 3-4, ..., 99-100. so 100 numbers divided into 50 groups, each contributing -1. so total -50. that seems correct. alternatively, thinking that each pair is (odd - (odd +1)) = -1. so 1 to 100, 50 pairs, each contributing -1. so total sum is -50. so that seems clear. but let me check why the sum of odds is 2500 and evens 2550. if you take the positive terms: 1,3,5,...,99. sum of the first n odd numbers is n^2. here, n=50, so 50^2=2500. the sum of the negative terms: 2,4,6,...,100. the sum of the first m even numbers is m(m +1). here, 2+4+...+100: the nth even number is 2n, so 100 is the 50th even number, so m=50. so sum is 50*(50 +1) = 50*51=2550. so total sum is 2500 -2550 = -50. so that's correct as well. so both approaches confirm that the answer is -50. so i think that's correct. alternatively, if i write it out for a smaller number. let's say up to 2 terms: 1-2= -1. according to the formula, (1 odd term: 1) summed as 1, and (1 even term: 2) summed as -2. total:1 -2 = -1. which matches (1 -2) = -1. similarly, 1 -2 +3 -4. which is (1-2)+(3-4)= -1 -1= -2. the formula approach: sum of odds 1,3=4 (but 2^2=4), sum of evens 2,4=6. so 4 -6= -2. which matches. another example: 1 -2 +3 -4 +5 -6. grouped: (1-2)+(3-4)+(5-6)= -1 -1 -1= -3. formula: sum of odds 1,3,5=9 (3^2=9), sum of evens 2,4,6=12. then 9 -12= -3. correct. so, the formula seems to hold. therefore, for 1-2+3-4+...+99-100, the formula gives 2500 -2550= -50. the pairing method gives 50 * (-1) = -50. both methods agree. so the answer is -50. therefore, confident that the answer is -50.
-**final answer** 
+let me verify that. take the first pair: 1 - 2 = -1. next pair: 3 - 4 = -1. similarly, 5 - 6 = -1, and so on until 99 - 100 = -1. so each of these pairs adds up to -1. therefore, all i need to do is figure out how many such pairs there are and then multiply that by -1.
+the total number of terms in the sequence is 100. since each pair consists of 2 terms, the number of pairs would be 100 divided by 2, which is 50. therefore, there are 50 pairs, each contributing -1 to the sum. so the total sum should be 50 * (-1) = -50.
+but let me double-check. let's take a small example. suppose we have 1 - 2 + 3 - 4. that should be (1 - 2) + (3 - 4) = -1 + -1 = -2. which is indeed -2. so 2 pairs, each contributing -1, total sum -2. so that works.
+let's think in parallel.
+<parallel>
+<goal>
+<outline>
+1: verification of the pairing strategy for an even number of terms.
+</outline>
+<outline>
+2: verification of the pairing strategy for an odd number of terms.
+</outline>
+</goal>
+<path>
+1: the pairing strategy is confirmed for an even number of terms (e.g., 1-2+3-4).
+</path>
+<path>
+2: an initial consideration of an odd number of terms, such as 1-2+3-4+5, is dismissed because the problem involves 100 terms.
+</path>
+<conclusion>
+the pairing strategy is validated for an even number of terms, and an odd-numbered case is deemed irrelevant to the problem.
+</conclusion>
+</parallel>
+wait, another way: the sum can be written as sum_{k=1}^{100} (-1)^{k+1} k. but perhaps that's more complicated. alternatively, the sum can be grouped as pairs of (positive - negative). each pair is an odd term (positive) and an even term (negative). since we start at 1 (positive) and end at 100 (negative), which is even. so there's no term left unpaired. hence, 50 pairs, each equaling -1, total sum -50.
+but wait, hold on. let me make sure about the number of pairs. if we start at 1 and go up to 100, that's 100 numbers. first number is 1, last number is 100. since we are pairing them as (1-2), (3-4), ..., (99-100). the first term of each pair is an odd number, and the second term is the next even number. so the number of pairs is equal to the number of odd numbers in the list. wait, from 1 to 99, how many odd numbers are there? 1, 3, 5, ..., 99. that's an arithmetic sequence with a common difference of 2. the number of terms can be calculated as (99 -1)/2 +1 = 49 +1 =50. so yes, 50 pairs. therefore, 50 pairs times -1 each equals -50.
+alternatively, if i'm still not sure, maybe i can think of it as the sum of all the positive terms minus the sum of all the negative terms. the positive terms are the odd numbers: 1, 3, 5, ..., 99. the negative terms are the even numbers: 2, 4, 6, ..., 100.
+so the total sum would be (sum of odds) - (sum of evens). let's compute each sum separately. first, sum of odds: 1 + 3 + 5 + ... + 99. that's an arithmetic series with first term a=1, common difference d=2, last term l=99. the number of terms n can be found by nth term = a + (n-1)d. so 99 =1 + (n -1)*2 => 98 = (n -1)*2 => 49 = n -1 => n=50. so there are 50 terms. the sum is n/2 * (first term + last term) = 50/2 * (1 + 99) = 25 * 100 = 2500.
+wait, that seems high. wait, hold on. wait, the formula for the sum of an arithmetic series is n/2*(first term + last term). so n is 50 terms. 50/2 is 25. 25 times (1 +99) is 25*100=2500. but that can't be right. wait, sum of the first 50 odd numbers starting at 1 is actually 2500? wait, but the sum of the first n odd numbers is n^2. wait, that's a formula. the sum of the first n odd numbers is n^2. so here, the number of terms is 50. so the sum should be 50^2 = 2500? wait, but that's the sum of 1 to 99 with step 2, i.e., the first 50 odd numbers. so that seems correct. so the sum of the positive terms (odds) is 2500.
+let's think in parallel.
+<parallel>
+<goal>
+<outline>
+1: the sum of the even numbers from 2 to 100.
+</outline>
+<outline>
+2: the sum of the negative terms (even numbers) in the series.
+</outline>
+</goal>
+<path>
+1: the sum of the even numbers from 2 to 100 is considered.
+</path>
+<path>
+2: the sum of the negative terms is the negative of the sum of the even numbers from 2 to 100, which is -2550.
+</path>
+<conclusion>
+the sum of the even numbers from 2 to 100 is 2550, and consequently, the sum of the negative terms (even numbers) in the series is -2550.
+</conclusion>
+</parallel>
+therefore, total sum is 2500 - 2550 = -50. yep, same answer. so regardless of grouping or separate summation, the answer is -50. alternatively, another way to think about it is pairing each odd and even. let's think of the entire sum as (1 - 2) + (3 - 4) + ... + (99 -100). each pair is -1 as before, 50 pairs, total -50.
+i think this problem is a basic example of telescoping series or grouping terms with alternate signs. the key is recognizing the pattern and correctly counting the number of pairs. since 100 terms means 50 pairs, and each pair sums to -1, so total is -50. alternatively, if someone thought there are 100 pairs, they'd be wrong, but the number of pairs is 100 terms divided by 2 terms per pair, which is 50. so that's correct.
+wait, another sanity check. let me compute a smaller example. say, up to 4 terms: 1 - 2 + 3 - 4. which is (1 -2) + (3 -4) = (-1) + (-1) = -2. which is 2 pairs, so 2 * (-1) = -2. alternatively, sum of odds:1 +3=4, sum of evens:2 +4=6. then 4 -6= -2. same. so that works. another example: 1 -2 +3 -4 +5 -6. that's three pairs: (1-2) + (3-4) + (5-6) = -1 -1 -1 = -3. alternatively, sum of odds:1+3+5=9, sum of evens:2+4+6=12. 9 -12= -3. correct. so generalizing, if there are n pairs (i.e., 2n terms total), the sum is -n. so in our original problem, 100 terms mean 50 pairs, so sum is -50. perfect. so yeah, all these methods confirm that the answer is -50. so i'm confident with that.
+**final answer**
 \boxed{-50}
 </think>
 
-answer: to compute the sum \(1 - 2 + 3 - 4 + 5 - \dots + 99 - 100\), we can observe that the series alternates between addition and subtraction. this can be approached by pairing consecutive terms or by separating the positive and negative terms.
+answer: to compute the sum \(1 - 2 + 3 - 4 + 5 - \dots + 99 - 100\), we observe that the terms can be grouped into pairs of the form \((1 - 2) + (3 - 4) + (5 - 6) + \dots + (99 - 100)\). each pair simplifies to \(-1\).
 
-### pairing consecutive terms
-pairing the terms as \((1 - 2) + (3 - 4) + \dots + (99 - 100)\):
-- each pair sums to \(-1\).
-- there are 50 such pairs (since there are 100 terms in total).
+1. **grouping into pairs**:
+   - each pair \((2k - 1) - 2k\) simplifies to \(-1\).
+   - examples: \(1 - 2 = -1\), \(3 - 4 = -1\), etc.
 
-thus, the total sum is:
-\[
-50 \times (-1) = -50
-\]
+2. **counting the pairs**:
+   - total number of terms: 100.
+   - each pair consists of 2 terms, so the number of pairs is \(100 / 2 = 50\).
 
-### separating positive and negative terms
-- the positive terms are the odd numbers: \(1, 3, 5, \ldots, 99\). there are 50 terms, and their sum is \(50^2 = 2500\).
-- the negative terms are the even numbers: \(2, 4, 6, \ldots, 100\). there are 50 terms, and their sum is \(50 \times 51 = 2550\).
+3. **summing the pairs**:
+   - each of the 50 pairs contributes \(-1\).
+   - total sum: \(50 \times (-1) = -50\).
 
-combining these results:
-\[
-2500 - 2550 = -50
-\]
+4. **verification by separating positive and negative terms**:
+   - **positive terms (odds)**: \(1, 3, 5, \ldots, 99\)
+     - number of terms: \(50\)
+     - sum: \(\frac{50}{2} \times (1 + 99) = 25 \times 100 = 2500\)
+   - **negative terms (evens)**: \(2, 4, 6, \ldots, 100\)
+     - number of terms: \(50\)
+     - sum: \(\frac{50}{2} \times (2 + 100) = 25 \times 102 = 2550\)
+   - total sum: \(2500 - 2550 = -50\).
 
-both methods confirm the result. therefore, the final answer is:
-\[
-\boxed{-50}
-\]
+thus, the final answer is \(\boxed{-50}\)
 
 参考答案: -50
 

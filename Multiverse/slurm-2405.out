@@ -1,0 +1,262 @@
+[2025-08-11 02:08:32] Downcasting torch.float32 to torch.float16.
+[2025-08-11 02:08:39 TP0] Downcasting torch.float32 to torch.float16.
+[2025-08-11 02:08:39 TP2] Downcasting torch.float32 to torch.float16.
+[2025-08-11 02:08:39 TP0] Downcasting torch.float32 to torch.float16.
+[2025-08-11 02:08:39 TP0] Attention backend not set. Use flashinfer backend by default.
+[2025-08-11 02:08:39 TP0] Init torch distributed begin.
+[2025-08-11 02:08:39 TP1] Downcasting torch.float32 to torch.float16.
+[2025-08-11 02:08:39 TP3] Downcasting torch.float32 to torch.float16.
+[2025-08-11 02:08:39 TP2] Downcasting torch.float32 to torch.float16.
+[2025-08-11 02:08:39 TP2] Attention backend not set. Use flashinfer backend by default.
+[2025-08-11 02:08:39 TP2] Init torch distributed begin.
+[2025-08-11 02:08:40 TP1] Downcasting torch.float32 to torch.float16.
+[2025-08-11 02:08:40 TP1] Attention backend not set. Use flashinfer backend by default.
+[2025-08-11 02:08:40 TP1] Init torch distributed begin.
+[2025-08-11 02:08:40 TP3] Downcasting torch.float32 to torch.float16.
+[2025-08-11 02:08:40 TP3] Attention backend not set. Use flashinfer backend by default.
+[2025-08-11 02:08:40 TP3] Init torch distributed begin.
+[2025-08-11 02:08:40 TP0] sglang is using nccl==2.21.5
+[2025-08-11 02:08:40 TP2] sglang is using nccl==2.21.5
+[2025-08-11 02:08:40 TP3] sglang is using nccl==2.21.5
+[2025-08-11 02:08:40 TP1] sglang is using nccl==2.21.5
+[2025-08-11 02:08:42 TP2] Custom allreduce is disabled because it's not supported on more than two PCIe-only GPUs. To silence this warning, specify disable_custom_all_reduce=True explicitly.
+[2025-08-11 02:08:42 TP0] Custom allreduce is disabled because it's not supported on more than two PCIe-only GPUs. To silence this warning, specify disable_custom_all_reduce=True explicitly.
+[2025-08-11 02:08:42 TP1] Custom allreduce is disabled because it's not supported on more than two PCIe-only GPUs. To silence this warning, specify disable_custom_all_reduce=True explicitly.
+[2025-08-11 02:08:42 TP3] Custom allreduce is disabled because it's not supported on more than two PCIe-only GPUs. To silence this warning, specify disable_custom_all_reduce=True explicitly.
+[2025-08-11 02:08:42 TP0] Init torch distributed ends. mem usage=0.16 GB
+[2025-08-11 02:08:42 TP2] Init torch distributed ends. mem usage=0.16 GB
+[2025-08-11 02:08:42 TP3] Init torch distributed ends. mem usage=0.16 GB
+[2025-08-11 02:08:42 TP1] Init torch distributed ends. mem usage=0.16 GB
+[2025-08-11 02:08:42 TP0] Load weight begin. avail mem=1.56 GB
+[2025-08-11 02:08:42 TP3] Load weight begin. avail mem=1.56 GB
+[2025-08-11 02:08:42 TP2] Load weight begin. avail mem=1.56 GB
+[2025-08-11 02:08:42 TP1] Load weight begin. avail mem=1.56 GB
+[2025-08-11 02:08:44 TP1] Scheduler hit an exception: Traceback (most recent call last):
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/managers/scheduler.py", line 2541, in run_scheduler_process
+    scheduler = Scheduler(server_args, port_args, gpu_id, tp_rank, pp_rank, dp_rank)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/managers/scheduler.py", line 272, in __init__
+    self.tp_worker = TpWorkerClass(
+                     ^^^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/managers/tp_worker.py", line 85, in __init__
+    self.model_runner = ModelRunner(
+                        ^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/model_executor/model_runner.py", line 190, in __init__
+    self.initialize(min_per_gpu_memory)
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/model_executor/model_runner.py", line 205, in initialize
+    self.load_model()
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/model_executor/model_runner.py", line 458, in load_model
+    self.model = get_model(
+                 ^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/model_loader/__init__.py", line 22, in get_model
+    return loader.load_model(
+           ^^^^^^^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/model_loader/loader.py", line 372, in load_model
+    model = _initialize_model(
+            ^^^^^^^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/model_loader/loader.py", line 153, in _initialize_model
+    return model_class(
+           ^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/models/qwen2.py", line 357, in __init__
+    self.model = Qwen2Model(
+                 ^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/models/qwen2.py", line 260, in __init__
+    self.layers = make_layers(
+                  ^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/utils.py", line 440, in make_layers
+    + [
+      ^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/utils.py", line 441, in <listcomp>
+    maybe_offload_to_cpu(layer_fn(idx=idx, prefix=add_prefix(idx, prefix)))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/models/qwen2.py", line 262, in <lambda>
+    lambda idx, prefix: decoder_layer_type(
+                        ^^^^^^^^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/models/qwen2.py", line 192, in __init__
+    self.self_attn = Qwen2Attention(
+                     ^^^^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/models/qwen2.py", line 139, in __init__
+    self.o_proj = RowParallelLinear(
+                  ^^^^^^^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/layers/linear.py", line 1188, in __init__
+    self.quant_method.create_weights(
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/layers/linear.py", line 157, in create_weights
+    torch.empty(
+  File "/cluster/home2/yueyang/miniconda3/envs/Mutiverse/lib/python3.11/site-packages/torch/utils/_device.py", line 104, in __torch_function__
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 14.00 MiB. GPU 1 has a total capacity of 23.57 GiB of which 3.75 MiB is free. Process 689224 has 21.59 GiB memory in use. Including non-PyTorch memory, this process has 1.96 GiB memory in use. Of the allocated memory 1.54 GiB is allocated by PyTorch, and 19.57 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+[2025-08-11 02:08:44 TP2] Scheduler hit an exception: Traceback (most recent call last):
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/managers/scheduler.py", line 2541, in run_scheduler_process
+    scheduler = Scheduler(server_args, port_args, gpu_id, tp_rank, pp_rank, dp_rank)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/managers/scheduler.py", line 272, in __init__
+    self.tp_worker = TpWorkerClass(
+                     ^^^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/managers/tp_worker.py", line 85, in __init__
+    self.model_runner = ModelRunner(
+                        ^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/model_executor/model_runner.py", line 190, in __init__
+    self.initialize(min_per_gpu_memory)
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/model_executor/model_runner.py", line 205, in initialize
+    self.load_model()
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/model_executor/model_runner.py", line 458, in load_model
+    self.model = get_model(
+                 ^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/model_loader/__init__.py", line 22, in get_model
+    return loader.load_model(
+           ^^^^^^^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/model_loader/loader.py", line 372, in load_model
+    model = _initialize_model(
+            ^^^^^^^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/model_loader/loader.py", line 153, in _initialize_model
+    return model_class(
+           ^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/models/qwen2.py", line 357, in __init__
+    self.model = Qwen2Model(
+                 ^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/models/qwen2.py", line 260, in __init__
+    self.layers = make_layers(
+                  ^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/utils.py", line 440, in make_layers
+    + [
+      ^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/utils.py", line 441, in <listcomp>
+    maybe_offload_to_cpu(layer_fn(idx=idx, prefix=add_prefix(idx, prefix)))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/models/qwen2.py", line 262, in <lambda>
+    lambda idx, prefix: decoder_layer_type(
+                        ^^^^^^^^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/models/qwen2.py", line 192, in __init__
+    self.self_attn = Qwen2Attention(
+                     ^^^^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/models/qwen2.py", line 139, in __init__
+    self.o_proj = RowParallelLinear(
+                  ^^^^^^^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/layers/linear.py", line 1188, in __init__
+    self.quant_method.create_weights(
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/layers/linear.py", line 157, in create_weights
+    torch.empty(
+  File "/cluster/home2/yueyang/miniconda3/envs/Mutiverse/lib/python3.11/site-packages/torch/utils/_device.py", line 104, in __torch_function__
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 14.00 MiB. GPU 2 has a total capacity of 23.57 GiB of which 3.75 MiB is free. Process 689225 has 21.59 GiB memory in use. Including non-PyTorch memory, this process has 1.96 GiB memory in use. Of the allocated memory 1.54 GiB is allocated by PyTorch, and 19.57 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+[2025-08-11 02:08:44 TP0] Scheduler hit an exception: Traceback (most recent call last):
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/managers/scheduler.py", line 2541, in run_scheduler_process
+    scheduler = Scheduler(server_args, port_args, gpu_id, tp_rank, pp_rank, dp_rank)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/managers/scheduler.py", line 272, in __init__
+    self.tp_worker = TpWorkerClass(
+                     ^^^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/managers/tp_worker.py", line 85, in __init__
+    self.model_runner = ModelRunner(
+                        ^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/model_executor/model_runner.py", line 190, in __init__
+    self.initialize(min_per_gpu_memory)
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/model_executor/model_runner.py", line 205, in initialize
+    self.load_model()
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/model_executor/model_runner.py", line 458, in load_model
+    self.model = get_model(
+                 ^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/model_loader/__init__.py", line 22, in get_model
+    return loader.load_model(
+           ^^^^^^^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/model_loader/loader.py", line 372, in load_model
+    model = _initialize_model(
+            ^^^^^^^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/model_loader/loader.py", line 153, in _initialize_model
+    return model_class(
+           ^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/models/qwen2.py", line 357, in __init__
+    self.model = Qwen2Model(
+                 ^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/models/qwen2.py", line 260, in __init__
+    self.layers = make_layers(
+                  ^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/utils.py", line 440, in make_layers
+    + [
+      ^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/utils.py", line 441, in <listcomp>
+    maybe_offload_to_cpu(layer_fn(idx=idx, prefix=add_prefix(idx, prefix)))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/models/qwen2.py", line 262, in <lambda>
+    lambda idx, prefix: decoder_layer_type(
+                        ^^^^^^^^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/models/qwen2.py", line 192, in __init__
+    self.self_attn = Qwen2Attention(
+                     ^^^^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/models/qwen2.py", line 139, in __init__
+    self.o_proj = RowParallelLinear(
+                  ^^^^^^^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/layers/linear.py", line 1188, in __init__
+    self.quant_method.create_weights(
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/layers/linear.py", line 157, in create_weights
+    torch.empty(
+  File "/cluster/home2/yueyang/miniconda3/envs/Mutiverse/lib/python3.11/site-packages/torch/utils/_device.py", line 104, in __torch_function__
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 14.00 MiB. GPU 0 has a total capacity of 23.57 GiB of which 3.75 MiB is free. Process 689223 has 21.59 GiB memory in use. Including non-PyTorch memory, this process has 1.96 GiB memory in use. Of the allocated memory 1.54 GiB is allocated by PyTorch, and 19.57 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+[2025-08-11 02:08:44 TP3] Scheduler hit an exception: Traceback (most recent call last):
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/managers/scheduler.py", line 2541, in run_scheduler_process
+    scheduler = Scheduler(server_args, port_args, gpu_id, tp_rank, pp_rank, dp_rank)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/managers/scheduler.py", line 272, in __init__
+    self.tp_worker = TpWorkerClass(
+                     ^^^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/managers/tp_worker.py", line 85, in __init__
+    self.model_runner = ModelRunner(
+                        ^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/model_executor/model_runner.py", line 190, in __init__
+    self.initialize(min_per_gpu_memory)
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/model_executor/model_runner.py", line 205, in initialize
+    self.load_model()
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/model_executor/model_runner.py", line 458, in load_model
+    self.model = get_model(
+                 ^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/model_loader/__init__.py", line 22, in get_model
+    return loader.load_model(
+           ^^^^^^^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/model_loader/loader.py", line 372, in load_model
+    model = _initialize_model(
+            ^^^^^^^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/model_loader/loader.py", line 153, in _initialize_model
+    return model_class(
+           ^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/models/qwen2.py", line 357, in __init__
+    self.model = Qwen2Model(
+                 ^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/models/qwen2.py", line 260, in __init__
+    self.layers = make_layers(
+                  ^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/utils.py", line 440, in make_layers
+    + [
+      ^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/utils.py", line 441, in <listcomp>
+    maybe_offload_to_cpu(layer_fn(idx=idx, prefix=add_prefix(idx, prefix)))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/models/qwen2.py", line 262, in <lambda>
+    lambda idx, prefix: decoder_layer_type(
+                        ^^^^^^^^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/models/qwen2.py", line 192, in __init__
+    self.self_attn = Qwen2Attention(
+                     ^^^^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/models/qwen2.py", line 139, in __init__
+    self.o_proj = RowParallelLinear(
+                  ^^^^^^^^^^^^^^^^^^
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/layers/linear.py", line 1188, in __init__
+    self.quant_method.create_weights(
+  File "/cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/sglang/python/sglang/srt/layers/linear.py", line 157, in create_weights
+    torch.empty(
+  File "/cluster/home2/yueyang/miniconda3/envs/Mutiverse/lib/python3.11/site-packages/torch/utils/_device.py", line 104, in __torch_function__
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 14.00 MiB. GPU 3 has a total capacity of 23.57 GiB of which 3.75 MiB is free. Process 689226 has 21.59 GiB memory in use. Including non-PyTorch memory, this process has 1.96 GiB memory in use. Of the allocated memory 1.54 GiB is allocated by PyTorch, and 19.57 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+[2025-08-11 02:08:44] Received sigquit from a child process. It usually means the child failed.
+[2025-08-11 02:08:44] Received sigquit from a child process. It usually means the child failed.
+--- Logging error ---
+[2025-08-11 02:08:44] Received sigquit from a child process. It usually means the child failed.
+/var/spool/slurmd/job02405/slurm_script: line 10: 868491 Killed                  python /cluster/home2/yueyang/Multiverse/Multiverse/inference/engine/Multiverse-Engine/example/eval.py --model_path /cluster/nvme2/yueyang/Multiverse/model --prompts_dir /cluster/home2/yueyang/Multiverse/Multiverse/prompts/MATH500_test --results_dir /cluster/home2/yueyang/Multiverse/Multiverse/prompts/MATH500_results --stats_dir /cluster/home2/yueyang/Multiverse/Multiverse/prompts/MATH500_acc

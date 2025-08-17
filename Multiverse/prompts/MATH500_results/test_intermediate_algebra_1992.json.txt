@@ -13,403 +13,250 @@ Solve the following math problem: Solve
 <|im_start|>assistant
 <Think>
 Okay, so I need to solve the inequality \(\frac{|x^2 - 81|}{x^2 - 36x} < 0\).
-Hmm, let me think about how to approach this.
-First, I remember that when dealing with rational inequalities, especially those involving absolute values, it's important to consider the critical points where the expression can change signs.
-Also, the denominator can't be zero, so I need to note those values as points where the expression is undefined.
-Let me break it down step by step.
-Let's think in parallel.
-<Parallel>
-<Goal>
-<Outline>
-1: The condition under which a rational expression is negative.
-</Outline>
-<Outline>
-2: The impact of the absolute value in the numerator on its sign.
-</Outline>
-</Goal>
-<Path>
-1: A rational expression is negative if its numerator and denominator have opposite signs.
-</Path>
-<Path>
-2: The numerator is an absolute value expression, \(|x^2 - 81|\), which by definition is always non-negative. Consequently, the numerator will be zero when the expression inside the absolute value is zero, and positive otherwise.
-</Path>
-<Conclusion>
-The inequality requires the numerator and denominator to have opposite signs. The numerator, being an absolute value, is non-negative, meaning it is zero at specific points and positive elsewhere.
-</Conclusion>
-</Parallel>
-So the numerator is zero when \(x^2 - 81 = 0\), which factors into \((x - 9)(x + 9) = 0\).
-So x = 9 and x = -9 are the points where the numerator is zero.
-But since it's an absolute value, those points are just going to be tangent to the x-axis, right?
-Wait, but absolute value functions are always non-negative, so the numerator here is always ≥ 0, and equals zero at x = 9 and x = -9.
-So, the numerator is non-negative everywhere else.
-Now, the denominator is \(x^2 - 36x\).
+Hmm, let's break this down step by step.
+First, inequalities involving absolute values and rational expressions can be a bit tricky, so I need to be careful.
+Let me recall that the absolute value expression \(|x^2 - 81|\) will always be non-negative, meaning it's either zero or positive.
+But since it's in the numerator, and we have a fraction less than zero, that means the entire fraction must be negative.
+A fraction is negative when the numerator and denominator have opposite signs.
+However, since the numerator here is an absolute value, which is non-negative, the only way the fraction can be negative is if the denominator is negative.
+Because then the numerator (which is non-negative) divided by a negative denominator gives a non-positive result.
+Wait, but we need the fraction to be strictly less than zero, so the numerator must not be zero when the denominator is negative.
+If the numerator is zero, the entire fraction would be zero, which doesn't satisfy the inequality (since zero is not less than zero).
+So, actually, the fraction will be negative if and only if the denominator is negative and the numerator is positive.
+But the numerator here is an absolute value, so the numerator is zero when \(x^2 - 81 = 0\), which is when \(x = \pm9\).
+At all other points, the numerator is positive.
+Therefore, the fraction is negative when the denominator is negative, except at the points where the numerator is zero (since at those points, the fraction is zero, which doesn't satisfy the inequality).
+So, first, let's factor the denominator to understand where it's negative.
+The denominator is \(x^2 - 36x\).
 Let me factor that: \(x(x - 36)\).
-Wait, wait, actually \(x^2 - 36x = x(x - 36)\).
-So the denominator is zero at x = 0 and x = 36.
-Therefore, these two points, x = 0 and x = 36, are excluded from the domain because they make the denominator zero.
-So the expression is undefined at x = 0 and x = 36.
-Additionally, the original inequality is strictly less than 0, so we need the entire expression to be negative.
-Since the numerator is an absolute value, which is always non-negative, the only way the fraction can be negative is if the denominator is negative.
-Because a non-negative number divided by a negative number is negative.
-But the numerator is zero at x = 9 and x = -9, so at those points, the entire expression would be 0/(denominator), which is zero.
-But the inequality is strictly less than 0, so those points cannot be included in the solution set.
-Therefore, the expression will be negative when the denominator is negative, excluding the points where the numerator is zero (x = 9 and x = -9) and where the denominator is zero (x = 0 and x = 36).
-Therefore, first, identify where the denominator is negative.
-The denominator is \(x(x - 36)\).
-Let me determine where this product is negative.
-The critical points are at x = 0 and x = 36.
-These divide the real number line into three intervals: (-∞, 0), (0, 36), and (36, ∞).
-Let me test each interval:
+So, the denominator is \(x(x - 36)\).
+Now, I need to determine where this denominator is negative.
 Let's think in parallel.
 <Parallel>
 <Goal>
 <Outline>
-1: Determination of the sign of the denominator \(x(x-36)\) on the interval \((-∞, 0)\).
+1: The sign of the denominator x(x-36) in the interval x < 0.
 </Outline>
 <Outline>
-2: Determination of the sign of the denominator \(x(x-36)\) on the interval \((0, 36)\).
+2: The sign of the denominator x(x-36) in the interval 0 < x < 36.
 </Outline>
 <Outline>
-3: Determination of the sign of the denominator \(x(x-36)\) on the interval \((36, ∞)\).
+3: The sign of the denominator x(x-36) in the interval x > 36.
 </Outline>
 </Goal>
 <Path>
-1: For the interval \((-∞, 0)\), a test point \(x = -1\) is selected. Evaluating the denominator at this point yields \((-1)(-1-36) = (-1)(-37) = 37\), which is positive. Therefore, the denominator is positive on \((-∞, 0)\).
+1: For x in the interval x < 0, both factors x and (x-36) are negative. The product of two negative numbers is positive, so the denominator x(x-36) is positive in this interval.
 </Path>
 <Path>
-2: The sign of the denominator \(x(x - 36)\) on the interval \((0, 36)\) is determined by testing a value within this interval, such as x=18. For x=18, the product \(18(18 - 36)\) equals \(18 \times (-18) = -324\), which is negative.
+2: The denominator is positive if x is between 0 and 36. This is because for 0 < x < 36, the term x is positive and (x-36) is negative. The product of a positive and a negative term is negative, which means the denominator x(x-36) is negative for 0 < x < 36.
 </Path>
 <Path>
-3: For the interval (36, ∞), both factors x and (x - 36) are positive, leading to a positive product.
+3: For x values greater than 36, both factors x and (x-36) are positive, resulting in a positive denominator.
 </Path>
 <Conclusion>
-The sign of the denominator \(x(x-36)\) is positive on the interval \((-∞, 0)\), negative on the interval \((0, 36)\), and positive on the interval \((36, ∞)\).
+The denominator x(x-36) is positive when x < 0, negative when 0 < x < 36, and positive again when x > 36.
 </Conclusion>
 </Parallel>
-Therefore, the denominator is negative on (0, 36).
-So the expression \(\frac{|x^2 - 81|}{x^2 - 36x}\) is negative when x is in (0, 36), but we have to exclude the points where the numerator is zero, which are x = 9 and x = -9.
-However, x = -9 is not in the interval (0, 36).
-So in the interval (0, 36), the only point where the numerator is zero is x = 9.
+Wait, hold on, that can't be right.
+Let me test some values.
+Let's think in parallel.
+<Parallel>
+<Goal>
+<Outline>
+1: The sign of the denominator x(x-36) when x is 0.
+</Outline>
+<Outline>
+2: The sign of the denominator x(x-36) when x is 36.
+</Outline>
+</Goal>
+<Path>
+1: When x is 0, the denominator x(x-36) equals 0.
+</Path>
+<Path>
+2: When x is 36, the denominator x(x-36) is 0.
+</Path>
+<Conclusion>
+The denominator x(x-36) is zero at x=0 and x=36.
+</Conclusion>
+</Parallel>
+So, testing intervals:
+Let's think in parallel.
+<Parallel>
+<Goal>
+<Outline>
+1: The sign of the denominator x(x-36) in the interval x < 0.
+</Outline>
+<Outline>
+2: The sign of the denominator x(x-36) in the interval 0 < x < 36.
+</Outline>
+<Outline>
+3: The sign of the denominator x(x-36) in the interval x > 36.
+</Outline>
+</Goal>
+<Path>
+1: For x in the interval x < 0, the term x is negative and the term (x-36) is also negative. The product of two negative numbers is positive, so the denominator x(x-36) is positive in this interval.
+</Path>
+<Path>
+2: For x in the interval 0 < x < 36, the term x is positive and (x - 36) is negative. The product of a positive and a negative term is negative, so the denominator x(x-36) is negative in this interval.
+</Path>
+<Path>
+3: For x values greater than 36, both factors x and (x-36) are positive, resulting in a positive denominator.
+</Path>
+<Conclusion>
+The denominator x(x-36) is positive when x < 0, negative when 0 < x < 36, and positive again when x > 36.
+</Conclusion>
+</Parallel>
+So denominator is negative when 0 < x < 36.
+But we must also ensure that the numerator is not zero.
+The numerator \(|x^2 - 81|\) is zero at x = ±9.
+So at x = 9, the numerator is zero, which would make the fraction zero, and at x = -9, the numerator is also zero.
+However, x = -9 is not in the interval where the denominator is negative (0 < x < 36).
+So only x = 9 is in that interval.
 Therefore, we need to exclude x = 9 from the solution.
-Wait, but x = 9 is in the interval (0, 36).
-So the solution would be the interval (0, 36) without the point x = 9.
-But wait, let me confirm again.
-The numerator is zero at x = 9 and x = -9.
-At these points, the expression equals zero, which is not less than 0, so they are excluded.
-However, x = -9 is not in the interval where the denominator is negative (0, 36).
-So only x = 9 is inside the interval (0, 36) where the denominator is negative, causing the expression to be zero there.
-Therefore, the solution set should be (0, 9) union (9, 36).
-Wait, but let me double-check.
-Wait, if the denominator is negative on (0, 36), and the numerator is positive except at x = 9 and x = -9.
-Since in the interval (0, 36), the numerator is positive except at x = 9 where it is zero.
-So in (0, 9), the numerator is positive, denominator negative: so the fraction is negative.
-At x = 9, the numerator is zero: fraction is zero.
-In (9, 36), numerator is positive, denominator still negative: fraction is negative.
-Therefore, the fraction is negative on (0, 9) and (9, 36).
-But x = 9 makes it zero, so we exclude that point.
-So the solution is (0, 9) U (9, 36).
-But let me check the endpoints.
-The original inequality is strict (< 0), so the endpoints are not included.
-The denominator is zero at x = 0 and x = 36, so those are not included.
-Numerator is zero at x = 9, which is included in the interval but must be excluded because the inequality is strict.
-So yes, (0, 9) U (9, 36).
-Wait, but let me think again.
-Wait, when x is in (0, 36), denominator is negative.
-Numerator is |x2 -81|.
-Let's analyze the numerator.
-The numerator is |x2 -81|, which is the absolute value of a number.
-So, it's always non-negative, and it's zero at x = 9 and x = -9.
-So in the interval (0, 36), the numerator is |x2 -81|.
-Let's see, between x = 0 and x = 9, x2 is between 0 and 81, so x2 -81 is between -81 and 0.
-Taking absolute value, it becomes 81 - x2, so positive.
-Similarly, between x = 9 and x = 36, x2 is between 81 and 1296, so x2 -81 is positive, so absolute value is x2 -81.
-So in the entire interval (0, 36), except x =9, the numerator is positive.
-At x=9, numerator is zero.
-Therefore, the expression is negative on (0, 9) U (9, 36), since numerator is positive and denominator is negative, making the fraction negative.
-At x=9, the expression is zero, which does not satisfy the inequality.
-Therefore, the solution set is (0, 9) U (9, 36).
-But hold on, I need to make sure that there aren't any other intervals.
-Wait, the numerator is non-negative everywhere, denominator is negative only on (0, 36).
-Therefore, the only place where the expression is negative is when x is in (0, 36) excluding x=9.
-Therefore, yes, (0,9) U (9,36).
-Let me check with test values.
+Also, the original expression has a denominator, so we must exclude any points where the denominator is zero, which are x = 0 and x = 36.
+But x = 0 is not in the interval 0 < x < 36, but x = 36 is an endpoint.
+So the denominator is zero at x = 0 and x = 36, which are already excluded from the interval where the denominator is negative.
+Therefore, putting this all together: the fraction is negative when 0 < x < 36, excluding the points where the numerator is zero (x = 9) and the points where the denominator is zero (x = 0 and x = 36).
+But since x = -9 is not in the interval 0 < x < 36, we don't need to worry about that.
+Therefore, the solution should be the interval 0 < x < 36, excluding x = 9.
+Wait, but let me check with specific values to make sure.
 Let's think in parallel.
 <Parallel>
 <Goal>
 <Outline>
-1: The value of the expression at x=1.
+1: The validity of the inequality for x=1.
 </Outline>
 <Outline>
-2: The value of the expression at x=9.
+2: The validity of the inequality for x=9.
 </Outline>
 <Outline>
-3: The value of the expression at x=10.
+3: The validity of the inequality for x=10.
+</Outline>
+<Outline>
+4: The validity of the inequality for x=36.
 </Outline>
 </Goal>
 <Path>
-1: A test value of x=1 is chosen, which is within the interval (0,9). The numerator, |1^2 - 81|, evaluates to |1 - 81|, which is |-80|, resulting in 80. The denominator, 1^2 - 36*1, calculates to 1 - 36, yielding -35. The expression's value is 80 / -35, which is approximately -2.285, a negative number.
+1: For x=1, the numerator |1^2 - 81| evaluates to 80, and the denominator 1^2 - 36*1 evaluates to -35. The fraction 80/(-35) simplifies to -16/7, which is less than 0, satisfying the inequality.
 </Path>
 <Path>
-2: At x=9, the numerator is |9^2 - 81| = |81 - 81| = 0, resulting in a value of 0.
+2: The numerator |x^2-81| evaluates to |81-81| = 0 when x=9, making the fraction 0, which does not satisfy the inequality. This point is therefore not included in the solution.
 </Path>
 <Path>
-3: At x=10, the numerator |10^2 - 81| evaluates to |100 - 81|, which is 19. The denominator 10^2 - 36*10 becomes 100 - 360, resulting in -260. The expression value is 19/-260, approximately -0.073, which is less than 0.
+3: The value x=10, which is within the interval (0,36) and not equal to 9, is selected for testing. The numerator is |10^2 - 81| = |100 - 81| = |19| = 19. The denominator is 10^2 - 36*10 = 100 - 360 = -260. The fraction is 19 / (-260) = -19/260, which is less than 0. This confirms that x=10 satisfies the inequality.
+</Path>
+<Path>
+4: When x=36, the denominator x(x-36) becomes zero, rendering the expression undefined. Therefore, x=36 is not part of the solution set.
 </Path>
 <Conclusion>
-The expression evaluates to approximately -2.285 at x=1, 0 at x=9, and approximately -0.073 at x=10.
+The value x=1 satisfies the inequality, x=9 does not, x=10 satisfies the inequality, and x=36 is undefined, confirming that the inequality holds for values in (0,36) except x=9.
 </Conclusion>
 </Parallel>
-Similarly, at x = 35, numerator is |1225 -81| = 1144, denominator is 35^2 -36*35 = 35*(35 -36) = 35*(-1) = -35, so 1144 / (-35) ≈ -32.685, which is negative.
-So, in the interval (0, 36), except x=9, the expression is negative.
-At x=9, it's zero.
-Therefore, solution is (0, 9) U (9, 36).
-But let's check x values outside (0, 36).
-For example, x = -1.
+So the solution set is all x such that 0 < x < 9 or 9 < x < 36.
+So in interval notation, that would be (0, 9) union (9, 36).
+But let me double-check if there's any other critical points.
+The absolute value in the numerator doesn't cause sign changes, since it's always non-negative.
+But maybe I need to consider where the expression inside the absolute value changes sign?
+Wait, the numerator is |x^2 -81|, which is |(x-9)(x+9)|.
+So the expression inside the absolute value changes sign at x = -9 and x = 9.
+But since we are only considering the intervals where the denominator is negative, which is 0 < x < 36, except x = 0 and x = 36.
+Within this interval, the key points are x = 9, where the numerator is zero, and x = 0 and 36 where denominator is zero.
+So within 0 < x < 36, the numerator |x^2 -81| is zero at x = 9, positive elsewhere.
+So in the interval 0 < x < 9, the numerator is positive, denominator is negative (as established earlier), so the fraction is negative.
+Similarly, in 9 < x < 36, numerator is positive, denominator is negative, fraction is negative.
+At x = 9, the fraction is zero.
+At x = 0 and 36, the fraction is undefined.
+Therefore, combining these, the solution is 0 < x < 9 or 9 < x < 36.
+So (0,9) U (9,36).
+Yes, that seems right.
+Let me check with another value in the interval 0 < x < 9.
+Let's take x = 1.
 Let's think in parallel.
 <Parallel>
 <Goal>
 <Outline>
-1: The sign of the expression evaluated at x=-1.
-</Outline>
-<Outline>
-2: The sign of the expression evaluated at x=40.
+1: The validity of the inequality for x=1.
 </Outline>
 </Goal>
 <Path>
-1: The expression \(\frac{|x^2 - 81|}{x^2 - 36x}\) is evaluated at x=-1. The numerator, |(-1)^2 - 81|, simplifies to |1 - 81|, which is |-80|, resulting in 80. The denominator, (-1)^2 - 36*(-1), calculates to 1 + 36, yielding 37. The expression value is 80/37, approximately 2.162, a positive number, meaning it does not satisfy the inequality.
-</Path>
-<Path>
-2: The expression \(\frac{|x^2 - 81|}{x^2 - 36x}\) is evaluated at x=40, resulting in \(\frac{|40^2 - 81|}{40^2 - 36*40}\), which simplifies to \(\frac{|1600 - 81|}{1600 - 1440}\) or \(\frac{1519}{160}\), a positive value. This confirms the expression is positive for x > 36.
+1: For x=1, the numerator |1^2 - 81| evaluates to 80, and the denominator 1^2 - 36*1 evaluates to -35. The fraction 80/(-35) simplifies to -16/7, which is less than 0, satisfying the inequality.
 </Path>
 <Conclusion>
-The expression evaluates to a positive value at x=-1, indicating the inequality is not satisfied for x < 0. The expression also evaluates to a positive value at x=40, confirming the inequality is not satisfied for x > 36.
+The value x=1 satisfies the inequality, confirming the interval (0,9) is part of the solution set.
 </Conclusion>
 </Parallel>
-Therefore, outside of (0, 36), the expression is positive, so those intervals are not part of the solution.
-Therefore, the solution set is (0, 9) U (9, 36).
-But wait, the question is written as x2 -36x, which is x(x -36).
-So, when x is between 0 and 36, that expression is negative.
-So, yes, the fraction is negative there except where numerator is zero.
-But just to make sure, let me check another point near x=9.
-Let's take x=8.
+Now, let's check x = 10, which is in (9,36).
 Let's think in parallel.
 <Parallel>
 <Goal>
 <Outline>
-1: The value of the expression at x=8.
-</Outline>
-<Outline>
-2: The value of the expression at x=10.
+1: The validity of the inequality for x=10.
 </Outline>
 </Goal>
 <Path>
-1: At x=8, the numerator is |8^2 - 81|, which evaluates to |64 - 81|, resulting in |-17|, or 17. The denominator is 8^2 - 36*8, calculated as 64 - 288, yielding -224. The expression value is 17/-224, approximately -0.0759, which is less than 0.
-</Path>
-<Path>
-2: At x=10, the numerator |x^2 - 81| evaluates to |100 - 81|, which is 19. The denominator x^2 - 36x evaluates to 100 - 360, which is -260. The expression value is 19 / (-260), approximately -0.073, confirming it is negative.
+1: For x=10, the numerator |10^2 - 81| evaluates to |100 - 81|, which is |19|, equaling 19. The denominator 10^2 - 36*10 simplifies to 100 - 360, resulting in -260. The fraction 19/(-260) equals -19/260, a value less than 0, satisfying the inequality.
 </Path>
 <Conclusion>
-The expression evaluates to approximately -0.0759 at x=8 and approximately -0.073 at x=10, both of which are negative values.
+The value x=10 satisfies the inequality, confirming the interval (9,36) is part of the solution set.
 </Conclusion>
 </Parallel>
-So, in both cases, negative.
-So the expression is indeed negative on (0, 9) and (9, 36).
-Therefore, the solution set is the union of these two intervals, not including 9, and not including 0 and 36, which are the points where the denominator is zero.
-So, in interval notation, that would be (0, 9) U (9, 36).
-Therefore, I think that's the answer.
-But let me check once more if there's any mistake.
-Wait, another way to approach absolute value inequalities.
-Maybe I missed something?
+So both intervals work.
 Let's think in parallel.
 <Parallel>
 <Goal>
 <Outline>
-1: The definition of the absolute value function \(|x^2 - 81|\).
+1: The validity of the inequality for x=9.
 </Outline>
 <Outline>
-2: The definition of the absolute value function \(|x^2 - 81|\) on the interval \(x \in (0, 9)\).
-</Outline>
-<Outline>
-3: The definition of the absolute value function \(|x^2 - 81|\) on the interval \(x \in (9, 36)\).
+2: The validity of the inequality for x=36.
 </Outline>
 </Goal>
 <Path>
-1: The absolute value function \(|x^2 - 81|\) can be expressed as a piecewise function: it equals \(x^2 - 81\) when \(x^2 - 81 \geq 0\), and equals \(81 - x^2\) otherwise.
+1: For x=9, the numerator |x^2 - 81| evaluates to |81 - 81|, which is 0. Consequently, the fraction becomes 0, and since the inequality requires the expression to be less than 0, x=9 is not included in the solution set.
 </Path>
 <Path>
-2: For the interval \(x \in (0, 9)\), the expression \(x^2 - 81\) is negative, so the absolute value \(|x^2 - 81|\) is equivalent to \(-(x^2 - 81)\), which simplifies to \(81 - x^2\).
-</Path>
-<Path>
-3: For values of \(x\) in the interval \((9, 36)\), the expression \(x^2 - 81\) is positive, resulting in \(|x^2 - 81| = x^2 - 81\).
+2: When x=36, the denominator x^2 - 36x evaluates to 0, rendering the fraction undefined. Consequently, x=36 is not included in the solution set.
 </Path>
 <Conclusion>
-The function \(|x^2 - 81|\) is equivalent to \(81 - x^2\) for \(x \in (0, 9)\) and \(x^2 - 81\) for \(x \in (9, 36)\).
+The value x=9 is excluded from the solution set because the fraction equals 0, and x=36 is excluded because the fraction is undefined.
 </Conclusion>
 </Parallel>
-Therefore, we can split the inequality into two cases based on the definition of absolute value.
-Let's think in parallel.
-<Parallel>
-<Goal>
-<Outline>
-1: The inequality for the case \(x^2 \geq 81\).
-</Outline>
-<Outline>
-2: The inequality for the case \(x^2 < 81\).
-</Outline>
-</Goal>
-<Path>
-1: The first case is when \(x^2 \geq 81\), which implies \(|x^2 - 81| = x^2 - 81\). The inequality then becomes \(\frac{x^2 - 81}{x^2 - 36x} < 0\). The numerator, \(x^2 - 81\), factors into \((x - 9)(x + 9)\), and the denominator, \(x^2 - 36x\), factors into \(x(x - 36)\). The critical points for this case are x = -9, 0, 9, and 36, which divide the real number line into intervals where the expression's sign can be determined. The condition \(x^2 \geq 81\) restricts the domain for this case to \(x \leq -9\) or \(x \geq 9\).
-</Path>
-<Path>
-2: For the case \(x^2 < 81\), the inequality \(\frac{|x^2 - 81|}{x^2 - 36x} < 0\) is equivalent to \(\frac{81 - x^2}{x^2 - 36x} < 0\).
-</Path>
-<Conclusion>
-The inequality splits into two cases based on the definition of the absolute value numerator: \(\frac{x^2 - 81}{x^2 - 36x} < 0\) for \(x^2 \geq 81\), and \(\frac{81 - x^2}{x^2 - 36x} < 0\) for \(x^2 < 81\).
-</Conclusion>
-</Parallel>
-Case 1: x ≤ -9 or x ≥ 9
-Then the inequality is \(\frac{(x - 9)(x + 9)}{x(x - 36)} < 0\)
-We need to solve this inequality under the condition that x ≤ -9 or x ≥ 9.
-So first, let's note all the critical points where numerator or denominator is zero.
-Numerator is zero at x = 9 and x = -9.
-Denominator is zero at x = 0 and x = 36.
-So these points divide the real line into intervals.
-But considering our case 1 is x ≤ -9 or x ≥ 9, so we need to analyze the sign of the expression in those regions.
-Let's think in parallel.
-<Parallel>
-<Goal>
-<Outline>
-1: The sign analysis of the expression \(\frac{(x-9)(x+9)}{x(x-36)}\) for the condition \(x \leq -9\).
-</Outline>
-<Outline>
-2: The sign analysis of the expression \(\frac{(x-9)(x+9)}{x(x-36)}\) for the condition \(x \geq 9\).
-</Outline>
-</Goal>
-<Path>
-1: For \(x \leq -9\), the numerator \((x - 9)(x + 9)\) is positive since \(x \leq -9\) implies \(x+9 \leq 0\) and \(x-9 \leq -18 < 0\); the product of two negative terms is positive. The denominator \(x(x - 36)\) is positive because \(x \leq -9\) (negative) and \(x - 36 \leq -45\) (negative); the product of two negative terms is positive. The overall expression \(\frac{+}{+}\) is positive, which does not satisfy the inequality \(< 0\). The interval \(x \leq -9\) is therefore not part of the solution.
-</Path>
-<Path>
-2: For \(x \geq 9\), the numerator \((x-9)(x+9)\) is non-negative since \(x \geq 9\). The denominator \(x(x-36)\) is negative for \(9 \leq x < 36\) and positive for \(x > 36\). The expression \(\frac{(x-9)(x+9)}{x(x-36)}\) is therefore negative for \(9 \leq x < 36\) and positive for \(x > 36\). When \(x = 9\), the numerator is zero, making the expression equal to 0, which is not less than 0. For \(9 < x < 36\), the numerator \((x-9)(x+9)\) is positive, and the denominator \(x(x-36)\) is negative, resulting in a negative expression. For \(x > 36\), the numerator is positive and the denominator is positive, making the expression positive. The solution for this case is the interval \(9 < x < 36\).
-</Path>
-<Conclusion>
-The expression \(\frac{(x-9)(x+9)}{x(x-36)}\) is positive for \(x \leq -9\) and negative for \(9 < x < 36\). The inequality \(< 0\) is not satisfied for \(x \leq -9\), but is satisfied for \(9 < x < 36\).
-</Conclusion>
-</Parallel>
-Case 2: When x2 < 81, which is when -9 < x < 9.
-Then the inequality becomes \(\frac{81 - x^2}{x^2 - 36x} < 0\).
-Which is \(\frac{-(x^2 - 81)}{x(x - 36)} < 0\), which is \(\frac{-(x - 9)(x + 9)}{x(x - 36)} < 0\), which is equivalent to \(\frac{(x - 9)(x + 9)}{x(x - 36)} > 0\) after multiplying both sides by -1 and reversing the inequality sign.
-So in this case, we need the expression \(\frac{(x - 9)(x + 9)}{x(x - 36)}\) to be positive.
-Now, in the interval -9 < x < 9, let's analyze the sign of each factor.
-Let's think in parallel.
-<Parallel>
-<Goal>
-<Outline>
-1: The sign of the factor \(x-9\) for \(x \in (-9, 9)\).
-</Outline>
-<Outline>
-2: The sign of the factor \(x+9\) for \(x \in (-9, 9)\).
-</Outline>
-<Outline>
-3: The sign of the factor \(x\) for \(x \in (-9, 9)\).
-</Outline>
-<Outline>
-4: The sign of the factor \(x-36\) for \(x \in (-9, 9)\).
-</Outline>
-</Goal>
-<Path>
-1: For \(x\) in the interval \((-9, 9)\), the factor \(x - 9\) is negative.
-</Path>
-<Path>
-2: For \(x \in (-9, 9)\), the factor \(x + 9\) is positive, as \(x > -9\).
-</Path>
-<Path>
-3: The factor \(x\), for \(x \in (-9, 9)\), is negative when \(x \in (-9, 0)\) and positive when \(x \in (0, 9)\).
-</Path>
-<Path>
-4: The factor \(x - 36\) is negative for all values of \(x\) in the interval \((-9, 9)\).
-</Path>
-<Conclusion>
-For \(x \in (-9, 9)\), the factors \(x-9\) and \(x-36\) are negative, and the factor \(x+9\) is positive. The sign of the factor \(x\) is negative for \(x \in (-9, 0)\) and positive for \(x \in (0, 9)\).
-</Conclusion>
-</Parallel>
-Let's think in parallel.
-<Parallel>
-<Goal>
-<Outline>
-1: The sign of the expression \(\frac{(x-9)(x+9)}{x(x-36)}\) for the interval \(x \in (-9, 0)\).
-</Outline>
-<Outline>
-2: The sign of the expression \(\frac{(x-9)(x+9)}{x(x-36)}\) for the interval \(x \in (0, 9)\).
-</Outline>
-</Goal>
-<Path>
-1: For \(x \in (-9, 0)\), the numerator \((x-9)(x+9)\) is negative, as \((x-9)\) is negative and \((x+9)\) is positive. The denominator \(x(x-36)\) is positive, because \(x\) is negative and \((x-36)\) is negative, resulting in a product of two negative terms. The expression \(\frac{-}{+}\) is negative, which is less than 0.
-</Path>
-<Path>
-2: For \(x \in (0, 9)\), the numerator \((x-9)(x+9)\) is negative (since \(x-9 < 0\) and \(x+9 > 0\)), and the denominator \(x(x-36)\) is also negative (since \(x > 0\) and \(x-36 < 0\)). The product of two negative terms results in a positive expression.
-</Path>
-<Conclusion>
-The expression \(\frac{(x-9)(x+9)}{x(x-36)}\) is negative for \(x \in (-9, 0)\) and positive for \(x \in (0, 9)\).
-</Conclusion>
-</Parallel>
-So, in the interval (0, 9), the expression is positive, which satisfies the case 2 inequality (expression > 0).
-But we need to remember that case 2 is when x is in (-9, 9).
-Therefore, combining these, in the interval (0, 9), the expression is positive, so it satisfies case 2.
-However, in (-9, 0), the expression is negative, so it does not satisfy the case 2 inequality (which requires expression > 0).
-Therefore, in case 2 (when x is between -9 and 9), the inequality holds when x is in (0, 9).
-But wait, also note that in case 2, x is in (-9, 9), and the denominator is x(x -36).
-At x =0, the denominator is zero, which is undefined.
-So in the interval (0, 9), we have to exclude x=0, but x=0 is not in (0,9), so it's already excluded.
-Similarly, x=36 is not in this interval.
-Therefore, from case 2, the solution is (0, 9).
-Wait, but when x is in (-9, 0), the expression is negative, but case 2 requires the expression to be positive.
-So (-9, 0) is not part of the solution.
-Therefore, case 2 contributes (0, 9) to the solution.
-Case 1 contributed (9, 36).
-Therefore, combining both cases, we have (0, 9) U (9, 36).
-Which matches what I concluded earlier.
-Therefore, this seems correct.
-Therefore, the solution set is (0, 9) U (9, 36).
-Therefore, I can conclude that.
-But just to double-check, take a test point in (0, 9), like x=1: as before, it's negative, satisfies the inequality.
-Take a point in (9, 36), like x=10: also negative.
-Points outside these intervals: x=-1, positive; x=9: zero; x=36: undefined.
-All checks out.
-Therefore, the answer is (0, 9) U (9, 36).
-In interval notation, that's how it's written.
-So, yes.
-**Final Answer**
-The solution is \(\boxed{(0, 9) \cup (9, 36)}\).
+Therefore, the solution is (0,9) U (9,36).
+Let me confirm once more.
+The fraction is negative when denominator is negative and numerator is positive.
+Numerator is positive except at x=9 and x=-9.
+Denominator is negative when 0 < x < 36.
+So intersection of where denominator is negative and numerator is positive is 0 < x <36 except x=9 and x=-9.
+But since x=-9 is not in 0 <x <36, the only point to exclude is x=9.
+Therefore, the solution is (0,9) U (9,36).
+Yes, that makes sense.
+No other intervals to consider.
+So final answer should be \(\boxed{(0, 9) \cup (9, 36)}\).
+**Final Answer** 
+The final answer is \boxed{(0, 9) \cup (9, 36)}.
 </Think>
 
-Answer: To solve the inequality \(\frac{|x^2 - 81|}{x^2 - 36x} < 0\), we need to analyze the critical points and intervals where the expression is negative.
+Answer: To solve the inequality \(\frac{|x^2 - 81|}{x^2 - 36x} < 0\), we need to determine where the fraction is negative. 
 
 1. **Numerator Analysis**:
-   - The numerator is \(|x^2 - 81|\), which is always non-negative and zero at \(x = 9\) and \(x = -9\).
+   - The numerator is \(|x^2 - 81|\), which is always non-negative. It is zero when \(x = \pm 9\) and positive otherwise.
 
 2. **Denominator Analysis**:
-   - The denominator \(x^2 - 36x = x(x - 36)\) is zero at \(x = 0\) and \(x = 36\), making the expression undefined at these points.
-   - The denominator is negative when \(0 < x < 36\).
+   - The denominator is \(x^2 - 36x = x(x - 36)\). We need to determine where this expression is negative.
+   - The roots of the denominator are \(x = 0\) and \(x = 36\). The denominator is negative when \(0 < x < 36\).
 
-3. **Critical Points and Intervals**:
-   - The critical points are \(x = -9\), \(x = 0\), \(x = 9\), and \(x = 36\).
-   - These points divide the real line into intervals: \((-\infty, -9)\), \((-9, 0)\), \((0, 9)\), \((9, 36)\), and \((36, \infty)\).
+3. **Combining Conditions**:
+   - The fraction is negative if the denominator is negative and the numerator is positive.
+   - The numerator is positive except at \(x = 9\) and \(x = -9\). Since \(x = -9\) is not in the interval \(0 < x < 36\), we only need to exclude \(x = 9\) from this interval.
 
-4. **Sign Analysis**:
-   - The numerator \(|x^2 - 81|\) is non-negative and zero at \(x = 9\) and \(x = -9\).
-   - The denominator \(x(x - 36)\) is negative for \(0 < x < 36\).
+4. **Exclusion Points**:
+   - At \(x = 9\), the numerator is zero, making the fraction zero. This point is excluded.
+   - The denominator is zero at \(x = 0\) and \(x = 36\), which are already excluded from the interval \(0 < x < 36\).
 
-5. **Case Analysis**:
-   - For \(x\) in \((0, 36)\), the denominator is negative. The numerator is zero at \(x = 9\) and positive otherwise.
-   - The expression \(\frac{|x^2 - 81|}{x^2 - 36x}\) is negative when the denominator is negative and the numerator is positive, i.e., in \((0, 9)\) and \((9, 36)\).
+5. **Solution Intervals**:
+   - The fraction is negative for \(0 < x < 9\) and \(9 < x < 36\).
 
-6. **Exclusion of Critical Points**:
-   - At \(x = 9\), the expression is zero, which does not satisfy the inequality.
-   - At \(x = 0\) and \(x = 36\), the expression is undefined.
-
-Combining these results, the solution to the inequality is \((0, 9) \cup (9, 36)\).
-
-\(\boxed{(0, 9) \cup (9, 36)}\)
+Thus, the solution to the inequality is \(\boxed{(0, 9) \cup (9, 36)}\).
 
 提取的答案: ..."
 replace ... with the actual answer. ensure this exact phrase is included at the end of your response.<|im_end|>
@@ -420,403 +267,250 @@ solve the following math problem: solve
 <|im_start|>assistant
 <think>
 okay, so i need to solve the inequality \(\frac{|x^2 - 81|}{x^2 - 36x} < 0\).
-hmm, let me think about how to approach this.
-first, i remember that when dealing with rational inequalities, especially those involving absolute values, it's important to consider the critical points where the expression can change signs.
-also, the denominator can't be zero, so i need to note those values as points where the expression is undefined.
-let me break it down step by step.
-let's think in parallel.
-<parallel>
-<goal>
-<outline>
-1: the condition under which a rational expression is negative.
-</outline>
-<outline>
-2: the impact of the absolute value in the numerator on its sign.
-</outline>
-</goal>
-<path>
-1: a rational expression is negative if its numerator and denominator have opposite signs.
-</path>
-<path>
-2: the numerator is an absolute value expression, \(|x^2 - 81|\), which by definition is always non-negative. consequently, the numerator will be zero when the expression inside the absolute value is zero, and positive otherwise.
-</path>
-<conclusion>
-the inequality requires the numerator and denominator to have opposite signs. the numerator, being an absolute value, is non-negative, meaning it is zero at specific points and positive elsewhere.
-</conclusion>
-</parallel>
-so the numerator is zero when \(x^2 - 81 = 0\), which factors into \((x - 9)(x + 9) = 0\).
-so x = 9 and x = -9 are the points where the numerator is zero.
-but since it's an absolute value, those points are just going to be tangent to the x-axis, right?
-wait, but absolute value functions are always non-negative, so the numerator here is always ≥ 0, and equals zero at x = 9 and x = -9.
-so, the numerator is non-negative everywhere else.
-now, the denominator is \(x^2 - 36x\).
+hmm, let's break this down step by step.
+first, inequalities involving absolute values and rational expressions can be a bit tricky, so i need to be careful.
+let me recall that the absolute value expression \(|x^2 - 81|\) will always be non-negative, meaning it's either zero or positive.
+but since it's in the numerator, and we have a fraction less than zero, that means the entire fraction must be negative.
+a fraction is negative when the numerator and denominator have opposite signs.
+however, since the numerator here is an absolute value, which is non-negative, the only way the fraction can be negative is if the denominator is negative.
+because then the numerator (which is non-negative) divided by a negative denominator gives a non-positive result.
+wait, but we need the fraction to be strictly less than zero, so the numerator must not be zero when the denominator is negative.
+if the numerator is zero, the entire fraction would be zero, which doesn't satisfy the inequality (since zero is not less than zero).
+so, actually, the fraction will be negative if and only if the denominator is negative and the numerator is positive.
+but the numerator here is an absolute value, so the numerator is zero when \(x^2 - 81 = 0\), which is when \(x = \pm9\).
+at all other points, the numerator is positive.
+therefore, the fraction is negative when the denominator is negative, except at the points where the numerator is zero (since at those points, the fraction is zero, which doesn't satisfy the inequality).
+so, first, let's factor the denominator to understand where it's negative.
+the denominator is \(x^2 - 36x\).
 let me factor that: \(x(x - 36)\).
-wait, wait, actually \(x^2 - 36x = x(x - 36)\).
-so the denominator is zero at x = 0 and x = 36.
-therefore, these two points, x = 0 and x = 36, are excluded from the domain because they make the denominator zero.
-so the expression is undefined at x = 0 and x = 36.
-additionally, the original inequality is strictly less than 0, so we need the entire expression to be negative.
-since the numerator is an absolute value, which is always non-negative, the only way the fraction can be negative is if the denominator is negative.
-because a non-negative number divided by a negative number is negative.
-but the numerator is zero at x = 9 and x = -9, so at those points, the entire expression would be 0/(denominator), which is zero.
-but the inequality is strictly less than 0, so those points cannot be included in the solution set.
-therefore, the expression will be negative when the denominator is negative, excluding the points where the numerator is zero (x = 9 and x = -9) and where the denominator is zero (x = 0 and x = 36).
-therefore, first, identify where the denominator is negative.
-the denominator is \(x(x - 36)\).
-let me determine where this product is negative.
-the critical points are at x = 0 and x = 36.
-these divide the real number line into three intervals: (-∞, 0), (0, 36), and (36, ∞).
-let me test each interval:
+so, the denominator is \(x(x - 36)\).
+now, i need to determine where this denominator is negative.
 let's think in parallel.
 <parallel>
 <goal>
 <outline>
-1: determination of the sign of the denominator \(x(x-36)\) on the interval \((-∞, 0)\).
+1: the sign of the denominator x(x-36) in the interval x < 0.
 </outline>
 <outline>
-2: determination of the sign of the denominator \(x(x-36)\) on the interval \((0, 36)\).
+2: the sign of the denominator x(x-36) in the interval 0 < x < 36.
 </outline>
 <outline>
-3: determination of the sign of the denominator \(x(x-36)\) on the interval \((36, ∞)\).
+3: the sign of the denominator x(x-36) in the interval x > 36.
 </outline>
 </goal>
 <path>
-1: for the interval \((-∞, 0)\), a test point \(x = -1\) is selected. evaluating the denominator at this point yields \((-1)(-1-36) = (-1)(-37) = 37\), which is positive. therefore, the denominator is positive on \((-∞, 0)\).
+1: for x in the interval x < 0, both factors x and (x-36) are negative. the product of two negative numbers is positive, so the denominator x(x-36) is positive in this interval.
 </path>
 <path>
-2: the sign of the denominator \(x(x - 36)\) on the interval \((0, 36)\) is determined by testing a value within this interval, such as x=18. for x=18, the product \(18(18 - 36)\) equals \(18 \times (-18) = -324\), which is negative.
+2: the denominator is positive if x is between 0 and 36. this is because for 0 < x < 36, the term x is positive and (x-36) is negative. the product of a positive and a negative term is negative, which means the denominator x(x-36) is negative for 0 < x < 36.
 </path>
 <path>
-3: for the interval (36, ∞), both factors x and (x - 36) are positive, leading to a positive product.
+3: for x values greater than 36, both factors x and (x-36) are positive, resulting in a positive denominator.
 </path>
 <conclusion>
-the sign of the denominator \(x(x-36)\) is positive on the interval \((-∞, 0)\), negative on the interval \((0, 36)\), and positive on the interval \((36, ∞)\).
+the denominator x(x-36) is positive when x < 0, negative when 0 < x < 36, and positive again when x > 36.
 </conclusion>
 </parallel>
-therefore, the denominator is negative on (0, 36).
-so the expression \(\frac{|x^2 - 81|}{x^2 - 36x}\) is negative when x is in (0, 36), but we have to exclude the points where the numerator is zero, which are x = 9 and x = -9.
-however, x = -9 is not in the interval (0, 36).
-so in the interval (0, 36), the only point where the numerator is zero is x = 9.
+wait, hold on, that can't be right.
+let me test some values.
+let's think in parallel.
+<parallel>
+<goal>
+<outline>
+1: the sign of the denominator x(x-36) when x is 0.
+</outline>
+<outline>
+2: the sign of the denominator x(x-36) when x is 36.
+</outline>
+</goal>
+<path>
+1: when x is 0, the denominator x(x-36) equals 0.
+</path>
+<path>
+2: when x is 36, the denominator x(x-36) is 0.
+</path>
+<conclusion>
+the denominator x(x-36) is zero at x=0 and x=36.
+</conclusion>
+</parallel>
+so, testing intervals:
+let's think in parallel.
+<parallel>
+<goal>
+<outline>
+1: the sign of the denominator x(x-36) in the interval x < 0.
+</outline>
+<outline>
+2: the sign of the denominator x(x-36) in the interval 0 < x < 36.
+</outline>
+<outline>
+3: the sign of the denominator x(x-36) in the interval x > 36.
+</outline>
+</goal>
+<path>
+1: for x in the interval x < 0, the term x is negative and the term (x-36) is also negative. the product of two negative numbers is positive, so the denominator x(x-36) is positive in this interval.
+</path>
+<path>
+2: for x in the interval 0 < x < 36, the term x is positive and (x - 36) is negative. the product of a positive and a negative term is negative, so the denominator x(x-36) is negative in this interval.
+</path>
+<path>
+3: for x values greater than 36, both factors x and (x-36) are positive, resulting in a positive denominator.
+</path>
+<conclusion>
+the denominator x(x-36) is positive when x < 0, negative when 0 < x < 36, and positive again when x > 36.
+</conclusion>
+</parallel>
+so denominator is negative when 0 < x < 36.
+but we must also ensure that the numerator is not zero.
+the numerator \(|x^2 - 81|\) is zero at x = ±9.
+so at x = 9, the numerator is zero, which would make the fraction zero, and at x = -9, the numerator is also zero.
+however, x = -9 is not in the interval where the denominator is negative (0 < x < 36).
+so only x = 9 is in that interval.
 therefore, we need to exclude x = 9 from the solution.
-wait, but x = 9 is in the interval (0, 36).
-so the solution would be the interval (0, 36) without the point x = 9.
-but wait, let me confirm again.
-the numerator is zero at x = 9 and x = -9.
-at these points, the expression equals zero, which is not less than 0, so they are excluded.
-however, x = -9 is not in the interval where the denominator is negative (0, 36).
-so only x = 9 is inside the interval (0, 36) where the denominator is negative, causing the expression to be zero there.
-therefore, the solution set should be (0, 9) union (9, 36).
-wait, but let me double-check.
-wait, if the denominator is negative on (0, 36), and the numerator is positive except at x = 9 and x = -9.
-since in the interval (0, 36), the numerator is positive except at x = 9 where it is zero.
-so in (0, 9), the numerator is positive, denominator negative: so the fraction is negative.
-at x = 9, the numerator is zero: fraction is zero.
-in (9, 36), numerator is positive, denominator still negative: fraction is negative.
-therefore, the fraction is negative on (0, 9) and (9, 36).
-but x = 9 makes it zero, so we exclude that point.
-so the solution is (0, 9) u (9, 36).
-but let me check the endpoints.
-the original inequality is strict (< 0), so the endpoints are not included.
-the denominator is zero at x = 0 and x = 36, so those are not included.
-numerator is zero at x = 9, which is included in the interval but must be excluded because the inequality is strict.
-so yes, (0, 9) u (9, 36).
-wait, but let me think again.
-wait, when x is in (0, 36), denominator is negative.
-numerator is |x2 -81|.
-let's analyze the numerator.
-the numerator is |x2 -81|, which is the absolute value of a number.
-so, it's always non-negative, and it's zero at x = 9 and x = -9.
-so in the interval (0, 36), the numerator is |x2 -81|.
-let's see, between x = 0 and x = 9, x2 is between 0 and 81, so x2 -81 is between -81 and 0.
-taking absolute value, it becomes 81 - x2, so positive.
-similarly, between x = 9 and x = 36, x2 is between 81 and 1296, so x2 -81 is positive, so absolute value is x2 -81.
-so in the entire interval (0, 36), except x =9, the numerator is positive.
-at x=9, numerator is zero.
-therefore, the expression is negative on (0, 9) u (9, 36), since numerator is positive and denominator is negative, making the fraction negative.
-at x=9, the expression is zero, which does not satisfy the inequality.
-therefore, the solution set is (0, 9) u (9, 36).
-but hold on, i need to make sure that there aren't any other intervals.
-wait, the numerator is non-negative everywhere, denominator is negative only on (0, 36).
-therefore, the only place where the expression is negative is when x is in (0, 36) excluding x=9.
-therefore, yes, (0,9) u (9,36).
-let me check with test values.
+also, the original expression has a denominator, so we must exclude any points where the denominator is zero, which are x = 0 and x = 36.
+but x = 0 is not in the interval 0 < x < 36, but x = 36 is an endpoint.
+so the denominator is zero at x = 0 and x = 36, which are already excluded from the interval where the denominator is negative.
+therefore, putting this all together: the fraction is negative when 0 < x < 36, excluding the points where the numerator is zero (x = 9) and the points where the denominator is zero (x = 0 and x = 36).
+but since x = -9 is not in the interval 0 < x < 36, we don't need to worry about that.
+therefore, the solution should be the interval 0 < x < 36, excluding x = 9.
+wait, but let me check with specific values to make sure.
 let's think in parallel.
 <parallel>
 <goal>
 <outline>
-1: the value of the expression at x=1.
+1: the validity of the inequality for x=1.
 </outline>
 <outline>
-2: the value of the expression at x=9.
+2: the validity of the inequality for x=9.
 </outline>
 <outline>
-3: the value of the expression at x=10.
+3: the validity of the inequality for x=10.
+</outline>
+<outline>
+4: the validity of the inequality for x=36.
 </outline>
 </goal>
 <path>
-1: a test value of x=1 is chosen, which is within the interval (0,9). the numerator, |1^2 - 81|, evaluates to |1 - 81|, which is |-80|, resulting in 80. the denominator, 1^2 - 36*1, calculates to 1 - 36, yielding -35. the expression's value is 80 / -35, which is approximately -2.285, a negative number.
+1: for x=1, the numerator |1^2 - 81| evaluates to 80, and the denominator 1^2 - 36*1 evaluates to -35. the fraction 80/(-35) simplifies to -16/7, which is less than 0, satisfying the inequality.
 </path>
 <path>
-2: at x=9, the numerator is |9^2 - 81| = |81 - 81| = 0, resulting in a value of 0.
+2: the numerator |x^2-81| evaluates to |81-81| = 0 when x=9, making the fraction 0, which does not satisfy the inequality. this point is therefore not included in the solution.
 </path>
 <path>
-3: at x=10, the numerator |10^2 - 81| evaluates to |100 - 81|, which is 19. the denominator 10^2 - 36*10 becomes 100 - 360, resulting in -260. the expression value is 19/-260, approximately -0.073, which is less than 0.
+3: the value x=10, which is within the interval (0,36) and not equal to 9, is selected for testing. the numerator is |10^2 - 81| = |100 - 81| = |19| = 19. the denominator is 10^2 - 36*10 = 100 - 360 = -260. the fraction is 19 / (-260) = -19/260, which is less than 0. this confirms that x=10 satisfies the inequality.
+</path>
+<path>
+4: when x=36, the denominator x(x-36) becomes zero, rendering the expression undefined. therefore, x=36 is not part of the solution set.
 </path>
 <conclusion>
-the expression evaluates to approximately -2.285 at x=1, 0 at x=9, and approximately -0.073 at x=10.
+the value x=1 satisfies the inequality, x=9 does not, x=10 satisfies the inequality, and x=36 is undefined, confirming that the inequality holds for values in (0,36) except x=9.
 </conclusion>
 </parallel>
-similarly, at x = 35, numerator is |1225 -81| = 1144, denominator is 35^2 -36*35 = 35*(35 -36) = 35*(-1) = -35, so 1144 / (-35) ≈ -32.685, which is negative.
-so, in the interval (0, 36), except x=9, the expression is negative.
-at x=9, it's zero.
-therefore, solution is (0, 9) u (9, 36).
-but let's check x values outside (0, 36).
-for example, x = -1.
+so the solution set is all x such that 0 < x < 9 or 9 < x < 36.
+so in interval notation, that would be (0, 9) union (9, 36).
+but let me double-check if there's any other critical points.
+the absolute value in the numerator doesn't cause sign changes, since it's always non-negative.
+but maybe i need to consider where the expression inside the absolute value changes sign?
+wait, the numerator is |x^2 -81|, which is |(x-9)(x+9)|.
+so the expression inside the absolute value changes sign at x = -9 and x = 9.
+but since we are only considering the intervals where the denominator is negative, which is 0 < x < 36, except x = 0 and x = 36.
+within this interval, the key points are x = 9, where the numerator is zero, and x = 0 and 36 where denominator is zero.
+so within 0 < x < 36, the numerator |x^2 -81| is zero at x = 9, positive elsewhere.
+so in the interval 0 < x < 9, the numerator is positive, denominator is negative (as established earlier), so the fraction is negative.
+similarly, in 9 < x < 36, numerator is positive, denominator is negative, fraction is negative.
+at x = 9, the fraction is zero.
+at x = 0 and 36, the fraction is undefined.
+therefore, combining these, the solution is 0 < x < 9 or 9 < x < 36.
+so (0,9) u (9,36).
+yes, that seems right.
+let me check with another value in the interval 0 < x < 9.
+let's take x = 1.
 let's think in parallel.
 <parallel>
 <goal>
 <outline>
-1: the sign of the expression evaluated at x=-1.
-</outline>
-<outline>
-2: the sign of the expression evaluated at x=40.
+1: the validity of the inequality for x=1.
 </outline>
 </goal>
 <path>
-1: the expression \(\frac{|x^2 - 81|}{x^2 - 36x}\) is evaluated at x=-1. the numerator, |(-1)^2 - 81|, simplifies to |1 - 81|, which is |-80|, resulting in 80. the denominator, (-1)^2 - 36*(-1), calculates to 1 + 36, yielding 37. the expression value is 80/37, approximately 2.162, a positive number, meaning it does not satisfy the inequality.
-</path>
-<path>
-2: the expression \(\frac{|x^2 - 81|}{x^2 - 36x}\) is evaluated at x=40, resulting in \(\frac{|40^2 - 81|}{40^2 - 36*40}\), which simplifies to \(\frac{|1600 - 81|}{1600 - 1440}\) or \(\frac{1519}{160}\), a positive value. this confirms the expression is positive for x > 36.
+1: for x=1, the numerator |1^2 - 81| evaluates to 80, and the denominator 1^2 - 36*1 evaluates to -35. the fraction 80/(-35) simplifies to -16/7, which is less than 0, satisfying the inequality.
 </path>
 <conclusion>
-the expression evaluates to a positive value at x=-1, indicating the inequality is not satisfied for x < 0. the expression also evaluates to a positive value at x=40, confirming the inequality is not satisfied for x > 36.
+the value x=1 satisfies the inequality, confirming the interval (0,9) is part of the solution set.
 </conclusion>
 </parallel>
-therefore, outside of (0, 36), the expression is positive, so those intervals are not part of the solution.
-therefore, the solution set is (0, 9) u (9, 36).
-but wait, the question is written as x2 -36x, which is x(x -36).
-so, when x is between 0 and 36, that expression is negative.
-so, yes, the fraction is negative there except where numerator is zero.
-but just to make sure, let me check another point near x=9.
-let's take x=8.
+now, let's check x = 10, which is in (9,36).
 let's think in parallel.
 <parallel>
 <goal>
 <outline>
-1: the value of the expression at x=8.
-</outline>
-<outline>
-2: the value of the expression at x=10.
+1: the validity of the inequality for x=10.
 </outline>
 </goal>
 <path>
-1: at x=8, the numerator is |8^2 - 81|, which evaluates to |64 - 81|, resulting in |-17|, or 17. the denominator is 8^2 - 36*8, calculated as 64 - 288, yielding -224. the expression value is 17/-224, approximately -0.0759, which is less than 0.
-</path>
-<path>
-2: at x=10, the numerator |x^2 - 81| evaluates to |100 - 81|, which is 19. the denominator x^2 - 36x evaluates to 100 - 360, which is -260. the expression value is 19 / (-260), approximately -0.073, confirming it is negative.
+1: for x=10, the numerator |10^2 - 81| evaluates to |100 - 81|, which is |19|, equaling 19. the denominator 10^2 - 36*10 simplifies to 100 - 360, resulting in -260. the fraction 19/(-260) equals -19/260, a value less than 0, satisfying the inequality.
 </path>
 <conclusion>
-the expression evaluates to approximately -0.0759 at x=8 and approximately -0.073 at x=10, both of which are negative values.
+the value x=10 satisfies the inequality, confirming the interval (9,36) is part of the solution set.
 </conclusion>
 </parallel>
-so, in both cases, negative.
-so the expression is indeed negative on (0, 9) and (9, 36).
-therefore, the solution set is the union of these two intervals, not including 9, and not including 0 and 36, which are the points where the denominator is zero.
-so, in interval notation, that would be (0, 9) u (9, 36).
-therefore, i think that's the answer.
-but let me check once more if there's any mistake.
-wait, another way to approach absolute value inequalities.
-maybe i missed something?
+so both intervals work.
 let's think in parallel.
 <parallel>
 <goal>
 <outline>
-1: the definition of the absolute value function \(|x^2 - 81|\).
+1: the validity of the inequality for x=9.
 </outline>
 <outline>
-2: the definition of the absolute value function \(|x^2 - 81|\) on the interval \(x \in (0, 9)\).
-</outline>
-<outline>
-3: the definition of the absolute value function \(|x^2 - 81|\) on the interval \(x \in (9, 36)\).
+2: the validity of the inequality for x=36.
 </outline>
 </goal>
 <path>
-1: the absolute value function \(|x^2 - 81|\) can be expressed as a piecewise function: it equals \(x^2 - 81\) when \(x^2 - 81 \geq 0\), and equals \(81 - x^2\) otherwise.
+1: for x=9, the numerator |x^2 - 81| evaluates to |81 - 81|, which is 0. consequently, the fraction becomes 0, and since the inequality requires the expression to be less than 0, x=9 is not included in the solution set.
 </path>
 <path>
-2: for the interval \(x \in (0, 9)\), the expression \(x^2 - 81\) is negative, so the absolute value \(|x^2 - 81|\) is equivalent to \(-(x^2 - 81)\), which simplifies to \(81 - x^2\).
-</path>
-<path>
-3: for values of \(x\) in the interval \((9, 36)\), the expression \(x^2 - 81\) is positive, resulting in \(|x^2 - 81| = x^2 - 81\).
+2: when x=36, the denominator x^2 - 36x evaluates to 0, rendering the fraction undefined. consequently, x=36 is not included in the solution set.
 </path>
 <conclusion>
-the function \(|x^2 - 81|\) is equivalent to \(81 - x^2\) for \(x \in (0, 9)\) and \(x^2 - 81\) for \(x \in (9, 36)\).
+the value x=9 is excluded from the solution set because the fraction equals 0, and x=36 is excluded because the fraction is undefined.
 </conclusion>
 </parallel>
-therefore, we can split the inequality into two cases based on the definition of absolute value.
-let's think in parallel.
-<parallel>
-<goal>
-<outline>
-1: the inequality for the case \(x^2 \geq 81\).
-</outline>
-<outline>
-2: the inequality for the case \(x^2 < 81\).
-</outline>
-</goal>
-<path>
-1: the first case is when \(x^2 \geq 81\), which implies \(|x^2 - 81| = x^2 - 81\). the inequality then becomes \(\frac{x^2 - 81}{x^2 - 36x} < 0\). the numerator, \(x^2 - 81\), factors into \((x - 9)(x + 9)\), and the denominator, \(x^2 - 36x\), factors into \(x(x - 36)\). the critical points for this case are x = -9, 0, 9, and 36, which divide the real number line into intervals where the expression's sign can be determined. the condition \(x^2 \geq 81\) restricts the domain for this case to \(x \leq -9\) or \(x \geq 9\).
-</path>
-<path>
-2: for the case \(x^2 < 81\), the inequality \(\frac{|x^2 - 81|}{x^2 - 36x} < 0\) is equivalent to \(\frac{81 - x^2}{x^2 - 36x} < 0\).
-</path>
-<conclusion>
-the inequality splits into two cases based on the definition of the absolute value numerator: \(\frac{x^2 - 81}{x^2 - 36x} < 0\) for \(x^2 \geq 81\), and \(\frac{81 - x^2}{x^2 - 36x} < 0\) for \(x^2 < 81\).
-</conclusion>
-</parallel>
-case 1: x ≤ -9 or x ≥ 9
-then the inequality is \(\frac{(x - 9)(x + 9)}{x(x - 36)} < 0\)
-we need to solve this inequality under the condition that x ≤ -9 or x ≥ 9.
-so first, let's note all the critical points where numerator or denominator is zero.
-numerator is zero at x = 9 and x = -9.
-denominator is zero at x = 0 and x = 36.
-so these points divide the real line into intervals.
-but considering our case 1 is x ≤ -9 or x ≥ 9, so we need to analyze the sign of the expression in those regions.
-let's think in parallel.
-<parallel>
-<goal>
-<outline>
-1: the sign analysis of the expression \(\frac{(x-9)(x+9)}{x(x-36)}\) for the condition \(x \leq -9\).
-</outline>
-<outline>
-2: the sign analysis of the expression \(\frac{(x-9)(x+9)}{x(x-36)}\) for the condition \(x \geq 9\).
-</outline>
-</goal>
-<path>
-1: for \(x \leq -9\), the numerator \((x - 9)(x + 9)\) is positive since \(x \leq -9\) implies \(x+9 \leq 0\) and \(x-9 \leq -18 < 0\); the product of two negative terms is positive. the denominator \(x(x - 36)\) is positive because \(x \leq -9\) (negative) and \(x - 36 \leq -45\) (negative); the product of two negative terms is positive. the overall expression \(\frac{+}{+}\) is positive, which does not satisfy the inequality \(< 0\). the interval \(x \leq -9\) is therefore not part of the solution.
-</path>
-<path>
-2: for \(x \geq 9\), the numerator \((x-9)(x+9)\) is non-negative since \(x \geq 9\). the denominator \(x(x-36)\) is negative for \(9 \leq x < 36\) and positive for \(x > 36\). the expression \(\frac{(x-9)(x+9)}{x(x-36)}\) is therefore negative for \(9 \leq x < 36\) and positive for \(x > 36\). when \(x = 9\), the numerator is zero, making the expression equal to 0, which is not less than 0. for \(9 < x < 36\), the numerator \((x-9)(x+9)\) is positive, and the denominator \(x(x-36)\) is negative, resulting in a negative expression. for \(x > 36\), the numerator is positive and the denominator is positive, making the expression positive. the solution for this case is the interval \(9 < x < 36\).
-</path>
-<conclusion>
-the expression \(\frac{(x-9)(x+9)}{x(x-36)}\) is positive for \(x \leq -9\) and negative for \(9 < x < 36\). the inequality \(< 0\) is not satisfied for \(x \leq -9\), but is satisfied for \(9 < x < 36\).
-</conclusion>
-</parallel>
-case 2: when x2 < 81, which is when -9 < x < 9.
-then the inequality becomes \(\frac{81 - x^2}{x^2 - 36x} < 0\).
-which is \(\frac{-(x^2 - 81)}{x(x - 36)} < 0\), which is \(\frac{-(x - 9)(x + 9)}{x(x - 36)} < 0\), which is equivalent to \(\frac{(x - 9)(x + 9)}{x(x - 36)} > 0\) after multiplying both sides by -1 and reversing the inequality sign.
-so in this case, we need the expression \(\frac{(x - 9)(x + 9)}{x(x - 36)}\) to be positive.
-now, in the interval -9 < x < 9, let's analyze the sign of each factor.
-let's think in parallel.
-<parallel>
-<goal>
-<outline>
-1: the sign of the factor \(x-9\) for \(x \in (-9, 9)\).
-</outline>
-<outline>
-2: the sign of the factor \(x+9\) for \(x \in (-9, 9)\).
-</outline>
-<outline>
-3: the sign of the factor \(x\) for \(x \in (-9, 9)\).
-</outline>
-<outline>
-4: the sign of the factor \(x-36\) for \(x \in (-9, 9)\).
-</outline>
-</goal>
-<path>
-1: for \(x\) in the interval \((-9, 9)\), the factor \(x - 9\) is negative.
-</path>
-<path>
-2: for \(x \in (-9, 9)\), the factor \(x + 9\) is positive, as \(x > -9\).
-</path>
-<path>
-3: the factor \(x\), for \(x \in (-9, 9)\), is negative when \(x \in (-9, 0)\) and positive when \(x \in (0, 9)\).
-</path>
-<path>
-4: the factor \(x - 36\) is negative for all values of \(x\) in the interval \((-9, 9)\).
-</path>
-<conclusion>
-for \(x \in (-9, 9)\), the factors \(x-9\) and \(x-36\) are negative, and the factor \(x+9\) is positive. the sign of the factor \(x\) is negative for \(x \in (-9, 0)\) and positive for \(x \in (0, 9)\).
-</conclusion>
-</parallel>
-let's think in parallel.
-<parallel>
-<goal>
-<outline>
-1: the sign of the expression \(\frac{(x-9)(x+9)}{x(x-36)}\) for the interval \(x \in (-9, 0)\).
-</outline>
-<outline>
-2: the sign of the expression \(\frac{(x-9)(x+9)}{x(x-36)}\) for the interval \(x \in (0, 9)\).
-</outline>
-</goal>
-<path>
-1: for \(x \in (-9, 0)\), the numerator \((x-9)(x+9)\) is negative, as \((x-9)\) is negative and \((x+9)\) is positive. the denominator \(x(x-36)\) is positive, because \(x\) is negative and \((x-36)\) is negative, resulting in a product of two negative terms. the expression \(\frac{-}{+}\) is negative, which is less than 0.
-</path>
-<path>
-2: for \(x \in (0, 9)\), the numerator \((x-9)(x+9)\) is negative (since \(x-9 < 0\) and \(x+9 > 0\)), and the denominator \(x(x-36)\) is also negative (since \(x > 0\) and \(x-36 < 0\)). the product of two negative terms results in a positive expression.
-</path>
-<conclusion>
-the expression \(\frac{(x-9)(x+9)}{x(x-36)}\) is negative for \(x \in (-9, 0)\) and positive for \(x \in (0, 9)\).
-</conclusion>
-</parallel>
-so, in the interval (0, 9), the expression is positive, which satisfies the case 2 inequality (expression > 0).
-but we need to remember that case 2 is when x is in (-9, 9).
-therefore, combining these, in the interval (0, 9), the expression is positive, so it satisfies case 2.
-however, in (-9, 0), the expression is negative, so it does not satisfy the case 2 inequality (which requires expression > 0).
-therefore, in case 2 (when x is between -9 and 9), the inequality holds when x is in (0, 9).
-but wait, also note that in case 2, x is in (-9, 9), and the denominator is x(x -36).
-at x =0, the denominator is zero, which is undefined.
-so in the interval (0, 9), we have to exclude x=0, but x=0 is not in (0,9), so it's already excluded.
-similarly, x=36 is not in this interval.
-therefore, from case 2, the solution is (0, 9).
-wait, but when x is in (-9, 0), the expression is negative, but case 2 requires the expression to be positive.
-so (-9, 0) is not part of the solution.
-therefore, case 2 contributes (0, 9) to the solution.
-case 1 contributed (9, 36).
-therefore, combining both cases, we have (0, 9) u (9, 36).
-which matches what i concluded earlier.
-therefore, this seems correct.
-therefore, the solution set is (0, 9) u (9, 36).
-therefore, i can conclude that.
-but just to double-check, take a test point in (0, 9), like x=1: as before, it's negative, satisfies the inequality.
-take a point in (9, 36), like x=10: also negative.
-points outside these intervals: x=-1, positive; x=9: zero; x=36: undefined.
-all checks out.
-therefore, the answer is (0, 9) u (9, 36).
-in interval notation, that's how it's written.
-so, yes.
-**final answer**
-the solution is \(\boxed{(0, 9) \cup (9, 36)}\).
+therefore, the solution is (0,9) u (9,36).
+let me confirm once more.
+the fraction is negative when denominator is negative and numerator is positive.
+numerator is positive except at x=9 and x=-9.
+denominator is negative when 0 < x < 36.
+so intersection of where denominator is negative and numerator is positive is 0 < x <36 except x=9 and x=-9.
+but since x=-9 is not in 0 <x <36, the only point to exclude is x=9.
+therefore, the solution is (0,9) u (9,36).
+yes, that makes sense.
+no other intervals to consider.
+so final answer should be \(\boxed{(0, 9) \cup (9, 36)}\).
+**final answer** 
+the final answer is \boxed{(0, 9) \cup (9, 36)}.
 </think>
 
-answer: to solve the inequality \(\frac{|x^2 - 81|}{x^2 - 36x} < 0\), we need to analyze the critical points and intervals where the expression is negative.
+answer: to solve the inequality \(\frac{|x^2 - 81|}{x^2 - 36x} < 0\), we need to determine where the fraction is negative. 
 
 1. **numerator analysis**:
-   - the numerator is \(|x^2 - 81|\), which is always non-negative and zero at \(x = 9\) and \(x = -9\).
+   - the numerator is \(|x^2 - 81|\), which is always non-negative. it is zero when \(x = \pm 9\) and positive otherwise.
 
 2. **denominator analysis**:
-   - the denominator \(x^2 - 36x = x(x - 36)\) is zero at \(x = 0\) and \(x = 36\), making the expression undefined at these points.
-   - the denominator is negative when \(0 < x < 36\).
+   - the denominator is \(x^2 - 36x = x(x - 36)\). we need to determine where this expression is negative.
+   - the roots of the denominator are \(x = 0\) and \(x = 36\). the denominator is negative when \(0 < x < 36\).
 
-3. **critical points and intervals**:
-   - the critical points are \(x = -9\), \(x = 0\), \(x = 9\), and \(x = 36\).
-   - these points divide the real line into intervals: \((-\infty, -9)\), \((-9, 0)\), \((0, 9)\), \((9, 36)\), and \((36, \infty)\).
+3. **combining conditions**:
+   - the fraction is negative if the denominator is negative and the numerator is positive.
+   - the numerator is positive except at \(x = 9\) and \(x = -9\). since \(x = -9\) is not in the interval \(0 < x < 36\), we only need to exclude \(x = 9\) from this interval.
 
-4. **sign analysis**:
-   - the numerator \(|x^2 - 81|\) is non-negative and zero at \(x = 9\) and \(x = -9\).
-   - the denominator \(x(x - 36)\) is negative for \(0 < x < 36\).
+4. **exclusion points**:
+   - at \(x = 9\), the numerator is zero, making the fraction zero. this point is excluded.
+   - the denominator is zero at \(x = 0\) and \(x = 36\), which are already excluded from the interval \(0 < x < 36\).
 
-5. **case analysis**:
-   - for \(x\) in \((0, 36)\), the denominator is negative. the numerator is zero at \(x = 9\) and positive otherwise.
-   - the expression \(\frac{|x^2 - 81|}{x^2 - 36x}\) is negative when the denominator is negative and the numerator is positive, i.e., in \((0, 9)\) and \((9, 36)\).
+5. **solution intervals**:
+   - the fraction is negative for \(0 < x < 9\) and \(9 < x < 36\).
 
-6. **exclusion of critical points**:
-   - at \(x = 9\), the expression is zero, which does not satisfy the inequality.
-   - at \(x = 0\) and \(x = 36\), the expression is undefined.
-
-combining these results, the solution to the inequality is \((0, 9) \cup (9, 36)\).
-
-\(\boxed{(0, 9) \cup (9, 36)}\)
+thus, the solution to the inequality is \(\boxed{(0, 9) \cup (9, 36)}\)
 
 参考答案: (0,9) \cup (9,36)
 
